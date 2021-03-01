@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Primeira APP VUE</title>
+</head>
+<body>
+
+<div id="app">
+    <p>{{titulo}}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando Vue JS 2 !'
+        }
+    });
+</script>
+</body>
+</html>

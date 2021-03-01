@@ -6,15 +6,15 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 ## <a name="indice">Índice</a>
 
-1. [Seção 1: Introdução 0 / 9|28m](#parte1)     
-2. [Seção 2: Usando VueJS para Interagir com a DOM 0 / 32|2h 15m](#parte2)     
-3. [Seção 3: Usando Condicionais & Renderização de Listas 0 / 15|50m](#parte3)     
-4. [Seção 4: Projeto #01 - O Matador de Monstros 0 / 12|1h 7m](#parte4)     
-5. [Seção 5: Entendendo a Instância Vue 0 / 17|1h 29m](#parte5)     
-6. [Seção 6: Fluxo de Desenvolvimento "Real" Usando Vue CLI 0 / 14|51m](#parte6)     
-7. [Seção 7: Introdução aos Componentes 0 / 13|1h 2m](#parte7)     
-8. [Seção 8: Comunicação Entre Componentes 0 / 20|1h 14m](#parte8)     
-9. [Seção 9: Uso Avançado de Componentes 0 / 16|44m](#parte9)     
+01. [Seção 01: Introdução 0 / 9|28m](#parte1)     
+02. [Seção 02: Usando VueJS para Interagir com a DOM 0 / 32|2h 15m](#parte2)     
+03. [Seção 03: Usando Condicionais & Renderização de Listas 0 / 15|50m](#parte3)     
+04. [Seção 04: Projeto #01 - O Matador de Monstros 0 / 12|1h 7m](#parte4)     
+05. [Seção 05: Entendendo a Instância Vue 0 / 17|1h 29m](#parte5)     
+06. [Seção 06: Fluxo de Desenvolvimento "Real" Usando Vue CLI 0 / 14|51m](#parte6)     
+07. [Seção 07: Introdução aos Componentes 0 / 13|1h 2m](#parte7)     
+08. [Seção 08: Comunicação Entre Componentes 0 / 20|1h 14m](#parte8)     
+09. [Seção 09: Uso Avançado de Componentes 0 / 16|44m](#parte9)     
 10. [Seção 10: Projeto #02 - Tarefas (TODO) 0 / 13|1h 2m](#parte10)     
 11. [Seção 11: Manipulando Entrada de Usuário com Formulários 0 / 15|1h 2m](#parte11)     
 12. [Seção 12: Usando e Criando Diretivas 0 / 15|39m](#parte12)     
@@ -36,6 +36,34 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 
 ## <a name="parte1">1 - Seção 1: Introdução 0 / 9|28m</a>
+
+###2. Vamos Criar Nossa Primeira APP em VueJS
+
+```vue
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Primeira APP VUE</title>
+</head>
+<body>
+
+<div id="app">
+    <p>{{titulo}}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando Vue JS 2 !'
+        }
+    });
+</script>
+</body>
+</html>
+```
 
 
 
@@ -262,7 +290,7 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 ## <a name="parte26">26 - Seção 26: Bonus: HTML Essencial 0 / 16|3h 22m</a>
 
-
+[Seção 26: Bonus: HTML Essencial](/Secao-26-Bonus-HTML-Essencial)
 
 [Voltar ao Índice](#indice)
 
