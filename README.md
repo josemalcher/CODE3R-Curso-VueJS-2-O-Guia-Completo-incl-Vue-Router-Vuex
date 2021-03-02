@@ -272,7 +272,7 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 ## <a name="parte24">24 - Seção 24: Bonus: CSS Grid & Flexbox 0 / 9|1h 29m</a>
 
-
+[Seção 24: Bonus: CSS Grid & Flexbox](/Secao-24-Bonus-CSS-Grid-Flexbox)
 
 [Voltar ao Índice](#indice)
 
