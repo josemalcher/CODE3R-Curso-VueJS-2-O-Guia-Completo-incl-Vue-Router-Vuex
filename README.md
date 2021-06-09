@@ -396,11 +396,72 @@ new Pessoa()
 ```
 
 415. Funções Arrow #01
-     
+
+- [Secao-25-Bonus-Javascript-Essencial/415-Funcoes-Arrow.js](Secao-25-Bonus-Javascript-Essencial/415-Funcoes-Arrow.js)
+
+```javascript
+let dobro = function (a) {
+    return 2 * a;
+}
+
+dobro = (a) => {
+    return 2 * a
+}
+
+dobro = a => 2 * a // retorno implícito
+console.log(dobro(Math.PI));
+
+let ola = function () {
+    return 'Olá';
+};
+
+ola = () => 'Olá'
+ola = _ => 'Olá' // possui um param
+console.log(ola());
+```
+
 416. Funções Arrow #02
-     
+
+- [Secao-25-Bonus-Javascript-Essencial/416-Funcoes-Arrow.js](Secao-25-Bonus-Javascript-Essencial/416-Funcoes-Arrow.js)
+
+```javascript
+function Pessoa(){
+    this.idade = 0;
+
+    setInterval(() => {
+        this.idade++
+        console.log(this.idade);
+    }, 1000)
+}
+
+new Pessoa()
+```
+
 417. Funções Arrow #03
-     
+
+- [Secao-25-Bonus-Javascript-Essencial/417-Funcoes-Arrow.js](Secao-25-Bonus-Javascript-Essencial/417-Funcoes-Arrow.js)
+
+```javascript
+let comparaComThis = function (param) {
+    console.log(this === param)
+};
+
+comparaComThis(global); // global - escopo NODE
+// true
+const obj = {}
+comparaComThis = comparaComThis.bind(obj)
+comparaComThis(global); // false
+comparaComThis(obj) // true
+
+let comparaComThisArrow = param => console.log(this === param);
+comparaComThisArrow(global); // false
+comparaComThisArrow(module.exports) // true
+
+comparaComThisArrow = comparaComThisArrow.bind(obj);
+comparaComThisArrow(obj) // false
+comparaComThisArrow(module.exports) // true
+```
+
 418. Funções Anônimas
      
 419. Funções Callback #01
