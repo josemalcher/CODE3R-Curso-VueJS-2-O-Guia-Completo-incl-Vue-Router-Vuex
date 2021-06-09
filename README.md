@@ -357,9 +357,44 @@ console.log(area(10,10)); // Valor acima do permitido: 100 m2
 412. Função: "this" pode Variar
      
 413. Função: "this" e a Função bind #01
+
+- [Secao-25-Bonus-Javascript-Essencial/413-Funcao-this-e-a-Funcao-bind.js](Secao-25-Bonus-Javascript-Essencial/413-Funcao-this-e-a-Funcao-bind.js)
+
+```javascript
+const pessoa = {
+    saudacao: 'Bom dia',
+    falar(){
+        console.log(this.saudacao);
+    }
+}
+
+pessoa.falar()
+const falar = pessoa.falar();
+
+//falar(); // conflito entre paradigmas: funcional e OO
+
+const falarDePessoa = pessoa.falar.bind(pessoa);
+falarDePessoa()
+```
      
 414. Função: "this" e a Função bind #02
-     
+
+- [Secao-25-Bonus-Javascript-Essencial/414-Funcao-this-e-a-Funcao-bind.js](Secao-25-Bonus-Javascript-Essencial/414-Funcao-this-e-a-Funcao-bind.js)
+
+```javascript
+function Pessoa(){
+    this.idade = 0;
+
+    const self = this;
+
+    setInterval(function () {
+        self.idade++
+        console.log(self.idade);
+    }/*.bind(this)*/,1000);
+}
+new Pessoa()
+```
+
 415. Funções Arrow #01
      
 416. Funções Arrow #02
