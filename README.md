@@ -37,7 +37,7 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 ## <a name="parte1">1 - Seção 1: Introdução 0 / 9|28m</a>
 
-###2. Vamos Criar Nossa Primeira APP em VueJS
+### 2. Vamos Criar Nossa Primeira APP em VueJS
 
 ```vue
 <!DOCTYPE html>
@@ -281,6 +281,110 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 ## <a name="parte25">25 - Seção 25: Bonus: Javascript Essencial 0 / 28|3h 44m</a>
 
+410. Função: Cidadão de Primeira Classe
+
+- [Secao-25-Bonus-Javascript-Essencial/410-Funcao-Cidadao-de-Primeira-Classe.js](Secao-25-Bonus-Javascript-Essencial/410-Funcao-Cidadao-de-Primeira-Classe.js)
+
+```javascript
+//Função em JS é FirstClass Object (Citizens)
+// Highter-order function
+
+// cliar de forma literal
+function fn1() {
+
+}
+
+// Armazenar em uma variável
+const fn2 = function () {
+}
+
+// armazenar em um array
+const array = [function (a, b) {
+    return a + b
+}, fn1, fn2]
+console.log(array[0](2, 3));
+
+//Armazenar em um atributo de objeto
+const obj = {};
+obj.falar = function () {
+    return "Olá";
+};
+console.log(obj.falar());
+
+// Passar função como param
+function run(fun) {
+    fun();
+}
+
+run(function () {
+    console.log('Correndo por funções')
+})
+
+// uma função pode retornar/conter uma função
+function soma(a, b) {
+    return function (c) {
+        console.log(a + b + c);
+    };
+}
+
+//soma(2, 3)(4); // 9
+const cincoMais = soma(3, 2);
+cincoMais(4); //9
+```
+
+411. Função: Parâmetros e Retorno São Opcionais
+
+412. Função: "this" pode Variar
+     
+413. Função: "this" e a Função bind #01
+     
+414. Função: "this" e a Função bind #02
+     
+415. Funções Arrow #01
+     
+416. Funções Arrow #02
+     
+417. Funções Arrow #03
+     
+418. Funções Anônimas
+     
+419. Funções Callback #01
+     
+420. Funções Callback #02
+     
+421. Funções Callback #03
+     
+422. Funções Construtoras
+     
+423. Array: Map #01
+     
+424. Array: Map #02
+     
+425. Array: Map #03
+     
+426. Array: Filter #01
+     
+427. Array: Filter #02
+     
+428. Array: Reduce #01
+     
+429. Array: Reduce #02
+     
+430. Array: Reduce #03
+     
+431. ESNext: Revisão #01
+     
+432. ESNext: Revisão #02
+     
+433. ESNext: Revisão #03
+     
+434. ESNext: Operador Rest/Spread
+     
+435. Promises
+     
+436. Usando Callbacks Aninhadas
+     
+437. Refatorando Callbacks p/ Promises
 
 
 [Voltar ao Índice](#indice)
