@@ -498,10 +498,59 @@ pessoa.raiva()
 
 419. Funções Callback #01
      
+- []()
+
+````javascript
+const fabricantes = ["Mercedes", "Audio", "BMW"];
+
+function imprimir(nome, indice) {
+    console.log(`${indice + 1}. ${nome}`);
+}
+
+fabricantes.forEach(imprimir);
+fabricantes.forEach(fabricantes => console.log(fabricantes));
+````
+
 420. Funções Callback #02
-     
+
+- [Secao-25-Bonus-Javascript-Essencial/420-FuncoesCallback.js](Secao-25-Bonus-Javascript-Essencial/420-FuncoesCallback.js)
+
+```javascript
+const notas = [7.7,6.6, 5.9, 5.5, 9.9, 8.9, 7.9];
+
+// sem callback
+let notasBaixas = []
+for (let i in notas) {
+    if (notas[i] < 7) {
+        notasBaixas.push(notas[i])
+    }
+}
+console.log(notasBaixas);
+
+//Com call back
+notasBaixas2 = notas.filter(function (nota) {
+    return nota < 7;
+});
+
+console.log(notasBaixas2)
+
+const notasMenorque7 = nota => nota < 7;
+const notasBaixa3    = notas.filter(notasMenorque7);
+console.log(notasBaixa3)
+```
+
 421. Funções Callback #03
-     
+
+- [Secao-25-Bonus-Javascript-Essencial/421-FuncoesCallback.js](Secao-25-Bonus-Javascript-Essencial/421-FuncoesCallback.js)
+
+```javascript
+// exemplo de callback no browser
+
+document.getElementsByTagName('body')[0].onclick = function (ev) {
+    console.log('O evento ocorreu');
+};
+```
+
 422. Funções Construtoras
      
 423. Array: Map #01
