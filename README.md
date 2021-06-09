@@ -463,7 +463,39 @@ comparaComThisArrow(module.exports) // true
 ```
 
 418. Funções Anônimas
-     
+
+- [Secao-25-Bonus-Javascript-Essencial/418-Funcoes-Anonimas.js](Secao-25-Bonus-Javascript-Essencial/418-Funcoes-Anonimas.js)
+
+```javascript
+const soma = function (x, y) {
+    return x + y;
+};
+
+const imprimeResultado = function (a, b, operacao = soma) {
+    console.log(operacao(a, b))
+};
+
+imprimeResultado(3, 4);
+imprimeResultado(3, 4, soma);
+imprimeResultado(3, 4, function (x, y) {
+    return x - y
+});
+
+imprimeResultado(3, 4, (x, y) => x * y);
+
+const pessoa = {
+    falar: function () {
+        console.log('OLÁ!!!')
+    },
+    raiva() {
+        console.log('GRRRRR!')
+    }
+}
+pessoa.falar()
+pessoa.raiva()
+```
+
+
 419. Funções Callback #01
      
 420. Funções Callback #02
