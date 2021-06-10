@@ -41,7 +41,69 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 2. Vamos Criar Nossa Primeira APP em VueJS
 
+- [Secao-01-Introducao/primeira-app-vue.html](Secao-01-Introducao/2-primeira-app-vue.html)
+
+```vue
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Primeira APP VUE</title>
+</head>
+<body>
+
+<div id="app">
+    <p>{{titulo}}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando Vue JS 2 !'
+        }
+    });
+</script>
+</body>
+</html>
+```
+
 3. Extendendo Nossa Aplicação VueJS
+
+- [Secao-01-Introducao/3-Extendendo-Nossa-Aplicacao-VueJS.html](Secao-01-Introducao/3-Extendendo-Nossa-Aplicacao-VueJS.html)
+
+```vue
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Primeira APP VUE</title>
+</head>
+<body>
+
+<div id="app">
+    <input type="text" v-on:input="alterarTitulo">
+    <p>{{titulo}}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando Vue JS 2 !'
+        },
+        methods: {
+            alterarTitulo(event) {
+                this.titulo = event.target.value
+            }
+        }
+    });
+</script>
+</body>
+</html>
+```
 
 4. Executando o Código Localmente
 
@@ -58,6 +120,9 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 10. Usando o terminal
 
 11. Terminais
+
+- https://blog.cod3r.com.br/terminal-no-windows/
+- https://blog.cod3r.com.br/terminal-no-macos-e-linux/
 
 12. Aviso importante aos usuários de Windows
 
