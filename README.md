@@ -316,9 +316,112 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 21. Hora de Praticar - Template
 
+```vue
+<script src="https://unpkg.com/vue"></script>
+
+<div id="desafio">
+    <!-- 1) Preencha a tag <p> abaixo com o seu Nome e Idade - usando Interpolação -->
+    <p>Usando VueJS - SEU_NOME (IDADE)</p>
+    
+    <!-- 2) Exiba sua idade multiplicada por 3 -->
+    <p></p>
+    
+    <!-- 3) Chame uma função para exibir um número randomico
+        entre 0 and 1 (Math.random()) -->
+    <p></p>
+    
+    <!-- 4) Procure uma imagem no google e exiba na tag img 
+        fazendo o binding no atributo "src" -->
+    <div>
+        <img height="400">
+    </div>
+    
+    <!-- 5) Inicialize o input com o seu nome (use o atributo "value") -->
+    <div>
+        <input type="text">
+    </div>
+</div>
+<script src="app.js"></script>
+```
+
 22. Hora de Praticar - Template (Resposta)
 
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/21-HoradePraticar-Template/index.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/21-HoradePraticar-Template/index.html)
+
+```vue
+<script src="https://unpkg.com/vue"></script>
+
+<div id="desafio">
+    <!-- 1) Preencha a tag <p> abaixo com o seu Nome e Idade - usando Interpolação -->
+    <p>Usando VueJS - {{nome}} ({{idade}})</p>
+
+    <!-- 2) Exiba sua idade multiplicada por 3 -->
+    <p>Mutaches {{ idade * 3 }} - Método {{ idadeVezesTres()}}</p>
+
+    <!-- 3) Chame uma função para exibir um número randomico
+        entre 0 and 1 (Math.random()) -->
+    <p>{{ Math.random() }} - Método{{ random() }}</p>
+
+    <!-- 4) Procure uma imagem no google e exiba na tag img
+        fazendo o binding no atributo "src" -->
+    <div>
+        <img v-bind:src="image" height="200">
+    </div>
+
+    <!-- 5) Inicialize o input com o seu nome (use o atributo "value") -->
+    <div>
+        <input type="text" v-bind:value="nome">
+    </div>
+</div>
+<script src="app.js"></script>
+```
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/21-HoradePraticar-Template/app.js](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/21-HoradePraticar-Template/app.js)
+
+```javascript
+new Vue({
+    el: '#desafio',
+    data: {
+        nome: 'José Malcher Jr.',
+        idade: '36',
+        image: 'https://pbs.twimg.com/profile_images/1106193889/logo_Super_A__o_Web_caixa_pequena_400x400.png'
+    }, methods: {
+        idadeVezesTres(){
+            return this.idade * 3
+        },
+        random(){
+            return Math.random();
+        }
+    }
+});
+```
+
 23. Escutando Eventos
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/23-Escutando-Eventos.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/23-Escutando-Eventos.html)
+
+```vue
+
+<div id="app">
+  <p>{{contador}}</p>
+  <button v-on:click="somar">SOMAR 1</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      contador: 0
+    },
+    methods: {
+      somar(){
+        this.contador++
+      }
+    }
+  });
+</script>
+```
 
 24. Obtendo Dados do Evento
 
