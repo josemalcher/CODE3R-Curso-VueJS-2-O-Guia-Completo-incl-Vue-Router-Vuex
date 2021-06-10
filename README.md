@@ -796,11 +796,109 @@ console.log(numeros.reduce2(soma, 10));
 ```
 
 431. ESNext: Revisão #01
-     
+
+- [Secao-25-Bonus-Javascript-Essencial/431-ESNext-Revisao.js](Secao-25-Bonus-Javascript-Essencial/431-ESNext-Revisao.js)
+
+```javascript
+// let e const
+{
+    var a = 10 // global
+
+    let b = 30 // bloco
+    console.log(b)
+}
+console.log(a)
+//console.log(b) //  b is not defined
+
+//Template String
+const produto = 'iPad';
+console.log(`${produto} é CARO!`);
+
+//Destructuring
+const [l, e, ...tras] = 'TESTE';
+console.log(l, e, tras); // T E [ 'S', 'T', 'E' ]
+
+const [x, y, z] = [1, 2, 3];
+console.log(x,y) // 1 2
+
+const {idade: i, nome} = {nome: 'ANA' , idade: 23};
+console.log(i, nome); // 23 ANA
+
+
+```
+
 432. ESNext: Revisão #02
-     
+
+- [Secao-25-Bonus-Javascript-Essencial/432-ESNext-Revisao.js](Secao-25-Bonus-Javascript-Essencial/432-ESNext-Revisao.js)
+
+```javascript
+// Arrow function
+const soma = (a, b) => a + b;
+console.log(soma(2,3))
+
+// Arrow FUnction (this)
+const lexico1 = () => console.log(this === exports); // true
+const lexico2 = lexico1.bind({}); // true
+lexico1()
+lexico2();
+
+// param default
+function log(texto = 'Node') {
+    console.log(texto);
+}
+
+log(); // Node
+log(undefined);// Node
+log(null);// null
+log('MUDOU'); // MUDOU
+
+// operador rest
+
+function total(...numeros) {
+    let total = 0
+    numeros.forEach(n => total += n);
+    return total;
+}
+
+console.log(total(2, 4, 6));
+```
+
 433. ESNext: Revisão #03
      
+- [Secao-25-Bonus-Javascript-Essencial/433-ESNext-Revisao.js](Secao-25-Bonus-Javascript-Essencial/433-ESNext-Revisao.js)
+
+```javascript
+// ES8: Object. values / Object.entries
+const obj = {a: 1, b: 2, c: 3}
+console.log(Object.values(obj)) //     [ 1, 2, 3 ]
+console.log(Object.entries(obj))//     [ [ 'a', 1 ], [ 'b', 2 ], [ 'c', 3 ] ]
+
+
+//Melhorias na Notação Literal
+const nome = 'JOSE';
+const pessoa = {
+    nome,
+    ola() {
+        return "Olá!"
+    }
+}
+console.log(pessoa.nome, pessoa.ola()); // JOSE Olá!
+
+//class
+class Animal {
+
+}
+
+class Cachorro extends Animal {
+    falar(){
+        return 'Au au au ';
+    }
+}
+
+console.log(new Cachorro().falar()); // Au au au
+
+```
+
 434. ESNext: Operador Rest/Spread
      
 435. Promises
