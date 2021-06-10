@@ -135,6 +135,232 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 ## <a name="parte2">2 - Seção 2: Usando VueJS para Interagir com a DOM </a>
 
+13. Introdução do Módulo
+
+14. Entendendo VueJS Templates
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/14-EntendendoVueJSTemplates.js.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/14-EntendendoVueJSTemplates.js.html)
+
+```vue
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 2</title>
+</head>
+<body>
+
+<div id="app">
+    <p>{{titulo}}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando Vue JS 2 !'
+        }
+    });
+</script>
+</body>
+</html>
+```
+
+15. Sintaxe de Template e Instância VueJS Trabalhando Juntos
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/15-SintaxedeTemplateeInstanciaVueJSTrabalhandoJuntos.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/15-SintaxedeTemplateeInstanciaVueJSTrabalhandoJuntos.html)
+
+```vue
+<div id="app">
+    <p>{{titulo}}</p>
+    <p>{{saudacao()}}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando Vue JS 2 !'
+        }, methods: {
+            saudacao: function (){
+                return 'Boa Semana'; // sempre retorna string para o HTML
+            }
+        }
+    });
+</script>
+```
+16. Acessando Dados na Instância VueJS
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/16-AcessandoDadosnaInstanciaVueJS.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/16-AcessandoDadosnaInstanciaVueJS.html)
+
+```vue
+
+<div id="app">
+  <p>{{titulo}}</p>
+  <p>{{saudacao()}}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      titulo: 'Usando Vue JS 2 !'
+    }, methods: {
+      saudacao: function (){
+        console.log(this)
+        /* (...)
+          saudacao: ƒ ()
+          titulo: "Usando Vue JS 2 !"
+        */
+        return this.titulo;
+      }
+    }
+  });
+</script>
+```
+
+17. Binding de Atributos
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/17-BindingdeAtributos.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/17-BindingdeAtributos.html)
+
+```vue
+
+<div id="app">
+  <p>{{titulo}}</p>
+  <p>{{saudacao()}}</p>
+  <a v-bind:href="link">Blog José Malcher Jr.</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      titulo: 'Usando Vue JS 2 !',
+      link: 'https://josemalcher.net'
+    }, methods: {
+      saudacao: function (){
+        return this.titulo;
+      }
+    }
+  });
+</script>
+```
+
+18. Entendendo e Usando Diretivas
+
+19. Evitando Re-Renderização com v-once
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/19-Evitando-Re-Renderizacao-com-v-once.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/19-Evitando-Re-Renderizacao-com-v-once.html)
+
+```vue
+
+<div id="app">
+  <p v-once>{{titulo}}</p>
+  <p>{{saudacao()}}</p>
+  <a v-bind:href="link">Blog José Malcher Jr.</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      titulo: 'Titulo com V-Once',
+      link: 'https://josemalcher.net'
+    }, methods: {
+      saudacao: function (){
+        this.titulo = 'BOM DIA!!! (titulo alterado junto com saudação)'
+        return this.titulo;
+      }
+    }
+  });
+</script>
+```
+
+
+20. Como Imprimir HTML Puro
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/20-Como-Imprimir-HTML-Puro.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/20-Como-Imprimir-HTML-Puro.html)
+
+```vue
+
+<div id="app">
+  <p v-once>{{titulo}}</p>
+  <p>{{saudacao()}}</p>
+  <a v-bind:href="link">Blog José Malcher Jr.</a>
+
+  <p v-html="linkHTML"></p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      titulo: 'Titulo com V-Once',
+      link: 'https://josemalcher.net',
+      linkHTML: '<a href="https://josemalcher.net">José Malcher Jr. Blog</a>'
+    }, methods: {
+      saudacao: function (){
+        this.titulo = 'BOM DIA!!! (titulo alterado junto com saudação)'
+        return this.titulo;
+      }
+    }
+  });
+</script>
+```
+
+21. Hora de Praticar - Template
+
+22. Hora de Praticar - Template (Resposta)
+
+23. Escutando Eventos
+
+24. Obtendo Dados do Evento
+
+25. Passando nosso próprios Argumentos com Eventos
+
+26. Modificadores de Eventos
+
+27. Eventos de Teclado
+
+28. Hora de Praticar - Eventos
+
+29. Hora de Praticar - Eventos (Resposta)
+
+30. Código JavaScript no Template
+
+31. Usando Two-Way-Binding
+
+32. Propriedades Computadas
+
+33. Monitorando as Mudanças
+
+34. Sintaxe Reduzida (Shorthands)
+
+35. Hora de Praticar - Propriedades Reativas
+
+36. Hora de Praticar - Propriedades Reativas (Resposta)
+
+37. Estilo Dinâmico e Classe CSS #01
+
+38. Estilo Dinâmico e Classe CSS #02
+
+39. Estilo Dinâmico e Classe CSS #03
+
+40. Estilo Dinâmico Sem Classes CSS
+
+41. Hora de Praticar: Estilo
+
+42. Hora de Praticar: Estilo (Resposta)
+
+43. Conclusão do Módulo
+
+44. Recursos do Módulo & Links Úteis
 
 
 [Voltar ao Índice](#indice)
