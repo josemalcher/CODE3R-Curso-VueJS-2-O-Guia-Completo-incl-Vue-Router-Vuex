@@ -922,6 +922,23 @@ console.log(grupoFinal); // [ 'Maria', 'João', 'Pedro', 'Goria', 'Rafaela' ]
 ```
      
 435. Promises
+
+- [Secao-25-Bonus-Javascript-Essencial/435-Promises.js](Secao-25-Bonus-Javascript-Essencial/435-Promises.js)
+
+```javascript
+function falarDepoisDe(segundos, frase) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(frase)
+        }, segundos * 1000);
+    })
+}
+
+falarDepoisDe(3, 'Que Top')
+    .then(frase => frase.concat('?!?'))
+    .then(outrafrase => console.log(outrafrase))
+    .catch(e => console.log(e))
+```
      
 436. Usando Callbacks Aninhadas
      
