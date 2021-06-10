@@ -719,11 +719,82 @@ console.log(produtos.filter2(caro).filter2(fragil));
 ```
 
 428. Array: Reduce #01
-     
+
+- [Secao-25-Bonus-Javascript-Essencial/428-Array-Reduce.js](Secao-25-Bonus-Javascript-Essencial/428-Array-Reduce.js)
+
+```javascript
+const alunos = [
+    {nome: 'jose', nota: 10, bolsista: false},
+    {nome: 'maria', nota: 5, bolsista: false},
+    {nome: 'carlos', nota: 7, bolsista: true},
+    {nome: 'fabio', nota: 4, bolsista: false},
+    {nome: 'lorena', nota: 9, bolsista: true},
+]
+
+console.log(alunos.map(a => a.nota));
+
+const resultado = alunos.map(a => a.nota).reduce(function (acumulador, atual) {
+    console.log(acumulador, atual);
+    return acumulador + atual
+}, 0); // valor inicial do acumulador
+
+console.log(resultado)
+/*
+[ 10, 5, 7, 4, 9 ]
+0 10
+10 5
+15 7
+22 4
+26 9
+35
+*/
+```
+
 429. Array: Reduce #02
-     
+
+- [Secao-25-Bonus-Javascript-Essencial/429-Array-Reduce.js](Secao-25-Bonus-Javascript-Essencial/429-Array-Reduce.js)
+
+```javascript
+const alunos = [
+    {nome: 'jose', nota: 10, bolsista: false},
+    {nome: 'maria', nota: 5, bolsista: false},
+    {nome: 'carlos', nota: 7, bolsista: true},
+    {nome: 'fabio', nota: 4, bolsista: false},
+    {nome: 'lorena', nota: 9, bolsista: true},
+]
+
+// Desafio 1: todos os alunos são bolsistas?
+
+const todosBolsistas = (resultado, bolsistas) => resultado && bolsistas
+console.log(alunos.map(a => a.bolsista).reduce(todosBolsistas)); // false
+
+// Desafio 2: Algum aluno é bolsista?
+const algumBolsistas = (resultado, bolsista) => resultado || bolsista;
+console.log(alunos.map(a => a.bolsista).reduce(algumBolsistas))// true
+```
+
 430. Array: Reduce #03
      
+- [Secao-25-Bonus-Javascript-Essencial/430-Array-Reduce.js](Secao-25-Bonus-Javascript-Essencial/430-Array-Reduce.js)
+
+```javascript
+Array.prototype.reduce2 = function (callback, valorInicial) {
+    const indiceInicial = valorInicial ? 0 : 1;
+    let acumulador = valorInicial || this[0]
+
+    for (let i = indiceInicial; i < this.length; i++) {
+        acumulador = callback(acumulador, this[i], i, this);
+    }
+    return acumulador;
+};
+
+const soma = (total, valor) => total + valor;
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(numeros.reduce2(soma, 10));
+
+//
+```
+
 431. ESNext: Revisão #01
      
 432. ESNext: Revisão #02
