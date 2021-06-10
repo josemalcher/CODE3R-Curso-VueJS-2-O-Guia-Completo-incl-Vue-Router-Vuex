@@ -590,11 +590,78 @@ console.log(typeof ferrari) //object
 ```
      
 423. Array: Map #01
-     
+
+- [Secao-25-Bonus-Javascript-Essencial/423-Array-Map.js](Secao-25-Bonus-Javascript-Essencial/423-Array-Map.js)
+
+```javascript
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// For com propósito
+let resultado = nums.map(function (value) {
+    return value * 2;
+});
+
+console.log(resultado);
+
+const soma10 = e => e + 10;
+const triplo = e => e * 3;
+const paraDinheiro = e => `R$ ${parseFloat(e).toFixed(2).replace('.', ',')}`;
+
+resultado = nums.map(soma10).map(triplo).map(paraDinheiro)
+console.log(resultado);
+```
+
 424. Array: Map #02
-     
+
+- [Secao-25-Bonus-Javascript-Essencial/423-Array-Map.js](Secao-25-Bonus-Javascript-Essencial/423-Array-Map.js)
+
+```javascript
+const carrinho = [
+    '{"nome": "borracha"         , "preco": 3.45}',
+    '{"nome": "lapis"            , "preco": 0.45}',
+    '{"nome": "Kit lapis de cor" , "preco": 10.45}',
+    '{"nome": "Caneta"           , "preco": 1.45}',
+]
+
+// Retornar um array apenas com os preços
+
+const paraObjeto = json => JSON.parse(json);
+const apenasPreco = produto => produto.preco;
+
+const resultado = carrinho.map(paraObjeto).map(apenasPreco);
+
+console.log(resultado);
+```
+
 425. Array: Map #03
-     
+
+- [Secao-25-Bonus-Javascript-Essencial/425-Array-Map.js](Secao-25-Bonus-Javascript-Essencial/425-Array-Map.js)
+
+```javascript
+Array.prototype.map2 = function (callback) {
+    const newArray = [];
+    for (let i = 0; i < this.length; i++) {
+        newArray.push(callback(this[i], i, this));
+    }
+};
+
+const carrinho = [
+    '{"nome": "borracha"         , "preco": 3.45}',
+    '{"nome": "lapis"            , "preco": 0.45}',
+    '{"nome": "Kit lapis de cor" , "preco": 10.45}',
+    '{"nome": "Caneta"           , "preco": 1.45}',
+]
+
+// Retornar um array apenas com os preços
+
+const paraObjeto = json => JSON.parse(json);
+const apenasPreco = produto => produto.preco;
+
+const resultado = carrinho.map2(paraObjeto).map2(apenasPreco);
+
+console.log(resultado);
+```
+
 426. Array: Filter #01
      
 427. Array: Filter #02
