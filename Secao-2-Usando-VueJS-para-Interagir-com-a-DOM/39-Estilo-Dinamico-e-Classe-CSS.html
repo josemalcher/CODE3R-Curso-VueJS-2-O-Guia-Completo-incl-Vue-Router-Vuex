@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 2</title>
+</head>
+<style>
+    .caixas {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .demo {
+        width: 100px;
+        height: 100px;
+        background: gray;
+    }
+
+    .c1 {
+        background-color: red;
+    }
+
+    .c2 {
+        background-color: green;
+    }
+
+    .c3 {
+        background-color: blue
+    }
+    .girar{
+        transform: rotate(45deg);
+    }
+</style>
+<body>
+
+<div id="app">
+    <div class="caixas">
+        <div class="demo" :class="estilo1"
+             @click="aplicarC1 = !aplicarC1"></div>
+        <div class="demo" :class="estilo1"></div>
+        <div class="demo" :class="[classCSS, {girar: aplicarGirar }]"></div>
+    </div>
+    <hr>
+    <input type="text" v-model="classCSS">
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            aplicarC1: false,
+            classCSS: 'c1',
+            aplicarGirar: true
+
+        },
+        computed: {
+            estilo1() {
+                return {
+                    c1: this.aplicarC1,
+                    c2: !this.aplicarC1
+                }
+            }
+        }
+
+    });
+</script>
+</body>
+</html>

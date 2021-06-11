@@ -934,11 +934,241 @@ new Vue({
 
 37. Estilo Dinâmico e Classe CSS #01
 
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/37-Estilo-Dinamico-e-Classe-CSS.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/37-Estilo-Dinamico-e-Classe-CSS.html)
+
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 2</title>
+</head>
+<style>
+    #app {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .demo {
+        width: 100px;
+        height: 100px;
+        background: gray;
+    }
+
+    .c1 {
+        background-color: red;
+    }
+
+    .c2 {
+        background-color: black;
+    }
+
+    .c3 {
+        background-color: blue
+    }
+</style>
+<body>
+
+<div id="app">
+    <div class="demo" :class="{c1:aplicarC1}" @click="aplicarC1 = !aplicarC1"></div>
+    <div class="demo"></div>
+    <div class="demo"></div>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            aplicarC1: false
+        }
+
+    });
+</script>
+</body>
+</html>
+```
+
 38. Estilo Dinâmico e Classe CSS #02
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/38-Estilo-Dinamico-e-Classe-CSS.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/38-Estilo-Dinamico-e-Classe-CSS.html)
+
+```vue
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seção 2</title>
+</head>
+<style>
+  #app {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .demo {
+    width: 100px;
+    height: 100px;
+    background: gray;
+  }
+
+  .c1 {
+    background-color: red;
+  }
+
+  .c2 {
+    background-color: green;
+  }
+
+  .c3 {
+    background-color: blue
+  }
+</style>
+<body>
+
+<div id="app">
+  <div class="demo" :class="estilo1"
+       @click="aplicarC1 = !aplicarC1"></div>
+  <div class="demo"></div>
+  <div class="demo"></div>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      aplicarC1: false
+    },
+    computed:{
+      estilo1(){
+        return {
+          c1: this.aplicarC1,
+          c2: !this.aplicarC1
+        }
+      }
+    }
+
+  });
+</script>
+</body>
+</html>
+```
 
 39. Estilo Dinâmico e Classe CSS #03
 
+- []()
+
+```vue
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 2</title>
+</head>
+<style>
+    .caixas {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .demo {
+        width: 100px;
+        height: 100px;
+        background: gray;
+    }
+
+    .c1 {
+        background-color: red;
+    }
+
+    .c2 {
+        background-color: green;
+    }
+
+    .c3 {
+        background-color: blue
+    }
+    .girar{
+        transform: rotate(45deg);
+    }
+</style>
+<body>
+
+<div id="app">
+    <div class="caixas">
+        <div class="demo" :class="estilo1"
+             @click="aplicarC1 = !aplicarC1"></div>
+        <div class="demo" :class="estilo1"></div>
+        <div class="demo" :class="[classCSS, {girar: aplicarGirar }]"></div>
+    </div>
+    <hr>
+    <input type="text" v-model="classCSS">
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            aplicarC1: false,
+            classCSS: 'c1',
+            aplicarGirar: true
+
+        },
+        computed: {
+            estilo1() {
+                return {
+                    c1: this.aplicarC1,
+                    c2: !this.aplicarC1
+                }
+            }
+        }
+
+    });
+</script>
+</body>
+</html>
+```
+
 40. Estilo Dinâmico Sem Classes CSS
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/40-Estilo-Dinamico-Sem-Classes-CSS.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/40-Estilo-Dinamico-Sem-Classes-CSS.html)
+
+```vue
+
+<div id="app">
+    <div class="caixas">
+        <div class="demo" :style="{backgroundColor: cor}"></div>
+        <div class="demo" :style="[meuEstilo, {height: altura}]"></div>
+        <div class="demo"></div>
+    </div>
+    <hr>
+    <input type="text" v-model="cor">
+    <input type="text" v-model="largura">
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            cor: 'red',
+            largura: 100,
+            altura: 50
+        },
+        computed: {
+            meuEstilo(){
+                return{
+                    backgroundColor: this.cor,
+                    width: this.largura + 'px'
+                }
+            }
+        }
+
+    });
+</script>
+```
 
 41. Hora de Praticar: Estilo
 
