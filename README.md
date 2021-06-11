@@ -682,9 +682,121 @@ new Vue({
 
 30. Código JavaScript no Template
 
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/30-CodigoJavaScriptnoTemplate.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/30-CodigoJavaScriptnoTemplate.html)
+
+```vue
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 2</title>
+</head>
+<body>
+
+<div id="app">
+    <p>{{contador}}</p>
+    <p>{{contador > 10 ? 'MAIOR que 10' : 'Menor que 10'}}</p>
+    <button v-on:click="somar(5, $event)">SOMAR 1</button>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0,
+        },
+        methods: {
+            somar() {
+                this.contador++
+            }
+        }
+    });
+</script>
+</body>
+</html>
+```
+
 31. Usando Two-Way-Binding
 
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/31-Usando-Two-Way-Binding.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/31-Usando-Two-Way-Binding.html)
+
+```vue
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 2</title>
+</head>
+<body>
+
+<div id="app">
+    <p>{{titulo}}</p>
+    <input type="text" v-model="titulo">
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Título Principal',
+        }
+    });
+</script>
+</body>
+</html>
+```
+
 32. Propriedades Computadas
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/32-PropriedadesComputadas.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/32-PropriedadesComputadas.html)
+
+```vue
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 2</title>
+</head>
+<body>
+
+<div id="app">
+    <button v-on:click="aumentar">Aumentar</button>
+    <button v-on:click="contador2++">Aumentar 2</button>
+    <button v-on:click="diminur">Diminuir</button>
+    <p>Contador: {{ contador }} | {{ contador2}}</p>
+    <p>Resultado: {{ resultado }}</p>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0,
+            contador2: 0,
+        },
+        computed: {
+            resultado() {
+                console.log('Método computed resultado chamado....')
+                return this.contador >= 5 ? 'MAIOR ou IGUAL a 5' : 'Menor que 5'
+            }
+        },
+        methods: {
+            aumentar() {
+                this.contador++
+
+            },
+            diminur() {
+                this.contador--
+            }
+        }
+    });
+</script>
+</body>
+</html>
+```
 
 33. Monitorando as Mudanças
 
