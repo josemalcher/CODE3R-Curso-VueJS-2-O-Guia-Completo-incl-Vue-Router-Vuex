@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seção 2</title>
+</head>
+<body>
+
+<div id="app">
+  <p>{{contador}}</p>
+  <button @click="somar">SOMAR 1</button>
+  <input type="text" :value="contador">
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      contador: 0
+    },
+    methods: {
+      somar(){
+        this.contador++
+      }
+    }
+  });
+</script>
+</body>
+</html>

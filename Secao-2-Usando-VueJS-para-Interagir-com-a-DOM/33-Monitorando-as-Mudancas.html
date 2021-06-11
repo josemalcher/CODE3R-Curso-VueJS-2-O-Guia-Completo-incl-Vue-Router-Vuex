@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 2</title>
+</head>
+<body>
+
+<div id="app">
+    <button v-on:click="aumentar">Aumentar</button>
+    <button v-on:click="contador2++">Aumentar 2</button>
+    <button v-on:click="diminur">Diminuir</button>
+    <p>Contador: {{ contador }} | {{ contador2}}</p>
+    <p>Resultado: {{ resultado }}</p>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0,
+            contador2: 0,
+        },
+        computed: {
+            resultado() {
+                console.log('Método computed resultado chamado....')
+                return this.contador >= 5 ? 'MAIOR ou IGUAL a 5' : 'Menor que 5'
+            }
+        },
+        watch: {
+            contador(){ // mesmo nome da propriedade
+                setTimeout(() => {
+                    this.contador = 0;
+                }, 2000)
+            }
+        },
+
+        methods: {
+            aumentar() {
+                this.contador++
+
+            },
+            diminur() {
+                this.contador--
+            }
+        }
+    });
+</script>
+</body>
+</html>

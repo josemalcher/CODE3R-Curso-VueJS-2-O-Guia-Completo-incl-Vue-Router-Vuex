@@ -800,11 +800,137 @@ new Vue({
 
 33. Monitorando as Mudanças
 
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/33-Monitorando-as-Mudancas.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/33-Monitorando-as-Mudancas.html)
+
+```vue
+
+<div id="app">
+    <button v-on:click="aumentar">Aumentar</button>
+    <button v-on:click="contador2++">Aumentar 2</button>
+    <button v-on:click="diminur">Diminuir</button>
+    <p>Contador: {{ contador }} | {{ contador2}}</p>
+    <p>Resultado: {{ resultado }}</p>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0,
+            contador2: 0,
+        },
+        computed: {
+            resultado() {
+                console.log('Método computed resultado chamado....')
+                return this.contador >= 5 ? 'MAIOR ou IGUAL a 5' : 'Menor que 5'
+            }
+        },
+        watch: {
+            contador(){ // mesmo nome da propriedade
+                setTimeout(() => {
+                    this.contador = 0;
+                }, 2000)
+            }
+        },
+
+        methods: {
+            aumentar() {
+                this.contador++
+
+            },
+            diminur() {
+                this.contador--
+            }
+        }
+    });
+</script>
+```
+
 34. Sintaxe Reduzida (Shorthands)
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/34-Sintaxe-Reduzida-Shorthands.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/34-Sintaxe-Reduzida-Shorthands.html)
+
+```vue
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seção 2</title>
+</head>
+<body>
+
+<div id="app">
+  <p>{{contador}}</p>
+  <button @click="somar">SOMAR 1</button>
+  <input type="text" :value="contador">
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      contador: 0
+    },
+    methods: {
+      somar(){
+        this.contador++
+      }
+    }
+  });
+</script>
+</body>
+</html>
+```
 
 35. Hora de Praticar - Propriedades Reativas
 
+```javascript
+<script src="https://unpkg.com/vue"></script>
+
+<div id="desafio">
+    <!-- 1) Exibir em "resultado" o texto 'Valor Diferente' enquanto
+        "valor" for diferente de 37 - "valor" é alterado pelos botões.
+        Mostrar 'Valor Igual' quando "valor" for igual a 37 -->
+        
+    <!-- 2) Monitorar as mudança de "resultado" e reiniciar "valor"
+        para 0 depois de 5 segundos (dica: setTimeout(..., 5000) -->            
+    <div>
+        <p>Valor atual: {{ valor }}</p>
+        <button @click="valor += 5">Somar 5</button>
+        <button @click="valor += 1">Somar 1</button>
+        <p>{{ resultado }}</p>
+    </div>
+
+</div>
+<script src="app.js"></script>
+```
+
 36. Hora de Praticar - Propriedades Reativas (Resposta)
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/35-Hora-de-Praticar-Propriedades-Reativas/app.js](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/35-Hora-de-Praticar-Propriedades-Reativas/app.js)
+
+```javascript
+new Vue({
+    el: '#desafio',
+    data: {
+        valor: 0
+    },
+    computed:{
+        resultado(){
+            return this.valor == 37 ? 'Valor Igual' : 'Valor diferente';
+        }
+    },
+    watch: {
+        resultado(){
+            setTimeout(()=>{
+                this.valor = 0
+            }, 5000)
+        }
+    }
+});
+```
 
 37. Estilo Dinâmico e Classe CSS #01
 
