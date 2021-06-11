@@ -1172,7 +1172,177 @@ new Vue({
 
 41. Hora de Praticar: Estilo
 
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo)
+
+```vue
+<link rel="stylesheet" href="styles.css">
+<script src="https://unpkg.com/vue"></script>
+
+<div id="desafio">
+	<!-- 1) Iniciar a execução do efeito usando botão. 
+    O efeito deve alternadamente trocar as classes "destaque" e
+    "encolher" para cada chamada de setInteval. Use a div abaixo
+	com id "efeito" para associar as classes CSS. -->
+	<h2>#01</h2>
+	<div>
+		<button @click="iniciarEfeito">Iniciar Efeito</button>
+		<div id="efeito"></div>
+	</div>
+	
+	<!-- 2) Crie duas classes CSS e associe a div usando a
+		sintaxe de array -->
+	<h2>#02</h2>
+	<div>Estou sem classe CSS :(</div>
+
+	<!-- 3) Aplique na div abaixo a classe informada pelo usuário
+		(crie classe CSS de exemplo). -->
+	<h2>#03</h2>
+	<div>
+		<input type="text">
+		<div></div>
+	</div>
+
+	<!-- 4) Aplique na div abaixo a classe informada pelo usuário e
+    outra classe usando o valor true/false (crie classes CSS de exemplo). -->
+	<h2>#04</h2>
+	<div>
+		<input type="text">
+		<input type="text">
+		<div></div>
+	</div>
+
+	<!-- 5) Repita 3) mas utilizando estilos ao invés de classes CSS.
+    Associe os estilos a div abaixo  -->
+	<h2>#05</h2>
+	<div>
+		<input type="text">
+		<div></div>
+	</div>
+
+	<!-- 6) Crie uma barra de progresso simples com setInterval 
+    e binding de estilo. -->
+	<h2>#06</h2>
+	<div>
+		<button @click="iniciarProgresso">Iniciar</button>
+		<div></div>
+	</div>
+</div>
+<script src="app.js"></script>
+```
+
 42. Hora de Praticar: Estilo (Resposta)
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo/index.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo/index.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo/app.js](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo/app.js)
+
+```vue
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/vue"></script>
+
+<div id="desafio">
+  <!-- 1) Iniciar a execução do efeito usando botão.
+  O efeito deve alternadamente trocar as classes "destaque" e
+  "encolher" para cada chamada de setInteval. Use a div abaixo
+  com id "efeito" para associar as classes CSS. -->
+  <h2>#01</h2>
+  <div>
+    <button @click="iniciarEfeito">Iniciar Efeito</button>
+    <div id="efeito" :class="classe1"></div>
+  </div>
+
+  <!-- 2) Crie duas classes CSS e associe a div usando a
+      sintaxe de array -->
+  <h2>#02</h2>
+  <div :class="[{perigo}, 'quadrado']">Estou sem classe CSS :(</div>
+
+  <!-- 3) Aplique na div abaixo a classe informada pelo usuário
+      (crie classe CSS de exemplo). -->
+  <h2>#03</h2>
+  <div>
+    <input type="text" v-model="classe3">
+    <div :class="classe3"></div>
+  </div>
+
+  <!-- 4) Aplique na div abaixo a classe informada pelo usuário e
+  outra classe usando o valor true/false (crie classes CSS de exemplo). -->
+  <h2>#04</h2>
+  <div>
+    <input type="text" v-model="classe4">
+    <input type="text" @input="setPerigo">
+    <div :class="[classe4, {perigo}]"></div>
+  </div>
+
+  <!-- 5) Repita 3) mas utilizando estilos ao invés de classes CSS.
+  Associe os estilos a div abaixo  -->
+  <h2>#05</h2>
+  <div>
+    <input type="text" v-model="cor5">
+    <div :style="[estilo5, {backgroundColor: cor5}]"></div>
+  </div>
+
+  <!-- 6) Crie uma barra de progresso simples com setInterval
+  e binding de estilo. -->
+  <h2>#06</h2>
+  <div>
+    <button @click="iniciarProgresso">Iniciar</button>
+    <div class="barra-progresso">
+      <div class="progresso" :style="{width}"></div>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
+```
+
+```javascript
+new Vue({
+    el: '#desafio',
+    data: {
+        classe1: 'destaque',
+        perigo: true,
+        classe3: '',
+        classe4: '',
+        cor5: '',
+        estilo5: {
+            width: '100px',
+            height: '100px',
+        },
+        width: '0',
+    },
+    methods: {
+        iniciarEfeito() {
+            setInterval(() => {
+                this.classe1 = this.classe1 == 'destaque'
+                    ? 'encolher' : 'destaque'
+            }, 1000)
+        },
+        iniciarProgresso() {
+            let valor = 0
+            const temporizador = setInterval(() => {
+                valor += 5
+                this.width = `${valor}%`
+                if(valor == 100) clearInterval(temporizador)
+            }, 500)
+        },
+        setPerigo(event) {
+            if(event.target.value == "true") {
+                this.perigo = true
+            } else if(event.target.value == "false") {
+                this.perigo = false
+            }
+        }
+    }
+})
+
+```
 
 43. Conclusão do Módulo
 
