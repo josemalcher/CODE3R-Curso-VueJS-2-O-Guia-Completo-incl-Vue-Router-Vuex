@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 2</title>
+</head>
+<body>
+
+<div id="app">
+    <p>{{contador}}</p>
+    <button v-on:click="somar(5, $event)">SOMAR 1</button>
+    <p v-on:mouseover="atualizaXY">Mouse: {{ x }} - {{ y }}
+        <span v-on:mousemove.stop.prevent>PARAR EFEITO AQUI!</span>
+    </p>
+    <a v-on:click="naoNavegar" href="https://google.com">GOOGLE</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0,
+            x: 0,
+            y: 0
+        },
+        methods: {
+            somar(passo, ev) {
+                console.log(passo, ev) // 5 MouseEvent {isTrusted: true, screenX: 1446, screenY: -942, (...)
+                this.contador += passo
+            },
+            atualizaXY(event) {
+                this.x = event.clientX
+                this.y = event.clientY
+            },
+            naoNavegar(event) {
+                console.log('Não Navegar aqui')
+                event.preventDefault()
+            },
+            parar(event) {
+                event.stopPropagation()
+            }
+
+        }
+    });
+</script>
+</body>
+</html>

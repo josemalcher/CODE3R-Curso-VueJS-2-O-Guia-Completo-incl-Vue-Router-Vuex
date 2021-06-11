@@ -425,9 +425,120 @@ new Vue({
 
 24. Obtendo Dados do Evento
 
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/24-ObtendoDadosdoEvento.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/24-ObtendoDadosdoEvento.html)
+
+```vue
+
+<div id="app">
+    <p>{{contador}}</p>
+    <button v-on:click="somar">SOMAR 1</button>
+    <p v-on:mouseover="atualizaXY">Mouse: {{ x }} - {{ y }}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0,
+            x: 0,
+            y: 0
+        },
+        methods: {
+            somar(){
+                this.contador++
+            },
+            atualizaXY(event){
+                this.x = event.clientX
+                this.y = event.clientY
+            }
+
+        }
+    });
+</script>
+```
+
 25. Passando nosso próprios Argumentos com Eventos
 
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/25-PassandonossopropriosArgumentoscomEventos.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/25-PassandonossopropriosArgumentoscomEventos.html)
+
+```vue
+
+<div id="app">
+  <p>{{contador}}</p>
+  <button v-on:click="somar(5, $event)">SOMAR 1</button>
+  <p v-on:mouseover="atualizaXY">Mouse: {{ x }} - {{ y }}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      contador: 0,
+      x: 0,
+      y: 0
+    },
+    methods: {
+      somar(passo, ev){
+        console.log(passo, ev) // 5 MouseEvent {isTrusted: true, screenX: 1446, screenY: -942, (...)
+        this.contador += passo
+      },
+      atualizaXY(event){
+        this.x = event.clientX
+        this.y = event.clientY
+      }
+
+    }
+  });
+</script>
+```
+
 26. Modificadores de Eventos
+
+- [https://vuejs.org/v2/guide/events.html#Event-Modifiers](https://vuejs.org/v2/guide/events.html#Event-Modifiers)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/26-ModificadoresdeEventos.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/26-ModificadoresdeEventos.html)
+
+```vue
+<div id="app">
+    <p>{{contador}}</p>
+    <button v-on:click="somar(5, $event)">SOMAR 1</button>
+    <p v-on:mouseover="atualizaXY">Mouse: {{ x }} - {{ y }}
+        <span v-on:mousemove.stop.prevent>PARAR EFEITO AQUI!</span>
+    </p>
+    <a v-on:click="naoNavegar" href="https://google.com">GOOGLE</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0,
+            x: 0,
+            y: 0
+        },
+        methods: {
+            somar(passo, ev) {
+                console.log(passo, ev) // 5 MouseEvent {isTrusted: true, screenX: 1446, screenY: -942, (...)
+                this.contador += passo
+            },
+            atualizaXY(event) {
+                this.x = event.clientX
+                this.y = event.clientY
+            },
+            naoNavegar(event) {
+                console.log('Não Navegar aqui')
+                event.preventDefault()
+            },
+            parar(event) {
+                event.stopPropagation()
+            }
+
+        }
+    });
+</script>
+```
 
 27. Eventos de Teclado
 
