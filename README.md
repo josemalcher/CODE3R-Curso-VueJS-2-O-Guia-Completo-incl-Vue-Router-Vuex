@@ -542,9 +542,143 @@ new Vue({
 
 27. Eventos de Teclado
 
+-[https://vuejs.org/v2/guide/events.html#Key-Modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers)
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/28-Hora-de-Praticar-Eventos.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/28-Hora-de-Praticar-Eventos.html)
+
+```vue
+<div id="app">
+<p>{{contador}}</p>
+<button v-on:click="somar(5, $event)">SOMAR 1</button>
+<p v-on:mouseover="atualizaXY">Mouse: {{ x }} - {{ y }}
+  <span v-on:mousemove.stop.prevent>PARAR EFEITO AQUI!</span>
+</p>
+<a v-on:click="naoNavegar" href="https://google.com">GOOGLE</a>
+
+<input type="text" v-on:keyup.enter.alt="exibirAlerta">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    contador: 0,
+    x: 0,
+    y: 0
+  },
+  methods: {
+    somar(passo, ev) {
+      console.log(passo, ev) // 5 MouseEvent {isTrusted: true, screenX: 1446, screenY: -942, (...)
+      this.contador += passo
+    },
+    atualizaXY(event) {
+      this.x = event.clientX
+      this.y = event.clientY
+    },
+    naoNavegar(event) {
+      console.log('Não Navegar aqui')
+      event.preventDefault()
+    },
+    exibirAlerta(){
+      console.log('ENTROU COM ENTER + ALT')
+    },
+    parar(event) {
+      event.stopPropagation()
+    }
+
+  }
+});
+</script>
+
+```
+
 28. Hora de Praticar - Eventos
 
+```vue
+<script src="https://unpkg.com/vue"></script>
+
+<div id="desafio">
+    <!-- 1) Exiba um alert quando o botão for clicado -->
+    <div>
+        <button>Exibir Alerta</button>
+    </div>
+    
+    <!-- 2) Escute o evento "keydown" e armazene o valor na propriedade
+        data (dica: event.target.value) -->
+    <div>
+        <input type="text">
+        <p>{{ valor }}</p>
+    </div>
+    
+    <!-- 3) Ajuste o exemplo 2 para disparar o evento "keydown" somente
+        quando a tecla for ENTER -->
+    <div>
+        <input type="text">
+        <p>{{ valor }}</p>
+    </div>
+</div>
+<script src="app.js"></script>
+```
+
 29. Hora de Praticar - Eventos (Resposta)
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/29-HoradePraticar-Eventos/index.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/29-HoradePraticar-Eventos/index.html)
+
+```vue
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://unpkg.com/vue"></script>
+
+<div id="desafio">
+    <!-- 1) Exiba um alert quando o botão for clicado -->
+    <div>
+        <button v-on:click="exibirAlerta">Exibir Alerta</button>
+    </div>
+
+    <!-- 2) Escute o evento "keyup" e armazene o valor na propriedade
+        data (dica: event.target.value) -->
+    <div>
+        <input type="text" v-on:keyup="valor = $event.target.value">
+        <p>{{ valor }}</p>
+    </div>
+
+    <!-- 3) Ajuste o exemplo 2 para disparar o evento "keydown" somente
+        quando a tecla for ENTER -->
+    <div>
+        <input type="text" v-on:keydown.enter="valor = $event.target.value">
+        <input type="text" v-on:keydown.enter="alterarValor">
+        <p>{{ valor }}</p>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
+```
+
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/29-HoradePraticar-Eventos/app.js](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/29-HoradePraticar-Eventos/app.js)
+
+```javascript
+new Vue({
+    el: '#desafio',
+    data: {
+        valor: ''
+    },
+    methods: {
+        exibirAlerta() {
+            alert('Estou Alertando AGORA!!');
+        },
+        alterarValor(event) {
+            this.valor = event.target.value;
+        }
+    }
+})
+```
 
 30. Código JavaScript no Template
 
