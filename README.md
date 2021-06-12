@@ -139,7 +139,7 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 14. Entendendo VueJS Templates
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/14-EntendendoVueJSTemplates.js.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/14-EntendendoVueJSTemplates.js.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/14-EntendendoVueJSTemplates.js.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/14-EntendendoVueJSTemplates.js.html)
 
 ```vue
 <!DOCTYPE html>
@@ -169,7 +169,7 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 15. Sintaxe de Template e Instância VueJS Trabalhando Juntos
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/15-SintaxedeTemplateeInstanciaVueJSTrabalhandoJuntos.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/15-SintaxedeTemplateeInstanciaVueJSTrabalhandoJuntos.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/15-SintaxedeTemplateeInstanciaVueJSTrabalhandoJuntos.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/15-SintaxedeTemplateeInstanciaVueJSTrabalhandoJuntos.html)
 
 ```vue
 <div id="app">
@@ -193,7 +193,7 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 ```
 16. Acessando Dados na Instância VueJS
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/16-AcessandoDadosnaInstanciaVueJS.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/16-AcessandoDadosnaInstanciaVueJS.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/16-AcessandoDadosnaInstanciaVueJS.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/16-AcessandoDadosnaInstanciaVueJS.html)
 
 ```vue
 
@@ -224,7 +224,7 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 17. Binding de Atributos
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/17-BindingdeAtributos.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/17-BindingdeAtributos.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/17-BindingdeAtributos.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/17-BindingdeAtributos.html)
 
 ```vue
 
@@ -254,7 +254,7 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 19. Evitando Re-Renderização com v-once
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/19-Evitando-Re-Renderizacao-com-v-once.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/19-Evitando-Re-Renderizacao-com-v-once.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/19-Evitando-Re-Renderizacao-com-v-once.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/19-Evitando-Re-Renderizacao-com-v-once.html)
 
 ```vue
 
@@ -284,7 +284,7 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 20. Como Imprimir HTML Puro
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/20-Como-Imprimir-HTML-Puro.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/20-Como-Imprimir-HTML-Puro.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/20-Como-Imprimir-HTML-Puro.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/20-Como-Imprimir-HTML-Puro.html)
 
 ```vue
 
@@ -346,7 +346,7 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 
 22. Hora de Praticar - Template (Resposta)
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/21-HoradePraticar-Template/index.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/21-HoradePraticar-Template/index.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/21-HoradePraticar-Template/index.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/21-HoradePraticar-Template/index.html)
 
 ```vue
 <script src="https://unpkg.com/vue"></script>
@@ -376,7 +376,7 @@ VueJS é um framework Javascript fantástico p construir aplicações Frontend! 
 <script src="app.js"></script>
 ```
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/21-HoradePraticar-Template/app.js](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/21-HoradePraticar-Template/app.js)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/21-HoradePraticar-Template/app.js](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/21-HoradePraticar-Template/app.js)
 
 ```javascript
 new Vue({
@@ -398,7 +398,7 @@ new Vue({
 
 23. Escutando Eventos
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/23-Escutando-Eventos.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/23-Escutando-Eventos.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/23-Escutando-Eventos.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/23-Escutando-Eventos.html)
 
 ```vue
 
@@ -425,7 +425,7 @@ new Vue({
 
 24. Obtendo Dados do Evento
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/24-ObtendoDadosdoEvento.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/24-ObtendoDadosdoEvento.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/24-ObtendoDadosdoEvento.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/24-ObtendoDadosdoEvento.html)
 
 ```vue
 
@@ -460,7 +460,7 @@ new Vue({
 
 25. Passando nosso próprios Argumentos com Eventos
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/25-PassandonossopropriosArgumentoscomEventos.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/25-PassandonossopropriosArgumentoscomEventos.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/25-PassandonossopropriosArgumentoscomEventos.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/25-PassandonossopropriosArgumentoscomEventos.html)
 
 ```vue
 
@@ -497,7 +497,7 @@ new Vue({
 26. Modificadores de Eventos
 
 - [https://vuejs.org/v2/guide/events.html#Event-Modifiers](https://vuejs.org/v2/guide/events.html#Event-Modifiers)
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/26-ModificadoresdeEventos.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/26-ModificadoresdeEventos.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/26-ModificadoresdeEventos.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/26-ModificadoresdeEventos.html)
 
 ```vue
 <div id="app">
@@ -544,7 +544,7 @@ new Vue({
 
 -[https://vuejs.org/v2/guide/events.html#Key-Modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers)
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/28-Hora-de-Praticar-Eventos.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/28-Hora-de-Praticar-Eventos.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/28-Hora-de-Praticar-Eventos.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/28-Hora-de-Praticar-Eventos.html)
 
 ```vue
 <div id="app">
@@ -623,7 +623,7 @@ new Vue({
 
 29. Hora de Praticar - Eventos (Resposta)
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/29-HoradePraticar-Eventos/index.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/29-HoradePraticar-Eventos/index.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/29-HoradePraticar-Eventos/index.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/29-HoradePraticar-Eventos/index.html)
 
 ```vue
 <!DOCTYPE html>
@@ -661,7 +661,7 @@ new Vue({
 </html>
 ```
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/29-HoradePraticar-Eventos/app.js](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/29-HoradePraticar-Eventos/app.js)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/29-HoradePraticar-Eventos/app.js](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/29-HoradePraticar-Eventos/app.js)
 
 ```javascript
 new Vue({
@@ -682,7 +682,7 @@ new Vue({
 
 30. Código JavaScript no Template
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/30-CodigoJavaScriptnoTemplate.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/30-CodigoJavaScriptnoTemplate.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/30-CodigoJavaScriptnoTemplate.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/30-CodigoJavaScriptnoTemplate.html)
 
 ```vue
 <!DOCTYPE html>
@@ -719,7 +719,7 @@ new Vue({
 
 31. Usando Two-Way-Binding
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/31-Usando-Two-Way-Binding.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/31-Usando-Two-Way-Binding.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/31-Usando-Two-Way-Binding.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/31-Usando-Two-Way-Binding.html)
 
 ```vue
 <!DOCTYPE html>
@@ -750,7 +750,7 @@ new Vue({
 
 32. Propriedades Computadas
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/32-PropriedadesComputadas.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/32-PropriedadesComputadas.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/32-PropriedadesComputadas.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/32-PropriedadesComputadas.html)
 
 ```vue
 <!DOCTYPE html>
@@ -800,7 +800,7 @@ new Vue({
 
 33. Monitorando as Mudanças
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/33-Monitorando-as-Mudancas.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/33-Monitorando-as-Mudancas.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/33-Monitorando-as-Mudancas.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/33-Monitorando-as-Mudancas.html)
 
 ```vue
 
@@ -849,7 +849,7 @@ new Vue({
 
 34. Sintaxe Reduzida (Shorthands)
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/34-Sintaxe-Reduzida-Shorthands.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/34-Sintaxe-Reduzida-Shorthands.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/34-Sintaxe-Reduzida-Shorthands.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/34-Sintaxe-Reduzida-Shorthands.html)
 
 ```vue
 <!DOCTYPE html>
@@ -909,7 +909,7 @@ new Vue({
 
 36. Hora de Praticar - Propriedades Reativas (Resposta)
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/35-Hora-de-Praticar-Propriedades-Reativas/app.js](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/35-Hora-de-Praticar-Propriedades-Reativas/app.js)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/35-Hora-de-Praticar-Propriedades-Reativas/app.js](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/35-Hora-de-Praticar-Propriedades-Reativas/app.js)
 
 ```javascript
 new Vue({
@@ -934,7 +934,7 @@ new Vue({
 
 37. Estilo Dinâmico e Classe CSS #01
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/37-Estilo-Dinamico-e-Classe-CSS.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/37-Estilo-Dinamico-e-Classe-CSS.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/37-Estilo-Dinamico-e-Classe-CSS.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/37-Estilo-Dinamico-e-Classe-CSS.html)
 
 ```javascript
 <!DOCTYPE html>
@@ -991,7 +991,7 @@ new Vue({
 
 38. Estilo Dinâmico e Classe CSS #02
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/38-Estilo-Dinamico-e-Classe-CSS.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/38-Estilo-Dinamico-e-Classe-CSS.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/38-Estilo-Dinamico-e-Classe-CSS.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/38-Estilo-Dinamico-e-Classe-CSS.html)
 
 ```vue
 <!DOCTYPE html>
@@ -1133,7 +1133,7 @@ new Vue({
 
 40. Estilo Dinâmico Sem Classes CSS
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/40-Estilo-Dinamico-Sem-Classes-CSS.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/40-Estilo-Dinamico-Sem-Classes-CSS.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/40-Estilo-Dinamico-Sem-Classes-CSS.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/40-Estilo-Dinamico-Sem-Classes-CSS.html)
 
 ```vue
 
@@ -1172,7 +1172,7 @@ new Vue({
 
 41. Hora de Praticar: Estilo
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo)
 
 ```vue
 <link rel="stylesheet" href="styles.css">
@@ -1232,8 +1232,8 @@ new Vue({
 
 42. Hora de Praticar: Estilo (Resposta)
 
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo/index.html](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo/index.html)
-- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo/app.js](Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo/app.js)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo/index.html](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo/index.html)
+- [Secao-2-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo/app.js](Secao-02-Usando-VueJS-para-Interagir-com-a-DOM/41-Hora-de-Praticar-Estilo/app.js)
 
 ```vue
 <!DOCTYPE html>
@@ -1367,6 +1367,35 @@ Documentação Oficial - Interligações de Classe e Estilo: https://br.vuejs.or
 
 ## <a name="parte3">3 - Seção 3: Usando Condicionais & Renderização de Listas </a>
 
+45. Introdução do Módulo
+
+46. Renderização Condicional com v-if/v-else
+
+47. Seleção Múltipla com v-else-if
+
+48. Usando v-if com Template
+
+49. Esconda o Elemento com v-show
+
+50. Renderizando Lista com v-for
+
+51. Acessando o Índice Atual
+
+52. Usando v-for com Template
+
+53. Iterando em Objetos
+
+54. Iterando em uma Lista de Números
+
+55. Identificando os Elementos no v-for
+
+56. Hora de Praticar: Condicionais & Listas
+
+57. Hora de Praticar: Condicionais & Listas (Resposta)
+
+58. Conclusão do Módulo
+
+59. Recursos do Módulo & Links Úteis
 
 
 [Voltar ao Índice](#indice)
