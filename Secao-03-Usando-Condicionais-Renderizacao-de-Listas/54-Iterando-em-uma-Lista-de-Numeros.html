@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 3</title>
+</head>
+<style>
+    ul{
+        list-style: none;
+    }
+</style>
+<body>
+
+<div id="app">
+   <div v-for="n in 10">{{ n }}</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            cores: ['vermelho', 'verde', 'amarelo', 'azul'],
+            pessoas: [
+                {nome: 'Jose', idade: 36, peso: 90},
+                {nome: 'Luciana', idade: 34, peso: 70},
+            ]
+        }
+    });
+</script>
+</body>
+</html>

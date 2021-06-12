@@ -1611,9 +1611,58 @@ Documentação Oficial - Interligações de Classe e Estilo: https://br.vuejs.or
 
 54. Iterando em uma Lista de Números
 
+- [Secao-03-Usando-Condicionais-Renderizacao-de-Listas/54-Iterando-em-uma-Lista-de-Numeros.html](Secao-03-Usando-Condicionais-Renderizacao-de-Listas/54-Iterando-em-uma-Lista-de-Numeros.html)
+
+```vue
+
+<div id="app">
+   <div v-for="n in 10">{{ n }}</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            cores: ['vermelho', 'verde', 'amarelo', 'azul'],
+            pessoas: [
+                {nome: 'Jose', idade: 36, peso: 90},
+                {nome: 'Luciana', idade: 34, peso: 70},
+            ]
+        }
+    });
+</script>
+```
+
 55. Identificando os Elementos no v-for
 
+- [Secao-03-Usando-Condicionais-Renderizacao-de-Listas/55-Identificando-os-Elementos-no-v-for.html](Secao-03-Usando-Condicionais-Renderizacao-de-Listas/55-Identificando-os-Elementos-no-v-for.html)
+
+```vue
+<div id="app">
+    <div v-for="(cor, i) in cores" :key="i">{{ i }} - {{ cor }}</div> <!-- No video usar "cor" - preferir usar o "i"-->
+    <button @click="cores.push('branco')">Adicionar Cor Branca</button>
+    <button @click="cores.push('Vermelho')">Adicionar Cor Vermelho</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            cores: ['vermelho', 'verde', 'amarelo', 'azul'],
+            pessoas: [
+                {nome: 'Jose', idade: 36, peso: 90},
+                {nome: 'Luciana', idade: 34, peso: 70},
+            ]
+        }
+    });
+</script>
+```
+
 56. Hora de Praticar: Condicionais & Listas
+
+
 
 57. Hora de Praticar: Condicionais & Listas (Resposta)
 
