@@ -1371,9 +1371,83 @@ Documentação Oficial - Interligações de Classe e Estilo: https://br.vuejs.or
 
 46. Renderização Condicional com v-if/v-else
 
+- [Secao-03-Usando-Condicionais-Renderizacao-de-Listas/46-RenderizacaoCondicional-com-v-if-v-else.html](Secao-03-Usando-Condicionais-Renderizacao-de-Listas/46-RenderizacaoCondicional-com-v-if-v-else.html)
+
+```vue
+<div id="app">
+    <p v-if="logado">Usuário Logado: {{ nome }}</p>
+    <p v-else>Nenhum usuário logado</p>
+    <button @click="logado = !logado">{{ logado ? 'Sair' : 'Entrar'}}</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            nome: 'José',
+            logado: false
+        }
+    });
+</script>
+
+```
+
 47. Seleção Múltipla com v-else-if
 
+- [Secao-03-Usando-Condicionais-Renderizacao-de-Listas/47-Selecao-Multipla-com-v-else-if.html](Secao-03-Usando-Condicionais-Renderizacao-de-Listas/47-Selecao-Multipla-com-v-else-if.html)
+
+```vue
+<div id="app">
+  <p v-if="logado">Usuário Logado: {{ nome }}</p>
+  <p v-else-if="anonimo">Navegando como ANÔNIMO</p>
+  <p v-else>Nenhum usuário logado</p>
+  <button @click="logado = !logado">{{ logado ? 'Sair' : 'Entrar'}}</button>
+  <input type="checkbox" v-model="anonimo">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      nome: 'José',
+      logado: false,
+      anonimo: true
+    }
+  });
+</script>
+```
+
 48. Usando v-if com Template
+
+- [Secao-03-Usando-Condicionais-Renderizacao-de-Listas/48-Usando-v-if-com-Template.html](Secao-03-Usando-Condicionais-Renderizacao-de-Listas/48-Usando-v-if-com-Template.html)
+
+```vue
+
+<div id="app">
+    <template v-if="logado">
+        <p>Usuário Logado: {{ nome }}</p>
+        <p>Perfil: Admin</p>
+    </template>
+    <p v-else-if="anonimo">Navegando como ANÔNIMO</p>
+    <p v-else>Nenhum usuário logado</p>
+    <button @click="logado = !logado">{{ logado ? 'Sair' : 'Entrar'}}</button>
+    <input type="checkbox" v-model="anonimo">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            nome: 'José',
+            logado: false,
+            anonimo: true
+        }
+    });
+</script>
+```
 
 49. Esconda o Elemento com v-show
 
