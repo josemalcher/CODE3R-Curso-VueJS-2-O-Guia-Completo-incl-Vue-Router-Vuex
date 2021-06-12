@@ -1451,13 +1451,163 @@ Documentação Oficial - Interligações de Classe e Estilo: https://br.vuejs.or
 
 49. Esconda o Elemento com v-show
 
+- [Secao-03-Usando-Condicionais-Renderizacao-de-Listas/49-Esconda-o-Elemento-com-v-show.html](Secao-03-Usando-Condicionais-Renderizacao-de-Listas/49-Esconda-o-Elemento-com-v-show.html)
+
+```vue
+
+<div id="app">
+    <template v-if="logado">
+        <p>Usuário Logado: {{ nome }}</p>
+        <p>Perfil: Admin</p>
+    </template>
+    <p v-else-if="anonimo">Navegando como ANÔNIMO</p>
+    <p v-else>Nenhum usuário logado</p>
+    <button @click="logado = !logado">{{ logado ? 'Sair' : 'Entrar'}}</button>
+    <input type="checkbox" v-model="anonimo">
+    <hr>
+    <footer v-show="logado">Desenvolvido para você - admin!</footer>
+    <footer v-show="!logado">Desenvolvido para você - DESCONHECIDO!!!</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            nome: 'José',
+            logado: false,
+            anonimo: false
+        }
+    });
+</script>
+```
+
 50. Renderizando Lista com v-for
+
+- [Secao-03-Usando-Condicionais-Renderizacao-de-Listas/50-Renderizando-Lista-com-v-for.html](Secao-03-Usando-Condicionais-Renderizacao-de-Listas/50-Renderizando-Lista-com-v-for.html)
+
+```vue
+
+<div id="app">
+  <ul>
+    <li v-for="cor in cores"> {{ cor }}</li>
+  </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      cores: ['vermelho', 'verde', 'amarelo', 'azul'],
+      pessoas: [
+        {nome: 'Jose', idade: 36, peso: 90},
+        {nome: 'Luciana', idade: 34, peso: 70},
+      ]
+    }
+  });
+</script>
+```
 
 51. Acessando o Índice Atual
 
+- [Secao-03-Usando-Condicionais-Renderizacao-de-Listas/51-Acessando-o-Indice-Atual.html](Secao-03-Usando-Condicionais-Renderizacao-de-Listas/51-Acessando-o-Indice-Atual.html)
+
+```vue
+
+<div id="app">
+    <ul>
+        <li v-for="(cor, i) in cores"> {{ i + 1 }} -  {{ cor }}</li>
+    </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            cores: ['vermelho', 'verde', 'amarelo', 'azul'],
+            pessoas: [
+                {nome: 'Jose', idade: 36, peso: 90},
+                {nome: 'Luciana', idade: 34, peso: 70},
+            ]
+        }
+    });
+</script>
+```
+
 52. Usando v-for com Template
 
+- [Secao-03-Usando-Condicionais-Renderizacao-de-Listas/52-Usando-v-for-comTemplate.html](Secao-03-Usando-Condicionais-Renderizacao-de-Listas/52-Usando-v-for-comTemplate.html)
+
+```vue
+<div id="app">
+    <ul>
+        <li v-for="(cor, i) in cores"> {{ i + 1 }} -  {{ cor }}</li>
+    </ul>
+    <hr>
+    <template v-for="(cor, i) in cores">
+        <h2>{{ cor }}</h2>
+        <p>{{ i + 1 }}</p>
+    </template>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            cores: ['vermelho', 'verde', 'amarelo', 'azul'],
+            pessoas: [
+                {nome: 'Jose', idade: 36, peso: 90},
+                {nome: 'Luciana', idade: 34, peso: 70},
+            ]
+        }
+    });
+</script>
+```
+
 53. Iterando em Objetos
+
+- [Secao-03-Usando-Condicionais-Renderizacao-de-Listas/53-Iterando-em-Objetos.html](Secao-03-Usando-Condicionais-Renderizacao-de-Listas/53-Iterando-em-Objetos.html)
+
+```vue
+
+<div id="app">
+  <ul>
+    <li v-for="(cor, i) in cores"> {{ i + 1 }} -  {{ cor }}</li>
+  </ul>
+  <hr>
+  <template v-for="(cor, i) in cores">
+    <h2>{{ cor }}</h2>
+    <p>{{ i + 1 }}</p>
+  </template>
+
+  <ul>
+    <li v-for="pessoa in pessoas">
+        <div v-for="(valor, chave, index) in pessoa">
+          ({{ index + 1}}) - {{ chave }} = {{ valor }}
+        </div>
+    </li>
+  </ul>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      cores: ['vermelho', 'verde', 'amarelo', 'azul'],
+      pessoas: [
+        {nome: 'Jose', idade: 36, peso: 90},
+        {nome: 'Luciana', idade: 34, peso: 70},
+      ]
+    }
+  });
+</script>
+```
 
 54. Iterando em uma Lista de Números
 
