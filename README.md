@@ -1770,6 +1770,12 @@ new Vue({
 
 59. Recursos do Módulo & Links Úteis
 
+Links Úteis:
+
+Documentação Oficial - Renderização Condicional: https://br.vuejs.org/v2/guide/conditional.html
+
+Documentação Oficial - Renderização de Listas: https://br.vuejs.org/v2/guide/list.html
+
 
 [Voltar ao Índice](#indice)
 
