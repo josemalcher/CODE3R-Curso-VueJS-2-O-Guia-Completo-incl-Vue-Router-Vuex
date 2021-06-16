@@ -1784,7 +1784,7 @@ Documentação Oficial - Renderização de Listas: https://br.vuejs.org/v2/guide
 
 ## <a name="parte4">4 - Seção 4: Projeto #01 - O Matador de Monstros </a>
 
-
+-  [Secao-04-Projeto-01-O-Matador-de-Monstros](Secao-04-Projeto-01-O-Matador-de-Monstros)
 
 [Voltar ao Índice](#indice)
 
