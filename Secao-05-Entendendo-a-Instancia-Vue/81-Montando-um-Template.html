@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 5: Entendendo a Instância Vue</title>
+</head>
+<body>
+
+<div id="app">
+
+</div>
+
+<script src="../lib/vue.js"></script>
+<script>
+    const vm = new Vue({
+        /*el: '#app',*/
+        template: `
+              <div>
+                  <h1>{{ aula }}</h1>
+                  <button @click="alterarAula">Alterar AULA</button>
+                  <h2>{{ modulo }}</h2>
+                  <button @click="alterarModulo">Alterar MODULO</button>
+              </div>
+        `,
+        data: {
+            aula  : 'AULA',
+            modulo: 'MODULO',
+        },
+        methods: {
+            alterarAula() {
+                this.aula += '!!!';
+            },
+            alterarModulo() {
+                this.modulo += '###';
+            }
+        }
+    });
+
+    //vm.$mount('#app');
+    vm.$mount()
+    document.querySelector('#app').appendChild(vm.$el)
+
+
+</script>
+</body>
+</html>

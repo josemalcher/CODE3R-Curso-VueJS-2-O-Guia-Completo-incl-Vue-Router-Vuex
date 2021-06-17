@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 5: Entendendo a Instância Vue</title>
+</head>
+<body>
+
+<div id="app">
+    <comp></comp>
+    <comp></comp>
+
+</div>
+
+<script src="../lib/vue.js"></script>
+<script>
+    Vue.component('comp', {
+        template: `
+              <div>
+                  <h1>{{ aula }}</h1>
+                  <button @click="alterarAula">Alterar AULA</button>
+                  <h2>{{ modulo }}</h2>
+                  <button @click="alterarModulo">Alterar MODULO</button>
+              </div>
+        `,
+        data: function (){
+            return {
+                aula  : 'AULA',
+                modulo: 'MODULO',
+            }
+        },
+        methods: {
+            alterarAula() {
+                this.aula += '!!!';
+            },
+            alterarModulo() {
+                this.modulo += '###';
+            }
+        }
+    })
+
+
+    const vm = new Vue({
+        el: '#app',
+    });
+
+</script>
+</body>
+</html>

@@ -1954,11 +1954,137 @@ Documentação Oficial - Renderização de Listas: https://br.vuejs.org/v2/guide
 
 79. Colocando $refs e Usando nos Templates
 
+- [Secao-05-Entendendo-a-Instancia-Vue/79-Colocando-refs-e-Usando-nos-Templates.html](Secao-05-Entendendo-a-Instancia-Vue/79-Colocando-refs-e-Usando-nos-Templates.html)
+
+```html
+<div id="app">
+    <h1 ref="aulaRef">{{ aula }}</h1>
+    <button @click="alterarAula">Alterar AULA</button>
+
+    <h2>{{ modulo }}</h2>
+    <button @click="alterarModulo">Alterar MODULO</button>
+</div>
+
+<script src="../lib/vue.js"></script>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            aula: 'AULA',
+            modulo: 'MODULO',
+        },
+        methods: {
+            alterarAula() {
+                this.aula += '!!!';
+            },
+            alterarModulo() {
+                this.modulo += '###';
+                console.log(this.$refs.aulaRef.innerHTML);
+            }
+        }
+    });
+
+    vm.$refs.aulaRef.innerText = "ALTERADO DIRETAMENTE"
+    console.log(vm.$refs)
+    /*
+    {aulaRef: h1}aulaRef: h1__proto__: Object
+     vue.js:9064 You are running Vue 
+    * */
+
+</script>
+```
+
 80. Onde Aprender Mais sobre a API do Vue
 
 81. Montando um Template
 
+- [Secao-05-Entendendo-a-Instancia-Vue/81-Montando-um-Template.html](Secao-05-Entendendo-a-Instancia-Vue/81-Montando-um-Template.html)
+
+```html
+
+<div id="app">
+
+</div>
+<script src="../lib/vue.js"></script>
+<script>
+    const vm = new Vue({
+        /*el: '#app',*/
+        template: `
+              <div>
+                  <h1>{{ aula }}</h1>
+                  <button @click="alterarAula">Alterar AULA</button>
+                  <h2>{{ modulo }}</h2>
+                  <button @click="alterarModulo">Alterar MODULO</button>
+              </div>
+        `,
+        data: {
+            aula  : 'AULA',
+            modulo: 'MODULO',
+        },
+        methods: {
+            alterarAula() {
+                this.aula += '!!!';
+            },
+            alterarModulo() {
+                this.modulo += '###';
+            }
+        }
+    });
+
+    //vm.$mount('#app');
+    vm.$mount()
+    document.querySelector('#app').appendChild(vm.$el)
+
+</script>
+```
+
+
 82. Usando Componentes
+
+- [Secao-05-Entendendo-a-Instancia-Vue/82-Usando-Componentes.html](Secao-05-Entendendo-a-Instancia-Vue/82-Usando-Componentes.html)
+
+```html
+
+<div id="app">
+    <comp></comp>
+    <comp></comp>
+
+</div>
+
+<script src="../lib/vue.js"></script>
+<script>
+    Vue.component('comp', {
+        template: `
+              <div>
+                  <h1>{{ aula }}</h1>
+                  <button @click="alterarAula">Alterar AULA</button>
+                  <h2>{{ modulo }}</h2>
+                  <button @click="alterarModulo">Alterar MODULO</button>
+              </div>
+        `,
+        data: function (){
+            return {
+                aula  : 'AULA',
+                modulo: 'MODULO',
+            }
+        },
+        methods: {
+            alterarAula() {
+                this.aula += '!!!';
+            },
+            alterarModulo() {
+                this.modulo += '###';
+            }
+        }
+    })
+
+
+    const vm = new Vue({
+        el: '#app',
+    });
+
+</script>
+```
 
 83. Limitações dos Templates
 
