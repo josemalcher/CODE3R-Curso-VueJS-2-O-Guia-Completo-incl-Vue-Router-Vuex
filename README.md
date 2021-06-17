@@ -2094,10 +2094,54 @@ Documentação Oficial - Renderização de Listas: https://br.vuejs.org/v2/guide
 
 86. O Ciclo de Vida da Instância Vue #02
 
+- [Secao-05-Entendendo-a-Instancia-Vue/86-O-Ciclo-de-Vida-da-Instancia.html](Secao-05-Entendendo-a-Instancia-Vue/86-O-Ciclo-de-Vida-da-Instancia.html)
+
+```html
+<div id="app">
+    <h1>{{ titulo }}</h1>
+    <button @click="titulo += '#'">Alterar Título</button>
+    <button @click="$destroy()">Destruir</button>
+</div>
+<script src="../lib/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Ciclo de Vida'
+        },
+        beforeCreate() {
+            console.log('Antes de Criar')
+        },
+        created() {
+            console.log('Criado')
+        },
+        beforeMount() {
+            console.log('Antes de Montar (DOM)')
+        },
+        mounted() {
+            console.log('DOM Montada')
+        },
+        beforeUpdate() {
+            console.log('Antes de Atualizar')
+        },
+        updated() {
+            console.log('Atualizado')
+        },
+        beforeDestroy() {
+            console.log('Antes de destruir')
+        },
+        destroyed() {
+            console.log('Destruido')
+        }
+    })
+</script>
+```
+
 87. Conclusão do Módulo
 
 88. Recursos do Módulo & Links Úteis
 
+- Documentação Oficial - A Instância Vue: https://br.vuejs.org/v2/guide/instance.html
 
 [Voltar ao Índice](#indice)
 

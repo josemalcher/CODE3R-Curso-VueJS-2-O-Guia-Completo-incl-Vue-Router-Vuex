@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 5: Entendendo a Instância Vue</title>
+</head>
+<body>
+
+<div id="app">
+    <h1>{{ titulo }}</h1>
+    <button @click="titulo += '#'">Alterar Título</button>
+    <button @click="$destroy()">Destruir</button>
+</div>
+<script src="../lib/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Ciclo de Vida'
+        },
+        beforeCreate() {
+            console.log('Antes de Criar')
+        },
+        created() {
+            console.log('Criado')
+        },
+        beforeMount() {
+            console.log('Antes de Montar (DOM)')
+        },
+        mounted() {
+            console.log('DOM Montada')
+        },
+        beforeUpdate() {
+            console.log('Antes de Atualizar')
+        },
+        updated() {
+            console.log('Atualizado')
+        },
+        beforeDestroy() {
+            console.log('Antes de destruir')
+        },
+        destroyed() {
+            console.log('Destruido')
+        }
+    })
+</script>
+</body>
+</html>
