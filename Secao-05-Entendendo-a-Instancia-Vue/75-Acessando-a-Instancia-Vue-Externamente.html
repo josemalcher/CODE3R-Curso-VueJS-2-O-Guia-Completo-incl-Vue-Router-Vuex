@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Seção 5: Entendendo a Instância Vue</title>
+</head>
+<body>
+
+<div id="app1">
+  <p>{{titulo_1}}</p>
+  <button @click="alterar">Alterar</button>
+</div>
+
+<div id="app2">
+  <p>{{titulo_2}}</p>
+  <button @click="alterar">Alterar</button>
+</div>
+
+<script src="../lib/vue.js"></script>
+<script>
+  const vm1 = new Vue({
+    el: '#app1',
+    data: {
+      titulo_1: 'Usando Vue JS 2 !'
+    },
+    methods: {
+      alterar(){
+        vm2.titulo_2 += '!!!' ;
+      }
+    }
+  });
+
+  const vm2 = new Vue({
+    el: '#app2',
+    data: {
+      titulo_2: 'Usando Vue JS 2 !'
+    },
+    methods: {
+      alterar(){
+        vm1.titulo_1 += '!?!?!?!' ;
+      }
+    }
+  });
+
+  setTimeout(() => {
+    vm1.titulo_1 = 'Alterado Pelo TIMER!';
+  }, 2000)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Seção 5: Entendendo a Instância Vue</title>
+</head>
+<body>
+
+<div id="app">
+  {{ nome }} {{ sobrenome }} {{ 100 - 55 }} {{ Math.pow(2, 3) }}
+</div>
+
+<!--<script src="../lib/vue.js"></script>-->
+
+<script>
+  function MeuVue(params) {
+    this.$el = document.querySelector(params.el)
+    this.$data = params.data
+
+    for(let atr in this.$data) {
+      Object.defineProperty(this, atr, {
+        get: () => {
+          return this.$data[atr]
+        },
+        set: value => {
+          this.$data[atr] = value
+        }
+      })
+    }
+
+    // interpolar
+    const regex = /\{\{([\s\w)(,.+*-]*)\}\}/g
+    this.$el.innerHTML = this.$el.innerHTML.replace(regex, (match, $1) => {
+      const value = this[$1.trim()]
+      return value ? value : eval($1)
+    })
+  }
+
+  const vm = new MeuVue({
+    el: '#app',
+    data: {
+      nome: 'Maria',
+      sobrenome: 'Silva'
+    }
+  })
+
+  console.log(vm.nome)
+  console.log(vm.$data.nome)
+
+  vm.nome = 'Pedro'
+  console.log(vm.nome)
+  console.log(vm.$data.nome)
+
+  // vm.$data.idade = 31
+  // console.log(vm.idade)
+</script>
+</body>
+</html>

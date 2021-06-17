@@ -1793,6 +1793,182 @@ Documentação Oficial - Renderização de Listas: https://br.vuejs.org/v2/guide
 
 ## <a name="parte5">5 - Seção 5: Entendendo a Instância Vue </a>
 
+72. Introdução do Módulo
+
+73. Noções básicas sobre a Instância Vue
+
+74. Usando Múltiplas Instâncias Vue
+
+- [Secao-05-Entendendo-a-Instancia-Vue/74-UsandoMultiplas-Instancias-Vue.html](Secao-05-Entendendo-a-Instancia-Vue/74-UsandoMultiplas-Instancias-Vue.html)
+
+```html
+
+<div id="app1">
+  <p>{{titulo_1}}</p>
+  <button @click="alterar">Alterar</button>
+</div>
+
+<div id="app2">
+  <p>{{titulo_2}}</p>
+  <button @click="alterar">Alterar</button>
+</div>
+
+<script src="../lib/vue.js"></script>
+<script>
+  new Vue({
+    el: '#app1',
+    data: {
+      titulo_1: 'Usando Vue JS 2 !'
+    },
+    methods: {
+      alterar(){
+        this.titulo_1 += '!!!' ;
+      }
+    }
+  });
+
+  new Vue({
+    el: '#app2',
+    data: {
+      titulo_2: 'Usando Vue JS 2 !'
+    },
+    methods: {
+      alterar(){
+        this.titulo_2 += '!?!?!?!' ;
+      }
+    }
+  });
+</script>
+```
+
+75. Acessando a Instância Vue Externamente
+
+- [Secao-05-Entendendo-a-Instancia-Vue/75-Acessando-a-Instancia-Vue-Externamente.html](Secao-05-Entendendo-a-Instancia-Vue/75-Acessando-a-Instancia-Vue-Externamente.html)
+
+```html
+
+<div id="app1">
+  <p>{{titulo_1}}</p>
+  <button @click="alterar">Alterar</button>
+</div>
+
+<div id="app2">
+  <p>{{titulo_2}}</p>
+  <button @click="alterar">Alterar</button>
+</div>
+
+<script src="../lib/vue.js"></script>
+<script>
+  const vm1 = new Vue({
+    el: '#app1',
+    data: {
+      titulo_1: 'Usando Vue JS 2 !'
+    },
+    methods: {
+      alterar(){
+        vm2.titulo_2 += '!!!' ;
+      }
+    }
+  });
+
+  const vm2 = new Vue({
+    el: '#app2',
+    data: {
+      titulo_2: 'Usando Vue JS 2 !'
+    },
+    methods: {
+      alterar(){
+        vm1.titulo_1 += '!?!?!?!' ;
+      }
+    }
+  });
+
+  setTimeout(() => {
+    vm1.titulo_1 = 'Alterado Pelo TIMER!';
+  }, 2000)
+
+</script>
+```
+
+76. Como o VueJS Gerencia os Dados e Métodos
+
+- [Secao-05-Entendendo-a-Instancia-Vue/76-Como-o-VueJS-Gerencia-os-Dados-e-Metodos.html](Secao-05-Entendendo-a-Instancia-Vue/76-Como-o-VueJS-Gerencia-os-Dados-e-Metodos.html)
+
+```html
+
+<div id="app">
+  {{ nome }} {{ sobrenome }} {{ 100 - 55 }} {{ Math.pow(2, 3) }}
+</div>
+
+<!--<script src="../lib/vue.js"></script>-->
+
+<script>
+  function MeuVue(params) {
+    this.$el = document.querySelector(params.el)
+    this.$data = params.data
+
+    for(let atr in this.$data) {
+      Object.defineProperty(this, atr, {
+        get: () => {
+          return this.$data[atr]
+        },
+        set: value => {
+          this.$data[atr] = value
+        }
+      })
+    }
+
+    // interpolar
+    const regex = /\{\{([\s\w)(,.+*-]*)\}\}/g
+    this.$el.innerHTML = this.$el.innerHTML.replace(regex, (match, $1) => {
+      const value = this[$1.trim()]
+      return value ? value : eval($1)
+    })
+  }
+
+  const vm = new MeuVue({
+    el: '#app',
+    data: {
+      nome: 'Maria',
+      sobrenome: 'Silva'
+    }
+  })
+
+  console.log(vm.nome)
+  console.log(vm.$data.nome)
+
+  vm.nome = 'Pedro'
+  console.log(vm.nome)
+  console.log(vm.$data.nome)
+
+  // vm.$data.idade = 31
+  // console.log(vm.idade)
+</script>
+```
+
+77. Meu Vue Framework
+
+78. Uma Análise Mais Detalhada de $el e $data
+
+79. Colocando $refs e Usando nos Templates
+
+80. Onde Aprender Mais sobre a API do Vue
+
+81. Montando um Template
+
+82. Usando Componentes
+
+83. Limitações dos Templates
+
+84. Como o VueJS Atualiza o DOM
+
+85. O Ciclo de Vida da Instância Vue #01
+
+86. O Ciclo de Vida da Instância Vue #02
+
+87. Conclusão do Módulo
+
+88. Recursos do Módulo & Links Úteis
 
 
 [Voltar ao Índice](#indice)
