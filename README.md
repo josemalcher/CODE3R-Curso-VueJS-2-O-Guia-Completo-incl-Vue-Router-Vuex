@@ -1892,7 +1892,11 @@ Documentação Oficial - Renderização de Listas: https://br.vuejs.org/v2/guide
 
 76. Como o VueJS Gerencia os Dados e Métodos
 
-- [Secao-05-Entendendo-a-Instancia-Vue/76-Como-o-VueJS-Gerencia-os-Dados-e-Metodos.html](Secao-05-Entendendo-a-Instancia-Vue/76-Como-o-VueJS-Gerencia-os-Dados-e-Metodos.html)
+77. Meu Vue Framework
+
+- [https://www.youtube.com/watch?v=REqVImw8Wgo](https://www.youtube.com/watch?v=REqVImw8Wgo)
+
+- [Secao-05-Entendendo-a-Instancia-Vue/77-Meu-Vue-Framework.html](Secao-05-Entendendo-a-Instancia-Vue/77-Meu-Vue-Framework.html)
 
 ```html
 
@@ -1945,8 +1949,6 @@ Documentação Oficial - Renderização de Listas: https://br.vuejs.org/v2/guide
   // console.log(vm.idade)
 </script>
 ```
-
-77. Meu Vue Framework
 
 78. Uma Análise Mais Detalhada de $el e $data
 
