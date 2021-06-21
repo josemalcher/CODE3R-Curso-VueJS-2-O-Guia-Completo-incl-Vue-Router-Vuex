@@ -2150,6 +2150,35 @@ Documentação Oficial - Renderização de Listas: https://br.vuejs.org/v2/guide
 
 ## <a name="parte6">6 - Seção 6: Fluxo de Desenvolvimento "Real" Usando Vue CLI </a>
 
+89. Introdução do Módulo
+
+90. Por que Precisamos de um Servidor Web?
+
+91. O que "Fluxo de Desenvolvimento" Significa?
+
+92. Usando o Vue CLI para Criar Projetos
+
+93. Instalando o Vue CLI e Criando um Novo Projeto
+
+    - [Secao-06-Fluxo-de-Desenvolvimento-Real-Usando-Vue-CLI/93-instalando-projeto1](Secao-06-Fluxo-de-Desenvolvimento-Real-Usando-Vue-CLI/93-instalando-projeto1)
+
+94. Uma Visão Geral sobre a Estrutura de Pastas
+
+95. Entendendo os Arquivos ".vue"
+
+96. Como Construir sua APP para Produção
+
+97. Criando um Projeto e Salvando Template
+
+98. Adicionando Plugins ao Projeto
+
+99. Conclusão do Módulo
+
+100. Mais sobre Arquivos ".vue" e o CLI
+
+101. Depurando Projetos VueJS
+
+102. Recursos do Módulo & Links Úteis
 
 
 [Voltar ao Índice](#indice)
