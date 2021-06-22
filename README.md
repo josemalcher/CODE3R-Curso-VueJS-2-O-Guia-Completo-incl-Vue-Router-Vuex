@@ -2172,6 +2172,15 @@ Documentação Oficial - Renderização de Listas: https://br.vuejs.org/v2/guide
 
 98. Adicionando Plugins ao Projeto
 
+- [https://vuetifyjs.com/en/](https://vuetifyjs.com/en/)
+- [https://simulatedgreg.gitbooks.io/electron-vue/content/pt_BR/](https://simulatedgreg.gitbooks.io/electron-vue/content/pt_BR/)
+- [https://github.com/nklayman/vue-cli-plugin-electron-builder](https://github.com/nklayman/vue-cli-plugin-electron-builder)
+
+```
+vue add vuetify
+vue add electron-builder
+```
+
 99. Conclusão do Módulo
 
 100. Mais sobre Arquivos ".vue" e o CLI
