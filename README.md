@@ -2217,6 +2217,75 @@ vue add electron-builder
 
 ## <a name="parte7">7 - Seção 7: Introdução aos Componentes </a>
 
+103. Introdução do Módulo
+
+104. Revisão Sobre Componentes
+
+- [Secao-07-IntroducaoaosComponentes/104-RevisaoSobreComponentes.html](Secao-07-IntroducaoaosComponentes/104-RevisaoSobreComponentes.html)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 07</title>
+</head>
+<body>
+
+<div id="app">
+<contador></contador>
+<contador></contador>
+<contador></contador>
+</div>
+
+<script src="../lib/vue.js"></script>
+<script>
+
+    Vue.component('contador', {
+        template: `
+          <div>
+          <span>{{contador}}</span>
+          <button @click="contador++"> + </button>
+          <button @click="contador--"> - </button>
+          </div>
+        `,
+        data(){
+            return {
+                contador: 0
+            }
+        }
+    });
+
+
+    new Vue({
+        el: '#app',
+    });
+</script>
+</body>
+</html>
+```
+
+105. Registrar Componentes (Global e Local)
+
+106. Criar Projeto Usando Vue CLI
+
+107. Criar um Componente
+
+108. Usando Componentes
+
+109. Usando CSS com Escopo de Componente
+
+110. Hora de Praticar: Organizar Projeto em Componentes
+
+111. Hora de Praticar: Organizar Projeto em Componentes (Resposta)
+
+112. Organizando os Componentes em Pastas
+
+113. Regras de Nomes de Componentes
+
+114. Conclusão do Módulo
+
+115. Recursos do Módulo & Links Úteis
 
 
 [Voltar ao Índice](#indice)

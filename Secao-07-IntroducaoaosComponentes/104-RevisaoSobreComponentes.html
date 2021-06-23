@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 07</title>
+</head>
+<body>
+
+<div id="app">
+<contador></contador>
+<contador></contador>
+<contador></contador>
+</div>
+
+<script src="../lib/vue.js"></script>
+<script>
+
+    Vue.component('contador', {
+        template: `
+          <div>
+          <span>{{contador}}</span>
+          <button @click="contador++"> + </button>
+          <button @click="contador--"> - </button>
+          </div>
+        `,
+        data(){
+            return {
+                contador: 0
+            }
+        }
+    });
+
+
+    new Vue({
+        el: '#app',
+    });
+</script>
+</body>
+</html>
