@@ -1,15 +1,15 @@
 <template>
   <v-app>
 
-    <app-menu/>
+    <Menu />
 
-    <app-toolbar/>
+    <Toolbar />
 
     <v-content>
-      <app-caroussel/>
+      <Caroussel />
     </v-content>
 
-    <app-footer/>
+    <Footer />
 
   </v-app>
 </template>
@@ -22,10 +22,10 @@ import Toolbar from   "@/components/template/Toolbar.vue";
 
 export default {
   components: {
-    'app-footer': Footer,
-    'app-caroussel': Caroussel,
-    'app-toolbar': Toolbar,
-    'app-menu': Menu
+     Footer,
+     Caroussel,
+     Toolbar,
+     Menu
   },
 }
 </script>

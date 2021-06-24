@@ -2387,9 +2387,55 @@ import Toolbar from   "@/components/template/Toolbar.vue";
 
 113. Regras de Nomes de Componentes
 
+- [Secao-07-IntroducaoaosComponentes/111-Hora-de-Praticar-Organizar-Projeto-em-Componentes/componente-desafio/src/App.vue](Secao-07-IntroducaoaosComponentes/111-Hora-de-Praticar-Organizar-Projeto-em-Componentes/componente-desafio/src/App.vue)
+
+```vue
+<template>
+  <v-app>
+
+    <Menu />
+
+    <Toolbar />
+
+    <v-content>
+      <Caroussel />
+    </v-content>
+
+    <Footer />
+
+  </v-app>
+</template>
+
+<script>
+import Menu from      "@/components/template/Menu.vue";
+import Footer from    "@/components/template/Footer.vue";
+import Caroussel from "@/components/widgets/Caroussel.vue";
+import Toolbar from   "@/components/template/Toolbar.vue";
+
+export default {
+  components: {
+     Footer,
+     Caroussel,
+     Toolbar,
+     Menu
+  },
+}
+</script>
+
+```
+
 114. Conclusão do Módulo
 
 115. Recursos do Módulo & Links Úteis
+
+Se você quiser aprender mais sobre componentes Vue JS, você talvez queira olhar esse artigo da documentação oficial:
+
+https://br.vuejs.org/v2/guide/components.html
+
+Importante: Alguns assuntos serão abordados nos próximos módulos do curso!
+
+Também ver: https://br.vuejs.org/v2/guide/components-registration.html
+
 
 
 [Voltar ao Índice](#indice)
