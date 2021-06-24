@@ -2371,6 +2371,8 @@ button {
 
 110. Hora de Praticar: Organizar Projeto em Componentes
 
+- [Secao-07-IntroducaoaosComponentes/111-Hora-de-Praticar-Organizar-Projeto-em-Componentes](Secao-07-IntroducaoaosComponentes/111-Hora-de-Praticar-Organizar-Projeto-em-Componentes)
+
 111. Hora de Praticar: Organizar Projeto em Componentes (Resposta)
 
 112. Organizando os Componentes em Pastas
