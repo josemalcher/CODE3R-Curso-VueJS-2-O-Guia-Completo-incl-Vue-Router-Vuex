@@ -2345,6 +2345,8 @@ vue add electron-builder
 
 108. Usando Componentes
 
+- [Secao-07-IntroducaoaosComponentes/106-criar-projeto-usando-vue-cli/src/components/Contadores.vue](Secao-07-IntroducaoaosComponentes/106-criar-projeto-usando-vue-cli/src/components/Contadores.vue)
+
 109. Usando CSS com Escopo de Componente
 
 110. Hora de Praticar: Organizar Projeto em Componentes

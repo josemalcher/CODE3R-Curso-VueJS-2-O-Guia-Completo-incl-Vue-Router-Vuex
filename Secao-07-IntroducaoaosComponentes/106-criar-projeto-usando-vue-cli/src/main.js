@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Contador from "./components/Contador.vue";
+import Contadores from "./components/Contadores.vue";
 
 Vue.config.productionTip = false
-Vue.component('app-contador', Contador)
+Vue.component('app-contadores', Contadores)
 
 new Vue({
   render: h => h(App),
