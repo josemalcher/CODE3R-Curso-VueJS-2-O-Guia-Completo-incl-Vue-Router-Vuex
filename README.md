@@ -2377,6 +2377,14 @@ button {
 
 112. Organizando os Componentes em Pastas
 
+```
+import Menu from      "@/components/template/Menu.vue";
+import Footer from    "@/components/template/Footer.vue";
+import Caroussel from "@/components/widgets/Caroussel.vue";
+import Toolbar from   "@/components/template/Toolbar.vue";
+
+```
+
 113. Regras de Nomes de Componentes
 
 114. Conclusão do Módulo
