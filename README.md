@@ -2337,7 +2337,11 @@ vue add electron-builder
 
 106. Criar Projeto Usando Vue CLI
 
+- [Secao-07-IntroducaoaosComponentes/106-criar-projeto-usando-vue-cli](Secao-07-IntroducaoaosComponentes/106-criar-projeto-usando-vue-cli)
+
 107. Criar um Componente
+
+- [Secao-07-IntroducaoaosComponentes/106-criar-projeto-usando-vue-cli/src/components/Contador.vue](Secao-07-IntroducaoaosComponentes/106-criar-projeto-usando-vue-cli/src/components/Contador.vue)
 
 108. Usando Componentes
 
