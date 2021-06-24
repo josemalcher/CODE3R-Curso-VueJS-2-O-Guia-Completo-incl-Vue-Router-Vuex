@@ -2267,6 +2267,74 @@ vue add electron-builder
 
 105. Registrar Componentes (Global e Local)
 
+- [Secao-07-IntroducaoaosComponentes/105-Registrar-Componentes-GlobaleLocal.html](Secao-07-IntroducaoaosComponentes/105-Registrar-Componentes-GlobaleLocal.html)
+
+```html
+
+<div id="app1">
+    <contador1></contador1>
+    <contador1></contador1>
+    <contador1></contador1>
+</div>
+<hr>
+<div id="app2">
+    <contador2></contador2>
+    <contador2></contador2>
+    <contador2></contador2>
+</div>
+
+<script src="../lib/vue.js"></script>
+<script>
+    // Registro GLobal
+    // Vue.component('contador', {
+    //     template: `
+    //       <div>
+    //       <span>{{contador}}</span>
+    //       <button @click="contador++"> + </button>
+    //       <button @click="contador--"> - </button>
+    //       </div>
+    //     `,
+    //     data(){
+    //         return {
+    //             contador: 0
+    //         }
+    //     }
+    // });
+
+    const contador = {
+        template: `
+          <div>
+          <span>{{contador}}</span>
+          <button @click="contador++"> + </button>
+          <button @click="contador--"> - </button>
+          </div>
+        `,
+        data(){
+            return {
+                contador: 0
+            }
+        }
+    };
+
+    new Vue({
+        el: '#app1',
+        // REGISTRO LOCAL
+        components:{
+            contador1: contador
+        }
+    });
+
+
+    new Vue({
+        el: '#app2',
+        // REGISTRO LOCAL
+        components:{
+            contador2: contador
+        }
+    });
+</script>
+```
+
 106. Criar Projeto Usando Vue CLI
 
 107. Criar um Componente

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seção 07</title>
+</head>
+<body>
+
+<div id="app1">
+    <contador1></contador1>
+    <contador1></contador1>
+    <contador1></contador1>
+</div>
+<hr>
+<div id="app2">
+    <contador2></contador2>
+    <contador2></contador2>
+    <contador2></contador2>
+</div>
+
+<script src="../lib/vue.js"></script>
+<script>
+    // Registro GLobal
+    // Vue.component('contador', {
+    //     template: `
+    //       <div>
+    //       <span>{{contador}}</span>
+    //       <button @click="contador++"> + </button>
+    //       <button @click="contador--"> - </button>
+    //       </div>
+    //     `,
+    //     data(){
+    //         return {
+    //             contador: 0
+    //         }
+    //     }
+    // });
+
+    const contador = {
+        template: `
+          <div>
+          <span>{{contador}}</span>
+          <button @click="contador++"> + </button>
+          <button @click="contador--"> - </button>
+          </div>
+        `,
+        data(){
+            return {
+                contador: 0
+            }
+        }
+    };
+
+    new Vue({
+        el: '#app1',
+        // REGISTRO LOCAL
+        components:{
+            contador1: contador
+        }
+    });
+
+
+    new Vue({
+        el: '#app2',
+        // REGISTRO LOCAL
+        components:{
+            contador2: contador
+        }
+    });
+</script>
+</body>
+</html>
