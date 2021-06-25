@@ -14,9 +14,6 @@ export default {
     nome: {
       type: String,
       default: 'Anônimo',
-      // default: function(){
-      //   return Array(5).fill(0).join(',')
-      // },
       required: true
     },
     idade: [Number, String]
