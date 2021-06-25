@@ -2463,6 +2463,31 @@ Também ver: https://br.vuejs.org/v2/guide/components-registration.html
 
 123. Validando Props #02
 
+```javascript
+<script>
+export default {
+  //props: ['nome'],
+  props: {
+    sobrenome: String,
+    nome: {
+      type: String,
+      default: 'Anônimo',
+      // default: function(){
+      //   return Array(5).fill(0).join(',')
+      // },
+      required: true
+    },
+    idade: [Number, String]
+  },
+  methods: {
+    inverterNome() {
+      return this.nome.split('').reverse().join('')
+    }
+  }
+}
+</script>
+```
+
 124. Comunicação Indireta com Eventos Personalizados
 
 125. Comunicação Indireta com Callback
