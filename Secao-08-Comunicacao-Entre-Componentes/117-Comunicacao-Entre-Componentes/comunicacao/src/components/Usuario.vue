@@ -18,9 +18,13 @@
                 :nome="nome"
                 @nomeMudou="nome = $event.antigo + $event.novo"
             />-->
-      <app-usuario-editar
+<!--      <app-usuario-editar
           :idade="idade"
           @idadeMudou="idade = $event + 50"
+      />      -->
+      <app-usuario-editar
+          :idade="idade"
+
       />
     </div>
   </div>

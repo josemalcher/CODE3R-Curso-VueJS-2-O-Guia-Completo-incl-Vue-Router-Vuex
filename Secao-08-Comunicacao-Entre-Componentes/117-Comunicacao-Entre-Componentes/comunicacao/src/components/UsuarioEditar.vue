@@ -8,14 +8,17 @@
 </template>
 
 <script>
+import barramento from "@/barramento";
+
 export default {
   props: {
     idade: [Number, String]
   },
   methods:{
     alterarIdade(){
-      //this.idade = 10
-      this.$emit('idadeMudou', 10)
+      this.idade += 2
+      //this.$emit('idadeMudou', 10)
+      barramento.$emit('idadeMudou', this.idade)
     }
   }
 }
