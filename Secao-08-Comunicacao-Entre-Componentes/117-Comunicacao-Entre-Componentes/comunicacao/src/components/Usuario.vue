@@ -2,11 +2,11 @@
   <div class="container">
     <h1>Componente Usuário</h1>
     <p>Esse é um componente muito legal!</p>
-    <p>{{nome}}</p>
+    <p>{{ nome }}</p>
     <button @click="alterarNome">Alterar Nome</button>
     <hr>
     <div class="componentes">
-      <app-usuario-info :nome="nome" />
+      <app-usuario-info :nome="nome"/>
       <app-usuario-editar/>
     </div>
   </div>
@@ -24,7 +24,7 @@ export default {
     }
   },
   methods: {
-    alterarNome(){
+    alterarNome() {
       this.nome = "José Malcher JR"
     }
   }
