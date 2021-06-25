@@ -2445,6 +2445,47 @@ Também ver: https://br.vuejs.org/v2/guide/components-registration.html
 
 ## <a name="parte8">8 - Seção 8: Comunicação Entre Componentes </a>
 
+116. Introdução do Módulo
+
+117. Comunicação Entre Componentes
+
+- [Secao-08-Comunicacao-Entre-Componentes/117-Comunicacao-Entre-Componentes/comunicacao](Secao-08-Comunicacao-Entre-Componentes/117-Comunicacao-Entre-Componentes/comunicacao)
+
+118. Comunicação Direta com Props #01
+
+119. Comunicação Direta com Props #02
+
+120. Nome das Propriedades são Case-Sensitive
+
+121. Usando Props no Componente Filho
+
+122. Validando Props #01
+
+123. Validando Props #02
+
+124. Comunicação Indireta com Eventos Personalizados
+
+125. Comunicação Indireta com Callback
+
+126. Problema da Comunicação entre Componentes Irmãos
+
+127. Comunicação entre Componentes Irmãos
+
+128. Usando Event Bus para Comunicação entre Componentes Irmãos #01
+
+129. Usando Event Bus para Comunicação entre Componentes Irmãos #02
+
+130. Adicionando Métodos no Event Bus
+
+131. Hora de Praticar: Comunicação entre Componentes
+
+132. Hora de Praticar: Comunicação entre Componentes (Resposta)
+
+133. Props por Valor vs Props por Referência
+
+134. Conclusão do Módulo
+
+135. Recursos do Módulo & Links Úteis
 
 
 [Voltar ao Índice](#indice)
