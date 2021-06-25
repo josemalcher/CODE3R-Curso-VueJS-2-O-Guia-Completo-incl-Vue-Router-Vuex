@@ -9,6 +9,7 @@
       <app-usuario-info
           :nome="nome"
           @nomeMudou="nome = $event"
+          :reiniciarFn="reiniciarNome"
       />
 <!--      <app-usuario-info
           :nome="nome"
@@ -33,6 +34,9 @@ export default {
   methods: {
     alterarNome() {
       this.nome = "José Malcher JR"
+    },
+    reiniciarNome(){
+      this.nome = "PEDRO USER"
     }
   }
 }
