@@ -2532,6 +2532,11 @@ export default new Vue({
 
 135. Recursos do Módulo & Links Úteis
 
+    Links Úteis:
+    
+    Documentação Oficial - Props: https://br.vuejs.org/v2/guide/components.html#Passando-Dados-aos-Filhos-com-Props
+    
+    Documentação Oficial - Eventos Personalizados: https://br.vuejs.org/v2/guide/components.html#Enviando-Mensagens-ao-Pai-com-Eventos
 
 [Voltar ao Índice](#indice)
 
