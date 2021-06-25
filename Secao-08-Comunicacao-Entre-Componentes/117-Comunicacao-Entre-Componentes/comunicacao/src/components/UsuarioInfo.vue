@@ -3,6 +3,7 @@
     <h2>As Informações de Usuário</h2>
     <p>Vários detalhes...</p>
     <p>nome do usuário: <strong>{{ inverterNome() }}</strong></p>
+    <p>Idade do usuário <strong>{{ idade }}</strong></p>
     <button @click="reiniciarNome">Reiniciar Nome</button>
     <button @click="reiniciarFn">Reiniciar Nome (CALLBack)</button>
   </div>
