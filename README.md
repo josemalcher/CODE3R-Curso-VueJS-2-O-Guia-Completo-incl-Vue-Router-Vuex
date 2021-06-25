@@ -2502,6 +2502,26 @@ export default {
 
 130. Adicionando Métodos no Event Bus
 
+- [Secao-08-Comunicacao-Entre-Componentes/117-Comunicacao-Entre-Componentes/comunicacao/src/barramento.js](Secao-08-Comunicacao-Entre-Componentes/117-Comunicacao-Entre-Componentes/comunicacao/src/barramento.js)
+
+```javascript
+import Vue from 'vue';
+
+export default new Vue({
+
+    methods: {
+        alterarIdade(idade){
+            this.$emit('idadeMudou', idade)
+        },
+        quandoIdadeMudar(callback){
+            this.$on('idadeMudou', callback)
+        }
+    }
+
+
+});
+```
+
 131. Hora de Praticar: Comunicação entre Componentes
 
 132. Hora de Praticar: Comunicação entre Componentes (Resposta)
