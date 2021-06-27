@@ -2585,6 +2585,36 @@ export default new Vue({
 
 144. Alternando entre Múltiplos Componentes com Componentes Dinâmicos
 
+- [Secao-09-Uso-Avancado-de-Componentes/137-Configurando-Projeto-do-Modulo/citacoes/src/App.vue](Secao-09-Uso-Avancado-de-Componentes/137-Configurando-Projeto-do-Modulo/citacoes/src/App.vue)
+
+```vue
+<template>
+  <div id="app">
+    <!--		<Citacoes />
+        <Sobre />-->
+    <span>
+      <button @click="componente = 'Citacoes'">Citações</button>
+      <button @click="componente = 'Sobre'">Sobre</button>
+    </span>
+    <component :is="componente"/>
+  </div>
+</template>
+
+<script>
+import Citacoes from './components/Citacoes'
+import Sobre from './components/Sobre'
+
+export default {
+  components: {Citacoes, Sobre},
+  data() {
+    return {
+      componente: 'Citacoes'
+    }
+  }
+}
+</script>
+```
+
 145. Entendendo o Comportamento do Componente Dinâmico
 
 146. Mantendo o Componente Dinâmico Vivo
