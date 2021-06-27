@@ -2545,6 +2545,37 @@ export default new Vue({
 
 ## <a name="parte9">9 - Seção 9: Uso Avançado de Componentes </a>
 
+136. Introdução do Módulo
+
+137. Configurando Projeto do Módulo
+
+138. Como Passar Conteúdo no Corpo do Componente?
+
+139. Passando Conteúdo com Slots
+
+140. Como o Conteúdo do Slot é Estilizado
+
+141. Usando Múltiplos Slots (Slots Nomeados)
+
+142. Usando Slot Padrão
+
+143. Resumo sobre Slots
+
+144. Alternando entre Múltiplos Componentes com Componentes Dinâmicos
+
+145. Entendendo o Comportamento do Componente Dinâmico
+
+146. Mantendo o Componente Dinâmico Vivo
+
+147. Métodos de Ciclo de Vida de um Componente Dinâmico
+
+148. Hora de Praticar - Slots e Componentes Dinâmicos
+
+149. Hora de Praticar - Slots e Componentes Dinâmicos (Resposta)
+
+150. Conclusão do Módulo
+
+151. Recursos do Módulo & Links Úteis
 
 
 [Voltar ao Índice](#indice)
