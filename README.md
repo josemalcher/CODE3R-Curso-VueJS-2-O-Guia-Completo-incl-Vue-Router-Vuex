@@ -2619,6 +2619,12 @@ export default {
 
 146. Mantendo o Componente Dinâmico Vivo
 
+```vue
+    <keep-alive>
+      <component :is="componente"/>
+    </keep-alive>
+```
+
 147. Métodos de Ciclo de Vida de um Componente Dinâmico
 
 148. Hora de Praticar - Slots e Componentes Dinâmicos
