@@ -2,7 +2,9 @@
     <div class="citacao">
 <!--        {{texto}}-->
       <slot name="autor"></slot>
-      <slot name="texto"></slot>
+<!--      <slot name="texto"></slot>-->
+      <slot></slot>
+<!--Evitar duplivar slot-->
       <slot name="fonte"></slot>
     </div>
 </template>
