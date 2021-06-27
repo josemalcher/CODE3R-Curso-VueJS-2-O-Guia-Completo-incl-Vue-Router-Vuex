@@ -1,12 +1,12 @@
 <template>
     <div class="citacao">
-        
+        {{texto}}
     </div>
 </template>
 
 <script>
 export default {
-
+ props:['texto']
 }
 </script>
 
