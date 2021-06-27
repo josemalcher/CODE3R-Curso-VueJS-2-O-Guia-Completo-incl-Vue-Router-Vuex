@@ -8,9 +8,9 @@
     <!--      {{citacoes[indice].texto}}-->
     <!--    <Citacao :texto="citacoes[indice].texto"></Citacao>-->
     <Citacao>
-      <h1>{{citacoes[indice].autor}}</h1>
-      <p>{{ citacoes[indice].texto }}</p>
-      <h6>{{citacoes[indice].fonte}}</h6>
+      <h1 slot="autor">{{citacoes[indice].autor}}</h1>
+      <p slot="texto">{{ citacoes[indice].texto }}</p>
+      <h6 slot="fonte">{{citacoes[indice].fonte}}</h6>
     </Citacao>
   </div>
 </template>

@@ -2557,6 +2557,28 @@ export default new Vue({
 
 141. Usando Múltiplos Slots (Slots Nomeados)
 
+- [Secao-09-Uso-Avancado-de-Componentes/137-Configurando-Projeto-do-Modulo/citacoes/src/components/Citacao.vue](Secao-09-Uso-Avancado-de-Componentes/137-Configurando-Projeto-do-Modulo/citacoes/src/components/Citacao.vue)
+
+```vue
+<template>
+    <div class="citacao">
+      <slot name="autor"></slot>
+      <slot name="texto"></slot>
+      <slot name="fonte"></slot>
+    </div>
+</template>
+```
+
+- [Secao-09-Uso-Avancado-de-Componentes/137-Configurando-Projeto-do-Modulo/citacoes/src/components/Citacoes.vue](Secao-09-Uso-Avancado-de-Componentes/137-Configurando-Projeto-do-Modulo/citacoes/src/components/Citacoes.vue)
+
+```vue
+    <Citacao>
+      <h1 slot="autor">{{citacoes[indice].autor}}</h1>
+      <p slot="texto">{{ citacoes[indice].texto }}</p>
+      <h6 slot="fonte">{{citacoes[indice].fonte}}</h6>
+    </Citacao>
+```
+
 142. Usando Slot Padrão
 
 143. Resumo sobre Slots

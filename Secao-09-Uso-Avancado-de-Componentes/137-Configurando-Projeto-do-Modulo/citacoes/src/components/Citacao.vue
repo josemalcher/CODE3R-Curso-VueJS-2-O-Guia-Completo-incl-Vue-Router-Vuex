@@ -1,7 +1,9 @@
 <template>
     <div class="citacao">
 <!--        {{texto}}-->
-      <slot></slot>
+      <slot name="autor"></slot>
+      <slot name="texto"></slot>
+      <slot name="fonte"></slot>
     </div>
 </template>
 
