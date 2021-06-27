@@ -8,9 +8,9 @@
     <!--      {{citacoes[indice].texto}}-->
     <!--    <Citacao :texto="citacoes[indice].texto"></Citacao>-->
     <Citacao>
-      <h1 slot="autor">{{citacoes[indice].autor}}</h1>
+      <h1 slot="autor">{{ citacoes[indice].autor }}</h1>
       <p>{{ citacoes[indice].texto }}</p>
-      <h6 slot="fonte">{{citacoes[indice].fonte}}</h6>
+      <h6 slot="fonte">{{ citacoes[indice].fonte }}</h6>
     </Citacao>
   </div>
 </template>
@@ -45,6 +45,18 @@ export default {
     indice() {
       return Math.abs(this.numero % 3)
     }
+  },
+  created() {
+    console.log('created');
+  },
+  destroyed() {
+    console.log('destroyed');
+  },
+  activated() {
+    console.log('activated');
+  },
+  deactivated() {
+    console.log('deactivated');
   }
 }
 </script>
@@ -55,8 +67,9 @@ export default {
   flex-direction: column;
   align-items: center;
 }
-h1{
-  color: green!important;
+
+h1 {
+  color: green !important;
 }
 
 </style>

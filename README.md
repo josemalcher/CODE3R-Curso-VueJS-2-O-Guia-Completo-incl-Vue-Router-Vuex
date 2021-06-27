@@ -2627,6 +2627,28 @@ export default {
 
 147. Métodos de Ciclo de Vida de um Componente Dinâmico
 
+- [Secao-09-Uso-Avancado-de-Componentes/137-Configurando-Projeto-do-Modulo/citacoes/src/components/Citacao.vue](Secao-09-Uso-Avancado-de-Componentes/137-Configurando-Projeto-do-Modulo/citacoes/src/components/Citacao.vue)
+
+```vue
+<script>
+export default {
+  /*props:['texto']*/
+  created() {
+    console.log('created');
+  },
+  destroyed() {
+    console.log('destroyed');
+  },
+  activated() {
+    console.log('activated');
+  },
+  deactivated() {
+    console.log('deactivated');
+  }
+}
+</script>
+```
+
 148. Hora de Praticar - Slots e Componentes Dinâmicos
 
 149. Hora de Praticar - Slots e Componentes Dinâmicos (Resposta)
