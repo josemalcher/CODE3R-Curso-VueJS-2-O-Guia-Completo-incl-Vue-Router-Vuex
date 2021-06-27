@@ -1,12 +1,13 @@
 <template>
     <div class="citacao">
-        {{texto}}
+<!--        {{texto}}-->
+      <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
- props:['texto']
+ /*props:['texto']*/
 }
 </script>
 

@@ -6,7 +6,12 @@
         </span>
     <!--        {{ numero }} {{ indice }}-->
     <!--      {{citacoes[indice].texto}}-->
-    <Citacao :texto="citacoes[indice].texto"></Citacao>
+    <!--    <Citacao :texto="citacoes[indice].texto"></Citacao>-->
+    <Citacao>
+      <h1>{{citacoes[indice].autor}}</h1>
+      <p>{{ citacoes[indice].texto }}</p>
+      <h6>{{citacoes[indice].fonte}}</h6>
+    </Citacao>
   </div>
 </template>
 
