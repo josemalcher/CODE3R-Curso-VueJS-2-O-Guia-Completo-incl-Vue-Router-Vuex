@@ -1,13 +1,11 @@
 <template>
-    <div class="caixa vermelho">
-        Conteúdo do Componente Vermelho
-    </div>
+  <div class="caixa vermelho">
+    <slot name="conteudo" />
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style>
