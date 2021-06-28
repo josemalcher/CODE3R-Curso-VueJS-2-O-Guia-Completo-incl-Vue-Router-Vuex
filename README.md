@@ -2670,6 +2670,33 @@ Links Úteis:
 
 ## <a name="parte10">10 - Seção 10: Projeto #02 - Tarefas (TODO) </a>
 
+152. Introdução do Módulo
+
+153. Configurar Projeto
+
+- [Secao-10-Projeto-02-Tarefas-TODO/tarefas](Secao-10-Projeto-02-Tarefas-TODO/tarefas)
+
+154. Componente Lista de Tarefas #01
+
+155. Componente Tarefa #01
+
+156. Componente Lista de Tarefas #02
+
+157. Componente Nova Tarefa #01
+
+158. Componente Nova Tarefa #02
+
+159. Componente Tarefa #02
+
+160. Componente Tarefa #03
+
+161. Componente Progresso
+
+162. Usando Local Storage
+
+163. Conclusão do Módulo
+
+164. Recursos do Módulo & Links Úteis
 
 
 [Voltar ao Índice](#indice)
