@@ -2657,6 +2657,11 @@ export default {
 
 151. Recursos do Módulo & Links Úteis
 
+Links Úteis:
+
+- Documentação Oficial - Slots: https://br.vuejs.org/v2/guide/components.html#Distribuicao-de-Conteudo-com-Slots
+
+- Documentação Oficial - Componentes Dinâmicos: https://br.vuejs.org/v2/guide/components.html#Componentes-Dinamicos
 
 [Voltar ao Índice](#indice)
 
