@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Tarefas</h1>
-    <TasksProgress :progress="progress" />
+    <TasksProgress :progress="progress"/>
     <new-task @taskAdded="addTask"></new-task>
     <TaskGrid
         :tasks="tasks"
@@ -34,6 +34,19 @@ export default {
       const done = this.tasks.filter(t => !t.pending).length
       return Math.round(done / total * 100) || 0
     }
+  },
+  watch: {
+    tasks: {
+      deep: true, // monitora o 'objeto' de forma mais profunda!
+      handler() {
+        localStorage.setItem('tasks', JSON.stringify(this.tasks))
+      }
+    }
+  },
+  created() {
+    const json = localStorage.getItem('tasks')
+    const array = JSON.parse(json)
+    this.tasks = Array.isArray(array) ? array : []
   },
   methods: {
     addTask(task) {
