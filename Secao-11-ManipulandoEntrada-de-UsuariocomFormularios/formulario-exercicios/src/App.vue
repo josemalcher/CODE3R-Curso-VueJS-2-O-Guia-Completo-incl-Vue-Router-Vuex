@@ -5,13 +5,13 @@
       <form class="painel">
         <div class="cabecalho">Formulário</div>
         <Rotulo nome="E-mail">
-          <input type="text" v-model="email">
+          <input type="text" v-model="user.email">
         </Rotulo>
         <Rotulo nome="Senha">
-          <input type="password">
+          <input type="password" v-model="user.senha">
         </Rotulo>
         <Rotulo nome="Idade">
-          <input type="number">
+          <input type="number" v-model="user.idade">
         </Rotulo>
         <Rotulo nome="Mensagem">
           <textarea name="" cols="30" rows="5"></textarea>
@@ -39,13 +39,13 @@
       <div class="painel">
         <div class="cabecalho">Resultado</div>
         <Rotulo nome="E-mail">
-          <span>{{ email }}</span>
+          <span>{{ user.email }}</span>
         </Rotulo>
         <Rotulo nome="Senha">
-          <span>???</span>
+          <span>{{ user.senha }}</span>
         </Rotulo>
         <Rotulo nome="Idade">
-          <span>???</span>
+          <span>{{user.idade}}</span>
         </Rotulo>
         <Rotulo nome="Mensagem">
           <span>???</span>
@@ -76,7 +76,11 @@ export default {
   components: {Rotulo, Escolha},
   data() {
     return {
-      email: ''
+      user: {
+        email: '',
+        senha: '',
+        idade: ''
+      }
     }
   }
 }
