@@ -2772,7 +2772,7 @@ Documentação Oficial - Formulário: https://br.vuejs.org/v2/guide/forms.html
 
 183. Criando uma Diretiva Simples
 
-```vue
+```javascript
 Vue.directive('destaque', {
 	bind(el, binding, vnode) {
 		el.style.backgroundColor = 'lightgreen';
@@ -2781,6 +2781,40 @@ Vue.directive('destaque', {
 ```
 
 184. Passando Valor para Diretiva Personalizada
+
+```vue
+<template>
+	<div id="app">
+		<h1>Diretivas</h1>
+    <hr>
+    <p v-text="'Usando Directivas <strong>v-text</strong>'"></p>
+    <p v-html="'Usando Directivas <strong>v-html</strong>'"></p>
+    <p v-destaque="'red'">Testando Directivas</p>
+    <p v-destaque="cor">Testando Directivas</p>
+	</div>
+</template>
+
+<script>
+export default {
+	data(){
+	  return{
+	    cor: 'green'
+    }
+  }
+}
+</script>
+```
+
+```javascript
+
+Vue.directive('destaque', {
+	bind(el, binding, vnode) {
+		//el.style.backgroundColor = 'lightgreen';
+		el.style.backgroundColor = binding.value;
+	}
+})
+
+```
 
 185. Passando Argumento para Diretiva Personalizada
 
