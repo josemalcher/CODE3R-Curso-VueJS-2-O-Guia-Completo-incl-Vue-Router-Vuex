@@ -2751,7 +2751,48 @@ Documentação Oficial - Formulário: https://br.vuejs.org/v2/guide/forms.html
 
 ## <a name="parte12">12 - Seção 12: Usando e Criando Diretivas </a>
 
+180. Introdução do Módulo
 
+181. Entendendo Diretivas
+
+-[Secao-12-Usando-e-Criando-Diretivas/181-Entendendo-Diretivas/diretivas-exercicios](Secao-12-Usando-e-Criando-Diretivas/181-Entendendo-Diretivas/diretivas-exercicios)
+
+```vue
+<template>
+	<div id="app">
+		<h1>Diretivas</h1>
+    <hr>
+    <p v-text="'Usando Directivas <strong>v-text</strong>'"></p>
+    <p v-html="'Usando Directivas <strong>v-html</strong>'"></p>
+	</div>
+</template>
+```
+
+182. Como a Diretiva Funciona - Funções Gatilho (Hooks)
+
+183. Criando uma Diretiva Simples
+
+184. Passando Valor para Diretiva Personalizada
+
+185. Passando Argumento para Diretiva Personalizada
+
+186. Modificando Diretivas Personalizadas com Modificadores
+
+187. Resumo sobre Diretivas Personalizadas
+
+188. Registrando Diretivas Localmente
+
+189. Usando Múltiplos Modificadores
+
+190. Passando Valores mais Complexos para as Diretivas
+
+191. Hora de Praticar - Diretivas
+
+192. Hora de Praticar - Diretivas (Resposta)
+
+193. Conclusão do Módulo
+
+194. Recursos do Módulo & Links Úteis
 
 [Voltar ao Índice](#indice)
 
