@@ -4,6 +4,7 @@
     <hr>
     <p v-text="'Usando Directivas <strong>v-text</strong>'"></p>
     <p v-html="'Usando Directivas <strong>v-html</strong>'"></p>
+    <p v-destaque>Testando Directivas</p>
 	</div>
 </template>
 

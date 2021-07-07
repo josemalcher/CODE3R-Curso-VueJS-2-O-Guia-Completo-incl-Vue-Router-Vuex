@@ -2772,6 +2772,14 @@ Documentação Oficial - Formulário: https://br.vuejs.org/v2/guide/forms.html
 
 183. Criando uma Diretiva Simples
 
+```vue
+Vue.directive('destaque', {
+	bind(el, binding, vnode) {
+		el.style.backgroundColor = 'lightgreen';
+	}
+})
+```
+
 184. Passando Valor para Diretiva Personalizada
 
 185. Passando Argumento para Diretiva Personalizada
