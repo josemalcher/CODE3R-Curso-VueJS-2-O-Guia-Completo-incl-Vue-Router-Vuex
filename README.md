@@ -2810,7 +2810,17 @@ export default {
 Vue.directive('destaque', {
 	bind(el, binding, vnode) {
 		//el.style.backgroundColor = 'lightgreen';
-		el.style.backgroundColor = binding.value;
+		//el.style.backgroundColor = binding.value;
+        let atraso = 0;
+        if(binding.modifiers['atrasar']) atraso = 3000
+        
+        setTimeout(() => {
+            if(binding.arg === 'fundo'){
+                el.style.backgroundColor = binding.value
+            }else{
+                el.style.color = binding.value;
+            }
+        })
 	}
 })
 
@@ -2818,7 +2828,59 @@ Vue.directive('destaque', {
 
 185. Passando Argumento para Diretiva Personalizada
 
+```vue
+    <p v-destaque:fundo="'lightblue'">Testando Directivas</p>
+    <p v-destaque="cor">Testando Directivas</p>
+```
+
+- [Secao-12-Usando-e-Criando-Diretivas/181-Entendendo-Diretivas/diretivas-exercicios/src/main.js](Secao-12-Usando-e-Criando-Diretivas/181-Entendendo-Diretivas/diretivas-exercicios/src/main.js)
+
+```javascript
+
+Vue.directive('destaque', {
+	bind(el, binding, vnode) {
+		//el.style.backgroundColor = 'lightgreen';
+		//el.style.backgroundColor = binding.value;
+		if(binding.arg === 'fundo'){
+			el.style.backgroundColor = binding.value;
+		}else{
+			el.style.color = binding.value;
+		}
+	}
+})
+```
+
 186. Modificando Diretivas Personalizadas com Modificadores
+
+- [Secao-12-Usando-e-Criando-Diretivas/181-Entendendo-Diretivas/diretivas-exercicios/src/main.js](Secao-12-Usando-e-Criando-Diretivas/181-Entendendo-Diretivas/diretivas-exercicios/src/main.js)
+
+```javascript
+Vue.directive('destaque', {
+    bind(el, binding, vnode) {
+
+        // eslint-disable-next-line no-unused-vars
+        let atraso = 0;
+
+        if (binding.modifiers['atrasar']) {
+            atraso = 3000;
+        }
+        setTimeout(() => {
+
+            if (binding.arg === 'fundo') {
+                el.style.backgroundColor = binding.value;
+            } else {
+                el.style.color = binding.value;
+            }
+        },atraso);
+    }
+})
+```
+
+```vue
+    <p v-destaque:fundo.atrasar="'lightblue'">Testando Directivas</p>
+    <p v-destaque.atrasar="cor">Testando...</p>
+```
+
 
 187. Resumo sobre Diretivas Personalizadas
 
