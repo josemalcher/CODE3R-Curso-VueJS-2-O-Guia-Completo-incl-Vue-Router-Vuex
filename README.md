@@ -2886,6 +2886,42 @@ Vue.directive('destaque', {
 
 188. Registrando Diretivas Localmente
 
+- [Secao-12-Usando-e-Criando-Diretivas/181-Entendendo-Diretivas/diretivas-exercicios/src/App.vue](Secao-12-Usando-e-Criando-Diretivas/181-Entendendo-Diretivas/diretivas-exercicios/src/App.vue)
+
+```vue
+
+export default {
+  components: {},
+  directives: {
+    'destaque-local': {
+      bind(el, binding, vnode) {
+
+        // eslint-disable-next-line no-unused-vars
+        let atraso = 0;
+
+        if (binding.modifiers['atrasar']) {
+          atraso = 3000;
+        }
+        setTimeout(() => {
+
+          if (binding.arg === 'fundo') {
+            el.style.backgroundColor = binding.value;
+          } else {
+            el.style.color = binding.value;
+          }
+        },atraso);
+      }
+    }
+  },
+  data() {
+    return {
+      cor: 'blue'
+    }
+  }
+}
+
+```
+
 189. Usando Múltiplos Modificadores
 
 190. Passando Valores mais Complexos para as Diretivas
