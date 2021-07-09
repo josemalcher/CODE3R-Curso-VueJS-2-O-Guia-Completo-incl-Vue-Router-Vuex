@@ -3076,6 +3076,10 @@ export default {
 
 194. Recursos do Módulo & Links Úteis
 
+Links Úteis:
+
+Documentação Oficial - Diretivas Personalizadas: https://br.vuejs.org/v2/guide/custom-directive.html
+
 [Voltar ao Índice](#indice)
 
 ---
