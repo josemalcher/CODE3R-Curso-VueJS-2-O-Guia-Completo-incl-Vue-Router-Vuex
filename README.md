@@ -3032,7 +3032,45 @@ export default {
 
 191. Hora de Praticar - Diretivas
 
+- [Secao-12-Usando-e-Criando-Diretivas/191-Hora-de-Praticar-Diretivas/diretivas-desafio](Secao-12-Usando-e-Criando-Diretivas/191-Hora-de-Praticar-Diretivas/diretivas-desafio)
+
 192. Hora de Praticar - Diretivas (Resposta)
+
+- [Secao-12-Usando-e-Criando-Diretivas/191-Hora-de-Praticar-Diretivas/diretivas-desafio/src/App.vue](Secao-12-Usando-e-Criando-Diretivas/191-Hora-de-Praticar-Diretivas/diretivas-desafio/src/App.vue)
+
+```vue
+   <button v-quando:click="acao">EXECUTAR</button>
+    <p v-quando:mouseenter="mouseEnter" v-quando:mouseleave="mouseLeaver">Teste de mouse event</p>
+
+```
+
+```vue
+export default {
+  directives: {
+    quando: {
+      bind(el, binding) {
+        // el.onclick = function (e) {
+        //   binding.value();
+        // }
+        const tipo = binding.arg;
+        const fn = binding.value;
+        el.addEventListener(tipo, fn);
+      }
+    }
+  },
+  methods: {
+    acao() {
+      alert('Ação Executada');
+    },
+    mouseEnter(){
+      console.log('Passou o mouse!')
+    },
+    mouseLeaver() {
+      console.log('Saiu o mouse!')
+    }
+  }
+}
+```
 
 193. Conclusão do Módulo
 
