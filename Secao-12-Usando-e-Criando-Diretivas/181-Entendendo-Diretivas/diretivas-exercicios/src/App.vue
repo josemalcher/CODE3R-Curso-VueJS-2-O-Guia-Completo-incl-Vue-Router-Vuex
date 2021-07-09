@@ -7,8 +7,9 @@
     <p v-destaque:fundo.atrasar="'lightblue'">Testando Directivas</p>
     <p v-destaque.atrasar="cor">Testando...</p>
     <hr>
-    <p v-destaque-local:fundo.atrasar.alternar="'lightblue'">Testando Directivas</p>
-    <p v-destaque-local.atrasar="cor">Testando...</p>
+    <p v-destaque-local:fundo.atrasar.alternar="{cor1: 'green', cor2: 'red', atraso:3000, intervalo: 2000}">Testando
+      Directivas</p>
+    <p v-destaque-local.atrasar="{cor1:'red', atraso: 5000}">Testando...</p>
   </div>
 </template>
 
@@ -30,23 +31,23 @@ export default {
 
         let atraso = 0;
 
-        const cor1 = binding.value;
-        const cor2 = 'purple';
+        const cor1 = binding.value.cor1;
+        const cor2 = binding.value.cor2;
         let corAtual = cor1;
 
         if (binding.modifiers['atrasar']) {
-          atraso = 3000;
+          atraso = binding.value.atraso;
         }
 
         setTimeout(() => {
-          setInterval(() => {
-            if (binding.modifiers['alternar']) {
+          if (binding.modifiers['alternar']) {
+            setInterval(() => {
               corAtual = corAtual === cor1 ? cor2 : cor1;
               aplicarCor(corAtual)
-            } else {
-              aplicarCor(binding.value)
-            }
-          }, 1000);
+            }, binding.value.intervalo);
+          } else {
+            aplicarCor(binding.value.cor1)
+          }
         }, atraso);
       }
     }

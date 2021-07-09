@@ -2978,6 +2978,58 @@ export default {
 
 190. Passando Valores mais Complexos para as Diretivas
 
+```vue
+export default {
+  components: {},
+  directives: {
+    'destaque-local': {
+      bind(el, binding, vnode) {
+
+        const aplicarCor = cor => {
+          if (binding.arg === 'fundo') {
+            el.style.backgroundColor = cor;
+          } else {
+            el.style.color = cor;
+          }
+        }
+
+        let atraso = 0;
+
+        const cor1 = binding.value.cor1;
+        const cor2 = binding.value.cor2;
+        let corAtual = cor1;
+
+        if (binding.modifiers['atrasar']) {
+          atraso = binding.value.atraso;
+        }
+
+        setTimeout(() => {
+          if (binding.modifiers['alternar']) {
+            setInterval(() => {
+              corAtual = corAtual === cor1 ? cor2 : cor1;
+              aplicarCor(corAtual)
+            }, binding.value.intervalo);
+          } else {
+            aplicarCor(binding.value.cor1)
+          }
+        }, atraso);
+      }
+    }
+  },
+  data() {
+    return {
+      cor: 'blue'
+    }
+  }
+}
+```
+
+```vue
+    <p v-destaque-local:fundo.atrasar.alternar="{cor1: 'green', cor2: 'red', atraso:3000, intervalo: 2000}">Testando
+      Directivas</p>
+    <p v-destaque-local.atrasar="{cor1:'red', atraso: 5000}">Testando...</p>
+```
+
 191. Hora de Praticar - Diretivas
 
 192. Hora de Praticar - Diretivas (Resposta)
