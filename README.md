@@ -3087,6 +3087,29 @@ Documentação Oficial - Diretivas Personalizadas: https://br.vuejs.org/v2/guide
 
 ## <a name="parte13">13 - Seção 13: Melhorando sua App com Filtros e Mixins </a>
 
+195. Introdução do Módulo
+
+- [Secao-13-Melhorando-sua-App-com-Filtros-e-Mixins/195-Introducao-do-Modulo/filtros-mixins-exercicios](Secao-13-Melhorando-sua-App-com-Filtros-e-Mixins/195-Introducao-do-Modulo/filtros-mixins-exercicios)
+
+196. Criando um Filtro Local
+
+197. Filtro Global e Como Encadear Múltiplos Filtros
+
+198. Filtro & v-bind
+
+199. Duplicando Código para Usar os Mixins
+
+200. Criando e Usando Mixins
+
+201. Criando um Mixin Global (Caso Especial!)
+
+202. Hora de Praticar - Filtros & Mixins
+
+203. Hora de Praticar - Filtros & Mixins (Resposta)
+
+204. Conclusão do Módulo
+
+205. Recursos do Módulo & Links Úteis
 
 
 [Voltar ao Índice](#indice)
