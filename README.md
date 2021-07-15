@@ -3093,6 +3093,35 @@ Documentação Oficial - Diretivas Personalizadas: https://br.vuejs.org/v2/guide
 
 196. Criando um Filtro Local
 
+```vue
+<template>
+  <div id="app">
+    <h1>Filtros & Mixins</h1>
+    <hr>
+    <p>{{ cpf | cpf }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      cpf: '09856723412'
+    }
+  },
+  filters: {
+    cpf(valor) {
+      const arr = valor.split('');
+      arr.splice(3,0, '.')
+      arr.splice(7,0, '.')
+      arr.splice(11,0, '-')
+      return arr.join('')
+    }
+  }
+}
+</script>
+```
+
 197. Filtro Global e Como Encadear Múltiplos Filtros
 
 198. Filtro & v-bind
