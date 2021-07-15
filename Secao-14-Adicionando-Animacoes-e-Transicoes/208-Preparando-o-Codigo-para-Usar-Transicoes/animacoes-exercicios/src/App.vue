@@ -10,6 +10,11 @@
     <transition name="fade">
       <b-alert variant="info" show v-if="exibir">{{ msn }}</b-alert>
     </transition>
+
+    <transition name="slide">
+      <b-alert variant="info" show v-if="exibir">{{ msn }}</b-alert>
+    </transition>
+
   </div>
 </template>
 
@@ -39,23 +44,33 @@ export default {
   opacity: 0;
 }
 
-.fade-enter-active, .fade-leave-active  {
+.fade-enter-active, .fade-leave-active {
   transition: opacity 2s;
 }
 
-/*.fade-enter-to {
-opacity: 1;
+@keyframes slide-in {
+  from {
+    transform: translateY(40px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
-.face-leave {
-opacity: 1;
-}*/
+@keyframes slide-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(40px);
+  }
+}
 
-/*.fade-leave-active {
-transition: opacity 2s;
-}*/
+.slide-enter-active {
+  animation: slide-in 2s ease;
+}
 
-/*.fade-leave-to {
-opacity: 0;
-}*/
+.slide-leave-active {
+  animation: slide-out 2s ease;
+}
 </style>
