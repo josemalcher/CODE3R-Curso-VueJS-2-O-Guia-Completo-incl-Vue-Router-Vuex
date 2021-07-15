@@ -5,10 +5,10 @@
     <b-button variant="primary"
               class="mb-4"
               @click="exibir = !exibir">
-              Mostrar Mensagem
+      Mostrar Mensagem
     </b-button>
     <transition name="fade">
-      <b-alert variant="info" show v-if="exibir">{{msn}}</b-alert>
+      <b-alert variant="info" show v-if="exibir">{{ msn }}</b-alert>
     </transition>
   </div>
 </template>
@@ -35,26 +35,27 @@ export default {
   font-size: 1.5rem;
 }
 
-.fade-enter{
-
-}
-.face-enter-active{
-
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 
-.fade-enter-to{
-
+.fade-enter-active, .fade-leave-active  {
+  transition: opacity 2s;
 }
 
-.face-leave{
-
+/*.fade-enter-to {
+opacity: 1;
 }
 
-.fade-leace-active{
+.face-leave {
+opacity: 1;
+}*/
 
-}
+/*.fade-leave-active {
+transition: opacity 2s;
+}*/
 
-.fade-leave-to{
-
-}
+/*.fade-leave-to {
+opacity: 0;
+}*/
 </style>

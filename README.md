@@ -3319,6 +3319,39 @@ Links Úteis:
 
 211. Criando Transição "Fade" com Propriedade CSS transition
 
+```vue
+    <transition name="fade">
+      <b-alert variant="info" show v-if="exibir">{{ msn }}</b-alert>
+    </transition>
+// ...
+<style>
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active  {
+  transition: opacity 2s;
+}
+
+/*.fade-enter-to {
+opacity: 1;
+}
+
+.face-leave {
+opacity: 1;
+}*/
+
+/*.fade-leave-active {
+transition: opacity 2s;
+}*/
+
+/*.fade-leave-to {
+opacity: 0;
+}*/
+</style>
+
+```
+
 212. Criando Transição "Slide" com Propriedade CSS animation
 
 213. Misturando as Propriedades transition e animation
