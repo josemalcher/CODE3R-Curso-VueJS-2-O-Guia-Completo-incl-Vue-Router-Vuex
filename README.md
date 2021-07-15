@@ -3309,6 +3309,8 @@ Links Úteis:
 
 208. Preparando o Código para Usar Transições
 
+- [Secao-14-Adicionando-Animacoes-e-Transicoes/208-Preparando-o-Codigo-para-Usar-Transicoes/animacoes-exercicios](Secao-14-Adicionando-Animacoes-e-Transicoes/208-Preparando-o-Codigo-para-Usar-Transicoes/animacoes-exercicios)
+
 209. Configurando Transição
 
 210. Definindo as Classes CSS para Transição
