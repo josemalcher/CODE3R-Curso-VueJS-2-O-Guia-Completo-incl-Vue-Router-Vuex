@@ -3150,6 +3150,54 @@ Vue.filter('inverter', function (valor) {
 
 200. Criando e Usando Mixins
 
+```vue
+<template>
+  <div id="app">
+    <h1>Filtros & Mixins</h1>
+    <hr>
+    <p>Usuário Logado: {{usuarioLogado}}</p>
+    <p>{{ cpfAluno | cpf | inverter }}</p>
+    <input type="text" :value="cpfAluno | cpf | inverter">
+    <hr>
+    <Fruta/>
+    <hr>
+    <ul>
+      <li v-for="fruta in frutas" :key="fruta">{{fruta}}</li>
+    </ul>
+    <input type="text" v-model="fruta" @keydown.enter="add">
+  </div>
+</template>
+
+<script>
+import frutasMixin from './frutasMixin';
+import Fruta from "./Fruta.vue";
+import usuarioLogado from "./usuarioLogado";
+
+export default {
+  components: {Fruta},
+  mixins : [frutasMixin, usuarioLogado],
+  data() {
+    return {
+      cpfAluno: '09856723412',
+      frutas: ['abacate']
+    }
+  },
+  filters: {
+    cpf(valor) {
+      const arr = valor.split('');
+      arr.splice(3, 0, '.')
+      arr.splice(7, 0, '.')
+      arr.splice(11, 0, '-')
+      return arr.join('')
+    }
+  },
+  methods: {
+
+  }
+}
+</script>
+```
+
 201. Criando um Mixin Global (Caso Especial!)
 
 202. Hora de Praticar - Filtros & Mixins
