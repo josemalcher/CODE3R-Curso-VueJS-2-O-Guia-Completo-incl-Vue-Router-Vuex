@@ -3290,6 +3290,11 @@ Vue.filter('contarPalavras', function (valor) {
 
 205. Recursos do Módulo & Links Úteis
 
+Links Úteis:
+
+- Documentação Oficial - Filtros: https://br.vuejs.org/v2/guide/filters.html
+
+- Documentação Oficial - Mixins: https://br.vuejs.org/v2/guide/mixins.html
 
 [Voltar ao Índice](#indice)
 
