@@ -3124,6 +3124,15 @@ export default {
 
 197. Filtro Global e Como Encadear Múltiplos Filtros
 
+- [Secao-13-Melhorando-sua-App-com-Filtros-e-Mixins/195-Introducao-do-Modulo/filtros-mixins-exercicios/src/main.js](Secao-13-Melhorando-sua-App-com-Filtros-e-Mixins/195-Introducao-do-Modulo/filtros-mixins-exercicios/src/main.js)
+
+```javascript
+
+Vue.filter('inverter', function (valor) {
+	return valor.split('').reverse().join('');
+});
+```
+
 198. Filtro & v-bind
 
 199. Duplicando Código para Usar os Mixins

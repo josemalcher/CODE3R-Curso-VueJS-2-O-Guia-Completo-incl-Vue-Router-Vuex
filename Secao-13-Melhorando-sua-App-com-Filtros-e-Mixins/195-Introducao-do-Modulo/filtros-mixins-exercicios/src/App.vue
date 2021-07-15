@@ -2,7 +2,7 @@
   <div id="app">
     <h1>Filtros & Mixins</h1>
     <hr>
-    <p>{{ cpf | cpf }}</p>
+    <p>{{ cpfAluno | cpf | inverter}}</p>
   </div>
 </template>
 
@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      cpf: '09856723412'
+      cpfAluno: '09856723412'
     }
   },
   filters: {
