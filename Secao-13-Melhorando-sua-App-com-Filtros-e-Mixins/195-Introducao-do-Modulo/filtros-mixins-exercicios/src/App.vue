@@ -12,17 +12,19 @@
       <li v-for="fruta in frutas" :key="fruta">{{fruta}}</li>
     </ul>
     <input type="text" v-model="fruta" @keydown.enter="add">
+    <hr>
+    <p>{{globalMain}}</p>
   </div>
 </template>
 
 <script>
 import frutasMixin from './frutasMixin';
 import Fruta from "./Fruta.vue";
-import usuarioLogado from "./usuarioLogado";
+import usuarioLogadoMixin from "./usuarioLogadoMixin";
 
 export default {
   components: {Fruta},
-  mixins : [frutasMixin, usuarioLogado],
+  mixins : [frutasMixin, usuarioLogadoMixin],
   data() {
     return {
       cpfAluno: '09856723412',
@@ -40,6 +42,9 @@ export default {
   },
   methods: {
 
+  },
+  created() {
+    console.log('Created - App.vue');
   }
 }
 </script>

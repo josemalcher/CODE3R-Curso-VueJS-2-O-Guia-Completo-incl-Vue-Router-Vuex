@@ -3,5 +3,8 @@ export default {
         usuarioLogado() {
             return 'JoseMalcher';
         }
+    },
+    created() {
+        console.log('Created - Usuário Mixin');
     }
 }

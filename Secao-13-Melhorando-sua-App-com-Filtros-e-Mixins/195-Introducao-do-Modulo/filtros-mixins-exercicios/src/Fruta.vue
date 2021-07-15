@@ -9,10 +9,14 @@
 
 <script>
 import frutasMixin from "./frutasMixin";
+import usuarioLogadoMixin from "./usuarioLogadoMixin";
 
 export default {
   name: "Fruta",
-  mixins : [frutasMixin],
+  mixins : [frutasMixin, usuarioLogadoMixin],
+  created() {
+    console.log('Created - FRUTA.vue');
+  }
 }
 </script>
 
