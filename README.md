@@ -3135,6 +3135,17 @@ Vue.filter('inverter', function (valor) {
 
 198. Filtro & v-bind
 
+```vue
+<template>
+  <div id="app">
+    <h1>Filtros & Mixins</h1>
+    <hr>
+    <p>{{ cpfAluno | cpf | inverter}}</p>
+    <input type="text" :value="cpfAluno | cpf | inverter">
+  </div>
+</template>
+```
+
 199. Duplicando Código para Usar os Mixins
 
 200. Criando e Usando Mixins
