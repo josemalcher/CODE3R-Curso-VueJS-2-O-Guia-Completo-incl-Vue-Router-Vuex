@@ -3303,6 +3303,59 @@ Links Úteis:
 
 ## <a name="parte14">14 - Seção 14: Adicionando Animações e Transições </a>
 
+206. Introdução do Módulo
+
+207. Entendendo as Transições
+
+208. Preparando o Código para Usar Transições
+
+209. Configurando Transição
+
+210. Definindo as Classes CSS para Transição
+
+211. Criando Transição "Fade" com Propriedade CSS transition
+
+212. Criando Transição "Slide" com Propriedade CSS animation
+
+213. Misturando as Propriedades transition e animation
+
+214. Usando v-show
+
+215. Configurando Animação no Carregamento do Componente
+
+216. Usando Nomes Diferentes de Classes CSS
+
+217. Usando Nomes e Atributos Dinâmicos
+
+218. Transicionar entre Múltiplos Elementos
+
+219. Escutando a Eventos de Transição (Hooks)
+
+220. Entendendo Animação em JavaScript
+
+221. Excluindo CSS da Animação
+
+222. Criando Animação em JavaScript
+
+223. Animando Componentes Dinâmicos
+
+224. Animando Listas com <transition-group>
+
+225. Usando <transition-group> - Preparações
+
+226. Usando <transition-group> para Animar Listas
+
+227. Entendendo a Aplicação
+
+228. Desenvolvendo a Aplicação #01
+
+229. Desenvolvendo a Aplicação #02
+
+230. Adicionando as Animações
+
+231. Conclusão do Módulo
+
+232. Recursos do Módulo & Links Úteis
 
 
 [Voltar ao Índice](#indice)
