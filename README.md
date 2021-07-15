@@ -3313,6 +3313,8 @@ Links Úteis:
 
 209. Configurando Transição
 
+![img/transicao_css.png](img/transicao_css.png)
+
 210. Definindo as Classes CSS para Transição
 
 211. Criando Transição "Fade" com Propriedade CSS transition
