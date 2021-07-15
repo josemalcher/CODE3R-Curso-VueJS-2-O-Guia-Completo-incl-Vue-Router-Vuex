@@ -11,7 +11,7 @@
       <b-alert variant="info" show v-if="exibir">{{ msn }}</b-alert>
     </transition>
 
-    <transition name="slide">
+    <transition name="slide" type="animation">
       <b-alert variant="info" show v-if="exibir">{{ msn }}</b-alert>
     </transition>
 
@@ -68,9 +68,15 @@ export default {
 
 .slide-enter-active {
   animation: slide-in 2s ease;
+  transition: opacity 2s;
 }
 
 .slide-leave-active {
   animation: slide-out 2s ease;
+  transition: opacity 6s;
+}
+
+.slide-enter, .slide-leave-to{
+  opacity: 0;
 }
 </style>
