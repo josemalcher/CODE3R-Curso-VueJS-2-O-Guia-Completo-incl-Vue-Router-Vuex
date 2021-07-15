@@ -2718,13 +2718,13 @@ Links Úteis:
 
 169. Modificar Entrada de Usuário com Modificadores de Input
 
-170. Usando <textarea> e Salvando Quebras de Linha
+170. Usando textarea e Salvando Quebras de Linha
 
 171. Usando Checkboxes e Salvando os Dados em um Array
 
 172. Usando Botões Radio
 
-173. Manipulando Combobox com <select> e <option>
+173. Manipulando Combobox com select e option
 
 174. O que o v-model faz e Como criar um Input Personalizado
 
