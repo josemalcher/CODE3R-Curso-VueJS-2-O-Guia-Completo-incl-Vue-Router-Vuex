@@ -29,8 +29,9 @@
       <option value="fade">Fade</option>
       <option value="slide">Slide</option>
     </b-select>
-    <transition :name="tipoAnimacao">
-      <b-alert variant="info" show v-show="exibir">{{ msn }}</b-alert>
+    <transition :name="tipoAnimacao" mode="out-in">
+      <b-alert variant="info"    show key="info" v-if="exibir">{{ msn }}</b-alert>
+      <b-alert variant="warning" show key="warn" v-else>{{ msn }}</b-alert>
     </transition>
   </div>
 </template>

@@ -3459,6 +3459,13 @@ opacity: 0;
 
 218. Transicionar entre Múltiplos Elementos
 
+```vue
+    <transition :name="tipoAnimacao" mode="out-in">
+      <b-alert variant="info"    show key="info" v-if="exibir">{{ msn }}</b-alert>
+      <b-alert variant="warning" show key="warn" v-else>{{ msn }}</b-alert>
+    </transition>
+```
+
 219. Escutando a Eventos de Transição (Hooks)
 
 220. Entendendo Animação em JavaScript
