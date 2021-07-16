@@ -3522,6 +3522,23 @@ methods: {
 
 221. Excluindo CSS da Animação
 
+```vue
+    <transition
+        :css="false"
+      @before-enter="beforEnter"
+      @enter="enter"
+      @after-enter="afterEnter"
+      @enter-cancelled="enterCancelled"
+
+      @before-leave="beforeLeave"
+      @leave="leave"
+      @after-leave="afterLeave"
+      @leave-cancelled="leaveCancelled"
+    >
+      <div class="caixa" v-if="exibir2"></div>
+    </transition>
+```
+
 222. Criando Animação em JavaScript
 
 223. Animando Componentes Dinâmicos
