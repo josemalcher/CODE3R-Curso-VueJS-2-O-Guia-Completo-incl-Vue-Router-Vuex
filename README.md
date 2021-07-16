@@ -3426,6 +3426,12 @@ opacity: 0;
 
 215. Configurando Animação no Carregamento do Componente
 
+```vue
+    <transition name="fade" appear>
+      <b-alert variant="info" show v-if="exibir">{{ msn }}</b-alert>
+    </transition>
+```
+
 216. Usando Nomes Diferentes de Classes CSS
 
 217. Usando Nomes e Atributos Dinâmicos

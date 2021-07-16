@@ -7,11 +7,11 @@
               @click="exibir = !exibir">
       Mostrar Mensagem
     </b-button>
-    <transition name="fade">
+    <transition name="fade" appear>
       <b-alert variant="info" show v-if="exibir">{{ msn }}</b-alert>
     </transition>
 
-    <transition name="slide" type="animation">
+    <transition name="slide" type="animation" appear>
 <!--      <b-alert variant="info" show v-if="exibir">{{ msn }}</b-alert>-->
       <b-alert variant="info" show v-show="exibir">{{ msn }}</b-alert>
     </transition>
@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       msn: 'Uma mensagem de informação para o Usuário',
-      exibir: false
+      exibir: true
     }
   }
 }
