@@ -3468,6 +3468,8 @@ opacity: 0;
 
 219. Escutando a Eventos de Transição (Hooks)
 
+![img/transicao_js.png](img/transicao_js.png)
+
 220. Entendendo Animação em JavaScript
 
 221. Excluindo CSS da Animação
