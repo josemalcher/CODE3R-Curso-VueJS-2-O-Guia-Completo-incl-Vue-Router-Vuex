@@ -3541,6 +3541,50 @@ methods: {
 
 222. Criando Animação em JavaScript
 
+```vue
+methods: {
+    animar(el, done, negativo) {
+      let rodada = 1
+      const temporizador = setInterval(() => {
+        const novaLargura = this.larguraBase +
+            (negativo ? -rodada * 10 : rodada * 10)
+        el.style.width = `${novaLargura}px`
+        rodada++
+        if (rodada > 30) {
+          clearInterval(temporizador)
+          done()
+        }
+      }, 20)
+    },
+    beforEnter(el) {
+      this.larguraBase = 0
+      el.style.width = `${this.larguraBase}px`
+    },
+    enter(el, done) {
+      this.animar(el, done, false)
+    },
+    /*    afterEnter(el){
+          console.log('AfterEnter')
+        },*/
+    /*    enterCancelled() {
+          console.log('EnterCancelled');
+        },*/
+    beforeLeave(el) {
+      this.larguraBase = 300
+      el.style.width = `${this.larguraBase}px`
+    },
+    leave(el, done) {
+      this.animar(el, done, true)
+    },
+    /*    afterLeave(el) {
+          console.log(afterLeave)
+        },
+        leaveCancelled(){
+          console.log('leaveCancelled')
+        }*/
+  }
+```
+
 223. Animando Componentes Dinâmicos
 
 224. Animando Listas com <transition-group>
