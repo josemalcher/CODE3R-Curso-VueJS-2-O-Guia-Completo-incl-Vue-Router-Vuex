@@ -12,8 +12,16 @@
     </transition>
 
     <transition name="slide" type="animation" appear>
-<!--      <b-alert variant="info" show v-if="exibir">{{ msn }}</b-alert>-->
+      <!--      <b-alert variant="info" show v-if="exibir">{{ msn }}</b-alert>-->
       <b-alert variant="info" show v-show="exibir">{{ msn }}</b-alert>
+    </transition>
+
+    <hr>
+    <transition
+      enter-active-class="animated bounce"
+      leave-active-class="animated shake"
+    >
+      <b-alert variant="info" show v-if="exibir">{{ msn }}</b-alert>
     </transition>
 
   </div>
@@ -25,7 +33,7 @@ export default {
   data() {
     return {
       msn: 'Uma mensagem de informação para o Usuário',
-      exibir: true
+      exibir: false
     }
   }
 }
@@ -77,7 +85,7 @@ export default {
   transition: opacity 2s;
 }
 
-.slide-enter, .slide-leave-to{
+.slide-enter, .slide-leave-to {
   opacity: 0;
 }
 </style>

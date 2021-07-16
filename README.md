@@ -3434,6 +3434,17 @@ opacity: 0;
 
 216. Usando Nomes Diferentes de Classes CSS
 
+- [https://animate.style/](https://animate.style/)
+
+```vue
+<transition
+  enter-active-class="animated bounce"
+  leave-active-class="animated shake"
+>
+  <b-alert variant="info" show v-if="exibir">{{ msn }}</b-alert>
+</transition>
+```
+
 217. Usando Nomes e Atributos Dinâmicos
 
 218. Transicionar entre Múltiplos Elementos
