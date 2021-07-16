@@ -33,6 +33,21 @@
       <b-alert variant="info"    show key="info" v-if="exibir">{{ msn }}</b-alert>
       <b-alert variant="warning" show key="warn" v-else>{{ msn }}</b-alert>
     </transition>
+    <hr>
+    <button @click="exibir2 = !exibir2">Mostrar</button>
+    <transition
+      @before-enter="beforEnter"
+      @enter="enter"
+      @after-enter="afterEnter"
+      @enter-cancelled="enterCancelled"
+
+      @before-leave="beforeLeave"
+      @leave="leave"
+      @after-leave="afterLeave"
+      @leave-cancelled="leaveCancelled"
+    >
+      <div class="caixa" v-if="exibir2"></div>
+    </transition>
   </div>
 </template>
 
@@ -43,7 +58,36 @@ export default {
     return {
       msn: 'Uma mensagem de informação para o Usuário',
       exibir: false,
+      exibir2: true,
       tipoAnimacao: 'fade'
+    }
+  },
+  methods: {
+    beforEnter(el){
+      console.log('beforEnter')
+    },
+    enter(el, done){
+      console.log('enter')
+      done()
+    },
+    afterEnter(el){
+      console.log('AfterEnter')
+    },
+    enterCancelled() {
+      console.log('EnterCancelled');
+    },
+    beforeLeave(el) {
+      console.log('beforLeave');
+    },
+    leave(el, done) {
+      console.log('Leave');
+      done()
+    },
+    afterLeave(el) {
+      console.log(afterLeave)
+    },
+    leaveCancelled(){
+      console.log('leaveCancelled')
     }
   }
 }
@@ -57,6 +101,13 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
   font-size: 1.5rem;
+}
+
+.caixa {
+  height: 100px;
+  width: 300px;
+  margin: 30px auto;
+  background-color: lightgreen;
 }
 
 .fade-enter, .fade-leave-to {

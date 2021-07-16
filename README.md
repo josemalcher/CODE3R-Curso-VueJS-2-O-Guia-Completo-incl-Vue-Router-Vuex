@@ -3472,6 +3472,54 @@ opacity: 0;
 
 220. Entendendo Animação em JavaScript
 
+```vue
+<button @click="exibir2 = !exibir2">Mostrar</button>
+    <transition
+      @before-enter="beforEnter"
+      @enter="enter"
+      @after-enter="afterEnter"
+      @enter-cancelled="enterCancelled"
+
+      @before-leave="beforeLeave"
+      @leave="leave"
+      @after-leave="afterLeave"
+      @leave-cancelled="leaveCancelled"
+    >
+      <div class="caixa" v-if="exibir2"></div>
+    </transition>
+```
+
+```vue
+methods: {
+    beforEnter(el){
+      console.log('beforEnter')
+    },
+    enter(el, done){
+      console.log('enter')
+      done()
+    },
+    afterEnter(el){
+      console.log('AfterEnter')
+    },
+    enterCancelled() {
+      console.log('EnterCancelled');
+    },
+    beforeLeave(el) {
+      console.log('beforLeave');
+    },
+    leave(el, done) {
+      console.log('Leave');
+      done()
+    },
+    afterLeave(el) {
+      console.log(afterLeave)
+    },
+    leaveCancelled(){
+      console.log('leaveCancelled')
+    }
+  }
+```
+
 221. Excluindo CSS da Animação
 
 222. Criando Animação em JavaScript
