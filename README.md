@@ -3417,6 +3417,13 @@ opacity: 0;
 
 214. Usando v-show
 
+```vue
+<transition name="slide" type="animation">
+  <!--      <b-alert variant="info" show v-if="exibir">{{ msn }}</b-alert>-->
+  <b-alert variant="info" show v-show="exibir">{{ msn }}</b-alert>
+</transition>
+```
+
 215. Configurando Animação no Carregamento do Componente
 
 216. Usando Nomes Diferentes de Classes CSS
