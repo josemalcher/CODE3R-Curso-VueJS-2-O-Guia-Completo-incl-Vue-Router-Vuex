@@ -3447,6 +3447,16 @@ opacity: 0;
 
 217. Usando Nomes e Atributos Dinâmicos
 
+```vue
+    <b-select v-model="tipoAnimacao" class="mb-4">
+      <option value="fade">Fade</option>
+      <option value="slide">Slide</option>
+    </b-select>
+    <transition :name="tipoAnimacao">
+      <b-alert variant="info" show v-show="exibir">{{ msn }}</b-alert>
+    </transition>
+```
+
 218. Transicionar entre Múltiplos Elementos
 
 219. Escutando a Eventos de Transição (Hooks)
