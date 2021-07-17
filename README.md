@@ -3604,6 +3604,15 @@ methods: {
 
 226. Usando <transition-group> para Animar Listas
 
+```vue
+<b-button @click="adicionaAluno" class="mb-4">Admicionar Aluno</b-button>
+    <transition-group name="slide" tag="div">
+      <b-list-group v-for="(aluno, i) in alunos" :key="aluno">
+        <b-list-group-item @click="removeAluno(i)">{{ aluno }}</b-list-group-item>
+      </b-list-group>
+    </transition-group>
+```
+
 227. Entendendo a Aplicação
 
 228. Desenvolvendo a Aplicação #01
