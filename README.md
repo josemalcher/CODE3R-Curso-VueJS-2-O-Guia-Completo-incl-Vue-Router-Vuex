@@ -3615,6 +3615,8 @@ methods: {
 
 227. Entendendo a Aplicação
 
+- [Secao-14-Adicionando-Animacoes-e-Transicoes/227-Entendendo-a-Aplicacao/super-quiz](Secao-14-Adicionando-Animacoes-e-Transicoes/227-Entendendo-a-Aplicacao/super-quiz)
+
 228. Desenvolvendo a Aplicação #01
 
 229. Desenvolvendo a Aplicação #02
