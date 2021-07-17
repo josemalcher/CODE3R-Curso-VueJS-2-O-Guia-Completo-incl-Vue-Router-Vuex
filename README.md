@@ -3635,6 +3635,35 @@ methods: {
 
 ## <a name="parte15">15 - Seção 15: Conectando com Servidor via HTTP </a>
 
+233. Introdução do Módulo
+
+234. Configuração do Firebase
+
+235. Configuração Global do Axios
+
+236. Criando Instância do Axios
+
+237. Criando Formulário
+
+238. Enviando POST
+
+239. Enviando GET
+
+240. Usando Axios Localmente
+
+241. Interceptando Requisições
+
+242. Interceptando Resposta
+
+243. Adicionando Headers Globais
+
+244. Implementando CRUD
+
+245. Exibindo Mensagens
+
+246. Conclusão do Módulo
+
+247. Recursos do Módulo & Links Úteis
 
 
 [Voltar ao Índice](#indice)
