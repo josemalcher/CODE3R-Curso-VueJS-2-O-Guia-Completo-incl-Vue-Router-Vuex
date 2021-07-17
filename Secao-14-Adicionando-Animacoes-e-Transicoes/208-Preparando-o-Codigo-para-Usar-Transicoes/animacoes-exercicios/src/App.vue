@@ -59,18 +59,26 @@
       <component :is="componenteSelecionado"></component>
     </transition>
 
+    <hr>
+    <b-button @click="adicionaAluno" class="mb-4">Admicionar Aluno</b-button>
+    <b-list-group v-for="(aluno, i) in alunos" :key="aluno">
+      <b-list-group-item @click="removeAluno(i)">{{ aluno }}</b-list-group-item>
+    </b-list-group>
+
   </div>
 </template>
 
 <script>
 import AlertaInfo from "./AlertaInfo.vue";
 import AlertaAdvertencia from "./AlertaAdvertencia.vue";
+
 export default {
-  components:{
+  components: {
     AlertaInfo, AlertaAdvertencia
   },
   data() {
     return {
+      alunos: ['Jose', 'Luciana', 'Paulo', 'tereza'],
       msn: 'Uma mensagem de informação para o Usuário',
       exibir: false,
       exibir2: true,
@@ -79,6 +87,13 @@ export default {
     }
   },
   methods: {
+    adicionaAluno() {
+      const s = Math.random().toString(36).substring(2);
+      this.alunos.push(s);
+    },
+    removeAluno(indice) {
+      this.alunos.splice(indice, 1)
+    },
     animar(el, done, negativo) {
       let rodada = 1
       const temporizador = setInterval(() => {
