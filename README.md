@@ -3587,6 +3587,17 @@ methods: {
 
 223. Animando Componentes Dinâmicos
 
+```vue
+<div class="mb-4">
+      <b-button class="mr-2" variant="primary" @click="componenteSelecionado = 'AlertaInfo'">Info</b-button>
+      <b-button variant="secondary" @click="componenteSelecionado = 'AlertaAdvertencia'">Advertência</b-button>
+    </div>
+    <transition name="fade" mode="out-in">
+      <component :is="componenteSelecionado"></component>
+    </transition>
+```
+
+
 224. Animando Listas com <transition-group>
 
 225. Usando <transition-group> - Preparações
