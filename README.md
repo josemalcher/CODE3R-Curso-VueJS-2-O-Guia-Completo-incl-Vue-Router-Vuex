@@ -3641,6 +3641,22 @@ methods: {
 
 235. Configuração Global do Axios
 
+- [Secao-15-Conectando-com-Servidor-via-HTTP/http-exercicios](Secao-15-Conectando-com-Servidor-via-HTTP/http-exercicios)
+
+```javascript
+import Vue from 'vue';
+import axios from 'axios';
+
+axios.defaults.baseURL = 'https://**********c34-default-rtdb.firebaseio.com/';
+
+Vue.use({
+    install(Vue) {
+        Vue.prototype.$http = axios;
+    }
+})
+
+```
+
 236. Criando Instância do Axios
 
 237. Criando Formulário
