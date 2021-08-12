@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  /*created() {
+  created() {
     this.$http.post('usuarios.json', {
       nome: 'Jose',
       email: 'malcher.malch@gmail.com'
@@ -15,7 +15,7 @@ export default {
     }).catch(e => {
       console.log(e)
     })
-  }*/
+  }
 }
 </script>
 
