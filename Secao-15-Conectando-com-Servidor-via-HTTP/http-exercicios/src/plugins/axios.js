@@ -8,7 +8,7 @@ Vue.use({
         //Vue.prototype.$http = axios;
 
         Vue.prototype.$http = axios.create({
-            baseURL: 'https://c********-default-rtdb.firebaseio.com/'
+            baseURL: 'https://curso-vue-2-26c34-default-rtdb.firebaseio.com/'
         })
 
     }
