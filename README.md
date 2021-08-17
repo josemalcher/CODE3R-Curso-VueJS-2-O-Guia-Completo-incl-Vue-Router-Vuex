@@ -3682,6 +3682,18 @@ Vue.use({
 
 238. Enviando POST
 
+```javascript
+ methods:{
+    salvar(){
+      this.$http.post('usuarios.json', this.usuario)
+      .then(resp => {
+        this.usuario.nome = ''
+        this.usuario.email = ''
+      })
+    }
+  }
+```
+
 239. Enviando GET
 
 240. Usando Axios Localmente
