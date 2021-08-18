@@ -30,7 +30,7 @@
       <b-list-group-item v-for="(usuario, id) in usuarios" :key="id">
         Nome: {{usuario.nome}} <br>
         E-mail: {{usuario.email}} <br>
-        ID: {{id}} <br>
+        ID: {{usuario.id}} <br>
       </b-list-group-item>
     </b-list-group>
 	</div>
@@ -63,6 +63,7 @@ export default {
       this.$http('usuarios.json')
       .then(res => {
         this.usuarios = res.data;
+        console.log(res.data)
       })
     }
   }
