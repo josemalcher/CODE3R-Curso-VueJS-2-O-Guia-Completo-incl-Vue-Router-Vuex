@@ -3708,6 +3708,21 @@ obterUsuarios(){
 
 240. Usando Axios Localmente
 
+```javascript
+<script>
+import axios from 'axios';
+
+    obterUsuarios(){
+    //this.$http.get()
+    axios('https://curso-vue-2-26c34-default-rtdb.firebaseio.com/usuarios.json')
+        //this.$http('usuarios.json')
+        .then(res => {
+            this.usuarios = res.data;
+        })
+
+
+```
+
 241. Interceptando Requisições
 
 242. Interceptando Resposta
