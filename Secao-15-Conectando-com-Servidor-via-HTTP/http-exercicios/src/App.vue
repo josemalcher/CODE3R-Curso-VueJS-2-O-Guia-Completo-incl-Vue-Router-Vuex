@@ -28,16 +28,16 @@
     <hr>
     <b-list-group>
       <b-list-group-item v-for="(usuario, id) in usuarios" :key="id">
-        <string>Nome:</string>{{usuario.nome}}<br>
-        <string>E-mail:</string>{{usuario.email}}<br>
-        <string>ID:</string>{{id}}<br>
+        Nome: {{usuario.nome}} <br>
+        E-mail: {{usuario.email}} <br>
+        ID: {{id}} <br>
       </b-list-group-item>
     </b-list-group>
 	</div>
 </template>
 
 <script>
-import axios from 'axios';
+//import axios from 'axios';
 
 export default {
   data(){
@@ -59,8 +59,8 @@ export default {
     },
     obterUsuarios(){
       //this.$http.get()
-      axios('https://curso-vue-2-26c34-default-rtdb.firebaseio.com/usuarios.json')
-      //this.$http('usuarios.json')
+      //axios('https://curso-vue-2-26c34-default-rtdb.firebaseio.com/usuarios.json')
+      this.$http('usuarios.json')
       .then(res => {
         this.usuarios = res.data;
       })

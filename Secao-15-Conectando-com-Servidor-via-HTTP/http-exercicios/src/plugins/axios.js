@@ -11,5 +11,15 @@ Vue.use({
             baseURL: 'https://curso-vue-2-26c34-default-rtdb.firebaseio.com/'
         })
 
+        Vue.prototype.$http.interceptors.request.use(config => {
+            console.log(config.method);
+
+/*            if (config.method == 'post') {
+                config.method = 'put'
+            }*/
+
+            return config;
+        });
+
     }
 })

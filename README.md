@@ -3725,6 +3725,32 @@ import axios from 'axios';
 
 241. Interceptando Requisições
 
+- [Secao-15-Conectando-com-Servidor-via-HTTP/http-exercicios/src/plugins/axios.js](Secao-15-Conectando-com-Servidor-via-HTTP/http-exercicios/src/plugins/axios.js)
+
+```javascript
+Vue.use({
+    install(Vue) {
+        //Vue.prototype.$http = axios;
+
+        Vue.prototype.$http = axios.create({
+            baseURL: 'https://curso-vue-2-26c34-default-rtdb.firebaseio.com/'
+        })
+
+        Vue.prototype.$http.interceptors.request.use(config => {
+            console.log(config.method);
+
+/*            if (config.method == 'post') {
+                config.method = 'put'
+            }*/
+
+            return config;
+        });
+
+    }
+})
+
+```
+
 242. Interceptando Resposta
 
 243. Adicionando Headers Globais
