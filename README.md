@@ -3696,6 +3696,16 @@ Vue.use({
 
 239. Enviando GET
 
+```javascript
+obterUsuarios(){
+      //this.$http.get()
+      this.$http('usuarios.json')
+      .then(res => {
+        this.usuarios = res.data;
+      })
+    }
+```
+
 240. Usando Axios Localmente
 
 241. Interceptando Requisições
