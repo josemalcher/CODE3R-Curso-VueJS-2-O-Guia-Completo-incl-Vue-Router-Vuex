@@ -3789,6 +3789,11 @@ Vue.use({
 
 243. Adicionando Headers Globais
 
+````javascript
+// axios.defaults.headers.common['Authorization'] = 'abc123';
+// axios.defaults.headers.get['Accepts'] = 'application/json*';
+````
+
 244. Implementando CRUD
 
 245. Exibindo Mensagens

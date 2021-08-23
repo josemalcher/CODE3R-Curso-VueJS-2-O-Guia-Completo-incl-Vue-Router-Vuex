@@ -37,7 +37,7 @@
 </template>
 
 <script>
-//import axios from 'axios';
+import axios from 'axios';
 
 export default {
   data(){
@@ -65,6 +65,7 @@ export default {
         this.usuarios = res.data;
         console.log(res.data)
       })
+      //axios.defaults.headers.common['Authorization'] = 'abc123456';
     }
   }
   /*created() {
