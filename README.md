@@ -3842,6 +3842,61 @@ salvar() {
 
 ## <a name="parte16">16 - Seção 16: Rotas em uma Aplicação VueJS </a>
 
+249. Introdução do Módulo
+
+250. Instalação do vue-router
+
+251. Configuração do vue-router
+
+252. Entendendo os Modos de Rotas (Hash vs History)
+
+253. Navegando com Router Links
+
+254. Onde estou? - Estilizando o Link Ativo
+
+255. Navegação via Código (Navegação Imperativa)
+
+256. Configurando Parâmetros de Rotas
+
+257. Lendo e Usando Parâmetros de Rotas
+
+258. Reagindo a Mudanças em Parâmetros de Rotas
+
+259. Parâmetros de Rotas via "props"
+
+260. Configurando Rotas Filhas (Rotas Aninhadas)
+
+261. Navegando para Rotas Aninhadas
+
+262. Tornando Router Links mais Dinâmico
+
+263. Criando Links com Rotas Nomeadas
+
+264. Usando Parâmetros da Query
+
+265. Múltiplos Router Views (Router Views Nomeados)
+
+266. Redirecionamento
+
+267. Configurando Rota "Pega Tudo"
+
+268. Animando Transições de Rotas
+
+269. Passando Fragmento Hash
+
+270. Controlando o Comportamento de Rolagem (Scroll)
+
+271. Protegendo Rotas
+
+272. Usando o Evento "beforeEnter"
+
+273. Usando o Evento "beforeLeave"
+
+274. Carregando Rotas Tardiamente
+
+275. Conclusão do Módulo
+
+276. Recursos do Módulo & Links Úteis
 
 
 [Voltar ao Índice](#indice)
