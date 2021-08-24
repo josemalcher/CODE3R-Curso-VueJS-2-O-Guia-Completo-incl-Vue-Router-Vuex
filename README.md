@@ -3800,6 +3800,36 @@ Vue.use({
 
 245. Exibindo Mensagens
 
+- [Secao-15-Conectando-com-Servidor-via-HTTP/http-exercicios/src/App.vue](Secao-15-Conectando-com-Servidor-via-HTTP/http-exercicios/src/App.vue)
+
+```javascript
+
+<b-alert show
+         dismissible
+         v-for="mensagem in mensagens"
+             :key="mensagem.texto"
+:variant="mensagem.tipo"
+    >{{mensagem.texto}}
+</b-alert>
+
+salvar() {
+      // this.$http.post('usuarios.json', this.usuario)
+      //     .then(() => {
+      //       this.limpar()
+      //     })
+      const metodo    = this.id ? 'patch' : 'post'
+      const finalUrl  = this.id ? `/${this.id}.json`: '.json'
+      this.$http[metodo](`/usuarios${finalUrl}`, this.usuario)
+          .then(() => {
+            this.limpar();
+            this.mensagens.push({
+              texto: 'Operação realizada com sucesso!',
+              tipo: 'success'
+            })
+          });
+    },
+```
+
 246. Conclusão do Módulo
 
 247. Recursos do Módulo & Links Úteis

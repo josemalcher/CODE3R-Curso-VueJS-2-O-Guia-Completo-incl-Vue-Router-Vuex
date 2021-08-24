@@ -1,6 +1,13 @@
 <template>
   <div id="app" class="container">
     <h1>HTTP com Axios</h1>
+    <b-alert show
+             dismissible
+             v-for="mensagem in mensagens"
+             :key="mensagem.texto"
+             :variant="mensagem.tipo"
+    >{{mensagem.texto}}
+    </b-alert>
     <b-card>
       <b-form-group label="Nome:">
         <b-form-input
@@ -46,6 +53,7 @@ export default {
   data() {
     return {
       usuarios: [],
+      mensagens: [],
       id: null,
       usuario: {
         nome: '',
@@ -58,6 +66,7 @@ export default {
       this.usuario.nome = '';
       this.usuario.email = '';
       this.id = null;
+      this.mensagens = [];
     },
     carregar(id) {
       this.id = id;
@@ -68,7 +77,12 @@ export default {
           .then(() => {
                 this.limpar()
               }
-          );
+          ).catch(err => {
+            this.mensagens.push({
+              texto: 'Problema ao excluir',
+              tipo: 'danger'
+            })
+      });
     },
     salvar() {
       // this.$http.post('usuarios.json', this.usuario)
@@ -78,7 +92,13 @@ export default {
       const metodo    = this.id ? 'patch' : 'post'
       const finalUrl  = this.id ? `/${this.id}.json`: '.json'
       this.$http[metodo](`/usuarios${finalUrl}`, this.usuario)
-          .then(() => this.limpar());
+          .then(() => {
+            this.limpar();
+            this.mensagens.push({
+              texto: 'Operação realizada com sucesso!',
+              tipo: 'success'
+            })
+          });
     },
     obterUsuarios() {
       //this.$http.get()
