@@ -3796,6 +3796,8 @@ Vue.use({
 
 244. Implementando CRUD
 
+- [Secao-15-Conectando-com-Servidor-via-HTTP/http-exercicios/src/App.vue](Secao-15-Conectando-com-Servidor-via-HTTP/http-exercicios/src/App.vue)
+
 245. Exibindo Mensagens
 
 246. Conclusão do Módulo
