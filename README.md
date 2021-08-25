@@ -3850,6 +3850,29 @@ salvar() {
 
 251. Configuração do vue-router
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js)
+
+```javascript
+import Vue from 'vue';
+import Router from 'vue-router';
+import Inicio from './components/Inicio';
+import Usuario from './components/usuario/Usuario';
+
+Vue.use(Router);
+
+export default new Router({
+    routes:[{
+        path: '/',
+        component:Inicio
+    },
+        {
+            path: '/usuario',
+            component: Usuario
+        }]
+})
+
+```
+
 252. Entendendo os Modos de Rotas (Hash vs History)
 
 253. Navegando com Router Links
