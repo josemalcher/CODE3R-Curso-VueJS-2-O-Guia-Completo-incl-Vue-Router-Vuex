@@ -3846,6 +3846,8 @@ salvar() {
 
 250. Instalação do vue-router
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios)
+
 251. Configuração do vue-router
 
 252. Entendendo os Modos de Rotas (Hash vs History)
