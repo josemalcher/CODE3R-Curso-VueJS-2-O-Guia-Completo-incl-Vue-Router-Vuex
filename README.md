@@ -3906,6 +3906,21 @@ export default new Router({
 
 254. Onde estou? - Estilizando o Link Ativo
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/components/template/Menu.vue](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/components/template/Menu.vue)
+
+```vue
+<template>
+  <nav class="menu">
+    <ul>
+      <router-link to="/" tag="li" active-class="active" exact>
+        <a>Início</a></router-link>
+      <router-link to="/usuario" tag="li" active-class="active" >
+        <a>Usuário</a></router-link>
+    </ul>
+  </nav>
+</template>
+```
+
 255. Navegação via Código (Navegação Imperativa)
 
 256. Configurando Parâmetros de Rotas
