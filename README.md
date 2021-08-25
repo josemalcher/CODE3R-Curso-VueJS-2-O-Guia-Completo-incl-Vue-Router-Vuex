@@ -3875,6 +3875,22 @@ export default new Router({
 
 252. Entendendo os Modos de Rotas (Hash vs History)
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js)
+
+```javascript
+export default new Router({
+    mode: 'history',
+    routes:[{
+        path: '/',
+        component:Inicio
+    },
+        {
+            path: '/usuario',
+            component: Usuario
+        }]
+})
+```
+
 253. Navegando com Router Links
 
 254. Onde estou? - Estilizando o Link Ativo
