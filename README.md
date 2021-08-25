@@ -3893,6 +3893,17 @@ export default new Router({
 
 253. Navegando com Router Links
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/components/template/Menu.vue](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/components/template/Menu.vue)
+
+```vue
+<template>
+    <nav class="menu">
+        <router-link to="/">Início</router-link>
+        <router-link to="/usuario">Usuário</router-link>
+    </nav>
+</template>
+```
+
 254. Onde estou? - Estilizando o Link Ativo
 
 255. Navegação via Código (Navegação Imperativa)
