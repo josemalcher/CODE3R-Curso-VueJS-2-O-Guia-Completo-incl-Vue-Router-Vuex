@@ -4045,6 +4045,29 @@ export default {
 
 260. Configurando Rotas Filhas (Rotas Aninhadas)
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js)
+
+```javascript
+
+export default new Router({
+    mode: 'history',
+    routes: [{
+        path: '/',
+        component: Inicio
+    },
+        {
+            path: '/usuario',
+            component: Usuario,
+            props: true,
+            children: [
+                {path: '', component: UsuarioLista},
+                {path: ':id', component: UsuarioDetalhe, props: true},
+                {path: ':id/editar', component: UsuarioEditar, props: true},
+            ]
+        }]
+})
+```
+
 261. Navegando para Rotas Aninhadas
 
 262. Tornando Router Links mais Dinâmico
