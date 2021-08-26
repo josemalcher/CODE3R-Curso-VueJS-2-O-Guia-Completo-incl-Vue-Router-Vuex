@@ -4094,6 +4094,21 @@ export default new Router({
 
 264. Usando Parâmetros da Query
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/components/usuario/UsuarioDetalhe.vue](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/components/usuario/UsuarioDetalhe.vue)
+
+```javascript
+ <router-link primario
+                 :to="{ name:'editarUsuario',
+                        params: {id},
+                        query: {
+                          completo: true,
+                          lingua: 'pt'
+                    }
+                        }"
+                 tag="button">Editar
+    </router-link>
+```
+
 265. Múltiplos Router Views (Router Views Nomeados)
 
 266. Redirecionamento

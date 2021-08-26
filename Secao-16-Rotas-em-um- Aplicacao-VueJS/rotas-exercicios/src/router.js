@@ -23,10 +23,13 @@ export default new Router({
             children: [
                 {path: '', component: UsuarioLista},
                 {path: ':id', component: UsuarioDetalhe, props: true},
-                {path: ':id/editar',
+                {
+                    path: ':id/editar',
                     component: UsuarioEditar,
                     props: true,
-                    name: 'editarUsuario'},
+                    name: 'editarUsuario',
+
+                },
             ]
         }]
 })
