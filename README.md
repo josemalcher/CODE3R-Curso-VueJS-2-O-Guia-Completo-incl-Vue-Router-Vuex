@@ -4074,6 +4074,24 @@ export default new Router({
 
 263. Criando Links com Rotas Nomeadas
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js)
+
+```javascript
+ {
+            path: '/usuario',
+            component: Usuario,
+            props: true,
+            children: [
+                {path: '', component: UsuarioLista},
+                {path: ':id', component: UsuarioDetalhe, props: true},
+                {path: ':id/editar',
+                    component: UsuarioEditar,
+                    props: true,
+                    name: 'editarUsuario'},
+            ]
+        }
+```
+
 264. Usando Parâmetros da Query
 
 265. Múltiplos Router Views (Router Views Nomeados)
