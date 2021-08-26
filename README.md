@@ -4015,6 +4015,34 @@ export default {
 
 259. Parâmetros de Rotas via "props"
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/components/usuario/Usuario.vue](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/components/usuario/Usuario.vue)
+
+```javascript
+export default {
+  name: "Usuario",
+  // data(){
+  //   return{
+  //     id: this.$route.params.id
+  //   }
+  // },
+  // watch:{
+  //   $route(to, from){
+  //     this.id = to.params.id;
+  //   }
+  // },
+  props: ['id'],
+  methods: {
+    irParaInicio() {
+      //this.$router.push('/')
+      this.$router.push({
+        path: '/'
+      });
+    }
+  }
+}
+</script>
+```
+
 260. Configurando Rotas Filhas (Rotas Aninhadas)
 
 261. Navegando para Rotas Aninhadas
