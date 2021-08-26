@@ -3956,6 +3956,22 @@ export default {
 
 256. Configurando Parâmetros de Rotas
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js)
+
+```javascript
+export default new Router({
+    mode: 'history',
+    routes:[{
+        path: '/',
+        component:Inicio
+    },
+        {
+            path: '/usuario/:id',
+            component: Usuario
+        }]
+})
+```
+
 257. Lendo e Usando Parâmetros de Rotas
 
 258. Reagindo a Mudanças em Parâmetros de Rotas
