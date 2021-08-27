@@ -14,13 +14,13 @@ Vue.use(Router);
 
 const router = new Router({
     mode: 'history',
-    scrollBehavior(to, from, savedPosition){
-        if(savedPosition){
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
             return savedPosition;
-        }else if(to.hash){
-          return {selector: to.hash}
-      }else{
-            return {x: 0, y:o}
+        } else if (to.hash) {
+            return {selector: to.hash}
+        } else {
+            return {x: 0, y: 0}
         }
     },
     routes: [{
@@ -43,7 +43,8 @@ const router = new Router({
             props: true,
             children: [
                 {path: '', component: UsuarioLista},
-                {path: ':id', component: UsuarioDetalhe, props: true,
+                {
+                    path: ':id', component: UsuarioDetalhe, props: true,
                     beforeEnter: (to, from, next) => {
                         console.log('antes da rota -> usuario detalhe')
                         next();
@@ -57,7 +58,7 @@ const router = new Router({
 
                 },
             ]
-        },{
+        }, {
             path: '/redirecionar',
             redirect: '/usuario'
         },
@@ -67,7 +68,7 @@ const router = new Router({
         }]
 })
 
-router.beforeEach((to,from, next) => {
+router.beforeEach((to, from, next) => {
     console.log('antes das rotas -> global')
     next();
 })
