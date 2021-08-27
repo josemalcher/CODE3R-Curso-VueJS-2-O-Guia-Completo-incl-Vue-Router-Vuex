@@ -10,7 +10,8 @@
                         query: {
                           completo: true,
                           lingua: 'pt'
-                        }
+                        },
+                        hash: '#rodape'
                  }"
                  tag="button">Editar
     </router-link>

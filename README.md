@@ -4184,6 +4184,20 @@ default: Usuario,
 
 270. Controlando o Comportamento de Rolagem (Scroll)
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js)
+
+```javascript
+  scrollBehavior(to, from, savedPosition){
+        if(savedPosition){
+            return savedPosition;
+        }else if(to.hash){
+          return {selector: to.hash}
+      }else{
+            return {x: 0, y:o}
+        }
+    },
+```
+
 271. Protegendo Rotas
 
 272. Usando o Evento "beforeEnter"
