@@ -4168,6 +4168,18 @@ default: Usuario,
 
 268. Animando Transições de Rotas
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/App.vue](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/App.vue)
+
+```javascript
+   <transition
+        mode="out-in"
+        enter-active-class="animated rubberBand"
+        leave-active-class="animated rollOut"
+    >
+      <router-view />
+    </transition>
+```
+
 269. Passando Fragmento Hash
 
 270. Controlando o Comportamento de Rolagem (Scroll)
