@@ -4225,6 +4225,22 @@ default: Usuario,
 
 273. Usando o Evento "beforeLeave"
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/components/usuario/UsuarioEditar.vue](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/components/usuario/UsuarioEditar.vue)
+
+```javascript
+beforeRouteLeave(to, from, next) {
+    if (this.confirmou) {
+      next();
+    }else{
+      if (confirm('Tem certeza?')) {
+        next();
+      }else{
+        next(false);
+      }
+    }
+  }
+```
+
 274. Carregando Rotas Tardiamente
 
 275. Conclusão do Módulo
