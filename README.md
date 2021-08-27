@@ -4123,6 +4123,27 @@ export default new Router({
 
 265. Múltiplos Router Views (Router Views Nomeados)
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js)
+
+```javascript
+ components: {
+default: Usuario,
+        menu: MenuAlt,
+        menuInferior: Menu
+},
+```
+
+```javascript
+<template>
+  <div id="app">
+    <h1>Rotas com VueRouter</h1>
+    <router-view name="menu"></router-view>
+    <router-view />
+    <router-view name="menuInferior"></router-view>
+  </div>
+</template>
+```
+
 266. Redirecionamento
 
 267. Configurando Rota "Pega Tudo"
