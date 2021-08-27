@@ -4109,6 +4109,18 @@ export default new Router({
     </router-link>
 ```
 
+````javascript
+<template>
+  <div class="usuario-editar">
+    <h3>Usuário Ediatar</h3>
+    <hr>
+    <p><strong>Código: </strong>{{ id }}</p>
+    <p><strong>Completo: </strong>{{$route.query.completo ? 'Sim' : 'Não'}}</p>
+    <p><strong>Língua: </strong>{{$route.query.lingua}}</p>
+  </div>
+</template>
+````
+
 265. Múltiplos Router Views (Router Views Nomeados)
 
 266. Redirecionamento

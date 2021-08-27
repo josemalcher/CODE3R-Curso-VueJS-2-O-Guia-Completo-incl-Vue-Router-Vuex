@@ -10,8 +10,8 @@
                         query: {
                           completo: true,
                           lingua: 'pt'
-                    }
-                        }"
+                        }
+                 }"
                  tag="button">Editar
     </router-link>
   </div>
