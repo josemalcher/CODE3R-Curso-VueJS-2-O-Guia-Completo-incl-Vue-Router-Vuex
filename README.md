@@ -4275,6 +4275,55 @@ const UsuarioEditar   = () => import(/* webpackChunkName: "usuario" */ '/compone
 
 ## <a name="parte17">17 - Seção 17: Melhor Gerenciamento de Estado com Vuex </a>
 
+277. Introdução do Módulo
+
+278. Por que usar um Gerenciador de Estado?
+
+279. Entendendo "Estado Centralizado"
+
+![](img/vuex_estado.png)
+
+280. Conhecendo o Projeto do Módulo
+
+281. Usando Estado Centralizado
+
+282. Por que Estado Centralizado Sozinho Não Resolve
+
+283. Entendendo Getters
+
+284. Usando Getters
+
+285. Mapeando Getters para Propriedades
+
+286. Observação sobre o funcionamento da aplicação
+
+287. Entendendo Mutations
+
+288. Usando Mutations
+
+289. Por que existem Mutations e Actions?
+
+290. Como Actions Complementam as Mutation
+
+291. Usando Actions
+
+292. Mapeando Actions para Métodos
+
+293. Vuex e Two-Way-Binding (v-model)
+
+294. Resumo do Vuex
+
+295. Melhorando a Estrutura de Pastas
+
+296. Modularizando o Gerenciador de Estado
+
+297. Usando Arquivos Separados
+
+298. Usando Namespaces para Evitar Conflitos de Nomes
+
+299. Conclusão do Módulo
+
+300. Recursos do Módulo & Links Úteis
 
 
 [Voltar ao Índice](#indice)
