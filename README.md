@@ -4146,6 +4146,15 @@ default: Usuario,
 
 266. Redirecionamento
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js)
+
+```javascript
+        {
+            path: '/redirecionar',
+            redirect: '/usuario'
+        }
+```
+
 267. Configurando Rota "Pega Tudo"
 
 268. Animando Transições de Rotas
