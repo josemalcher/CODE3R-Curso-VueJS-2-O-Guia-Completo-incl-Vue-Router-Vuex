@@ -4281,7 +4281,7 @@ const UsuarioEditar   = () => import(/* webpackChunkName: "usuario" */ '/compone
 
 279. Entendendo "Estado Centralizado"
 
-![](img/vuex_estado.png)
+![img/vuex_estado.png](img/vuex_estado.png)
 
 280. Conhecendo o Projeto do Módulo
 
