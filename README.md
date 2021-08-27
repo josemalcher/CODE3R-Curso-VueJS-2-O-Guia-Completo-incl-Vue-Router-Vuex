@@ -4157,6 +4157,15 @@ default: Usuario,
 
 267. Configurando Rota "Pega Tudo"
 
+- [Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js](Secao-16-Rotas-em-um- Aplicacao-VueJS/rotas-exercicios/src/router.js)
+
+```javascript
+        {
+            path: '*',
+            redirect: '/'
+        }
+```
+
 268. Animando Transições de Rotas
 
 269. Passando Fragmento Hash
