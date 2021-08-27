@@ -4202,6 +4202,27 @@ default: Usuario,
 
 272. Usando o Evento "beforeEnter"
 
+```javascript
+ {path: ':id', component: UsuarioDetalhe, props: true,
+                    beforeEnter: (to, from, next) => {
+                        console.log('antes da rota -> usuario detalhe')
+                        next();
+                    }
+                }
+```
+
+```javascript
+ beforeRouteEnter(to, from, next) {
+    //console.log(this.id) // erro
+    console.log(' dentro do componente -> usuario detalhe')
+    next(vm => {
+      console.log(vm.id); // acesso ao id do componente
+    })
+    const autenticado = true;
+    autenticado ? next() : next(false);
+  }
+```
+
 273. Usando o Evento "beforeLeave"
 
 274. Carregando Rotas Tardiamente

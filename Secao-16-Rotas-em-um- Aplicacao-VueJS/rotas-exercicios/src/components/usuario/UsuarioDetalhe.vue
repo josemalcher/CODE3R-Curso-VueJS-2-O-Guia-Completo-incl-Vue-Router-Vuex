@@ -32,6 +32,15 @@ export default {
   //   }
   // },
   props: ['id'],
+  beforeRouteEnter(to, from, next) {
+    //console.log(this.id) // erro
+    console.log(' dentro do componente -> usuario detalhe')
+    next(vm => {
+      console.log(vm.id); // acesso ao id do componente
+    })
+    const autenticado = true;
+    autenticado ? next() : next(false);
+  }
 }
 </script>
 
