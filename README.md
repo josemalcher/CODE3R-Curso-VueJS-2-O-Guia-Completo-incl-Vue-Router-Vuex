@@ -4357,9 +4357,90 @@ export default {
 
 286. Observação sobre o funcionamento da aplicação
 
+Observação sobre o funcionamento da aplicação
+Fala, pessoal!
+
+Um breve esclarecimento sobre um "bug" apresentado no desenvolvimento da aplicação usada nesse capítulo. Caso você tente alterar interagir com os valores no componente Loja Virtual, o console do navegador apresentará a seguinte mensagem de erro:
+```
+Computed property "quantidade" was assigned to but it has no setter
+```
+Ou:
+
+```
+Computed property "preco" was assigned to but it has no setter
+```
+Isso acontece porque em Loja Virtual para os campos preco e quantidade definimos apenas os getters para capturar os dados da store e não definimos os setters para modificar esses dados na store.
+
+Caso você queira permitir a alteração dos dados na store através do componente Loja Virtual, você deve implementar os setters, assim como foi feito em Parâmetros. Veja o exemplo:
+
+
+```javascript
+computed: {
+    quantidade: {
+        get () {
+         return this.$store.state.parametros.quantidade
+        },
+        set (valor) {
+            this.$store.commit('setQuantidade', valor)
+        }
+    },
+    preco: {
+        get () {
+            return this.$store.state.parametros.preco
+        },
+        set (valor) {
+            this.$store.commit('setPreco', valor)
+        }
+    }
+},
+```
+
+
+Tenha em mente que agora o que for alterado em Loja Virtual será alterado em Parâmetros, mas esse não era o caso de uso planejado para essa aplicação. Tranquilo?
+
+Esperamos que com essa aula artigo tenhamos esclarecido essa pequena confusão 😅
+
+
+
 287. Entendendo Mutations
 
+![img/mutattion.png](img/mutattion.png)
+
 288. Usando Mutations
+
+- [Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/store/store.js](Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/store/store.js)
+
+```javascript
+    mutations:{
+        adicionarProduto(state, payload) {
+            state.produtos.push(payload);
+        }
+    }
+```
+
+- [Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/components/Loja.vue](Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/components/Loja.vue)
+
+```javascript
+    methods: {
+      ...mapMutations(["adicionarProduto"]),
+        adicionar() {
+            const produto = {
+                id: this.sequencia,
+                nome: `Produto ${this.sequencia}`,
+                quantidade: this.quantidade,
+                preco: this.preco
+            }
+            this.sequencia++
+            // eslint-disable-next-line
+            //console.log(produto)
+
+          //this.$store.state.produtos.push(produto)
+          //this.$store.commit("adicionarProduto", produto);
+          this.adicionarProduto(produto);
+
+        }
+    }
+```
 
 289. Por que existem Mutations e Actions?
 
