@@ -9,15 +9,21 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex';
+
 export default {
-    computed: {
+    computed: mapGetters({
+      total: "valorTotal"
+    })
+    //computed:mapGetters(['valorTotal'])
+    /*computed: {
         total() {
           return this.$store.getters.valorTotal;
         },
         produtos() {
           return this.$store.state.produtos;
         }
-    },
+    },*/
 
 }
 </script>

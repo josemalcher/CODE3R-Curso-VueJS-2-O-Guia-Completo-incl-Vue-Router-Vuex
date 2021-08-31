@@ -4321,6 +4321,40 @@ export default new Vuex.Store({
 
 285. Mapeando Getters para Propriedades
 
+- [Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/components/Resumo.vue](Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/components/Resumo.vue)
+
+```javascript
+<template>
+    <Painel titulo="Resumo" roxo>
+        <div class="resumo">
+            <span>Total: <strong>{{ total | dinheiro }}</strong></span>
+            <hr>
+            <button>Finalizar!</button>
+        </div>
+    </Painel>
+</template>
+
+<script>
+import {mapGetters} from 'vuex';
+
+export default {
+    computed: mapGetters({
+      total: "valorTotal"
+    })
+    //computed:mapGetters(['valorTotal'])
+    /*computed: {
+        total() {
+          return this.$store.getters.valorTotal;
+        },
+        produtos() {
+          return this.$store.state.produtos;
+        }
+    },*/
+
+}
+</script>
+```
+
 286. Observação sobre o funcionamento da aplicação
 
 287. Entendendo Mutations
