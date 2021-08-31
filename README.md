@@ -4501,6 +4501,59 @@ methods: {
 
 293. Vuex e Two-Way-Binding (v-model)
 
+```javascript
+ mutations: {
+        adicionarProduto(state, payload) {
+            state.produtos.push(payload);
+        },
+        setQuantidade(state, payload) {
+            state.quantidade = payload;
+        },
+        setPreco(state, payload) {
+            state.preco = payload;
+        }
+    },
+```
+
+- [Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/components/Parametros.vue](Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/components/Parametros.vue)
+
+```javascript
+export default {
+  computed:{
+   quantidade: {
+     get() {
+       return this.$store.state.quantidade;
+     },
+     set(valor) {
+       this.$store.commit('setQuantidade', valor);
+     }
+   },
+    preco:{
+      get() {
+        return this.$store.state.preco;
+      },
+      set(valor) {
+        this.$store.commit('setPreco', valor);
+      }
+    }
+  }
+}
+```
+
+- [Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/components/Loja.vue](Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/components/Loja.vue)
+
+```javascript
+    computed:{
+      quantidade() {
+        return this.$store.state.quantidade;
+      },
+      preco(){
+        return this.$store.state.preco;
+      }
+    },
+```
+
+
 294. Resumo do Vuex
 
 295. Melhorando a Estrutura de Pastas
