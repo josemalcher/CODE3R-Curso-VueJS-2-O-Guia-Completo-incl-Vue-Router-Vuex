@@ -4490,6 +4490,15 @@ methods: {
 
 292. Mapeando Actions para Métodos
 
+```javascript
+    methods: {
+      ...mapActions(["adicionarProduto"]),
+
+/*      adicionarProduto(){
+        this.$store.dispatch('adicionarProduto', produto);
+      },*/
+```
+
 293. Vuex e Two-Way-Binding (v-model)
 
 294. Resumo do Vuex
