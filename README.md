@@ -4562,6 +4562,45 @@ export default {
 
 297. Usando Arquivos Separados
 
+- [Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/store/getters.js](Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/store/getters.js)
+
+```javascript
+export const getNome = state => state.nome
+export const getNomeCompleto = state => state.nome + state.sobrenome
+
+```
+
+- [Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/store/store.js](Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/store/store.js)
+
+```javascript
+
+import carrinho from "./modules/carrinho";
+import parametros from "./modules/parametros";
+
+import * as getters from './getters';
+
+Vue.use(Vuex);
+
+export default new Vuex.Store({
+    state:{
+        nome: 'Jose',
+        sobrenome: 'Malcher'
+    },
+    //getters,
+    getters:{
+      ...getters
+    },
+    modules:{carrinho, parametros}
+});
+```
+
+```javascript
+          // eslint-disable-next-line
+          console.log(this.$store.getters.getNome)
+          // eslint-disable-next-line
+          console.log(this.$store.getters.getNomeCompleto)
+```
+
 298. Usando Namespaces para Evitar Conflitos de Nomes
 
 299. Conclusão do Módulo
