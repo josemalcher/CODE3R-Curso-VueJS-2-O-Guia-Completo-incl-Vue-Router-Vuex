@@ -4446,7 +4446,47 @@ Esperamos que com essa aula artigo tenhamos esclarecido essa pequena confusão �
 
 290. Como Actions Complementam as Mutation
 
+![img/actions.png](img/actions.png)
+
 291. Usando Actions
+
+- [Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/store/store.js](Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/store/store.js)
+
+```javascript
+actions:{
+        //adicionarProduto(context, payload) {
+        adicionarProduto({commit}, payload) {
+            setTimeout(() => {
+                commit('adicionarProduto', payload);
+            }, 1000)
+        }
+```
+
+```javascript
+import {mapActions} from 'vuex';
+
+methods: {
+...mapActions(["adicionarProduto"]),
+        adicionar() {
+        const produto = {
+            id: this.sequencia,
+            nome: `Produto ${this.sequencia}`,
+            quantidade: this.quantidade,
+            preco: this.preco
+        }
+        this.sequencia++
+        // eslint-disable-next-line
+        //console.log(produto)
+
+        //this.$store.state.produtos.push(produto)
+        //this.$store.commit("adicionarProduto", produto);
+
+        this.adicionarProduto(produto);
+        //this.$store.dispatch('adicionarProduto', produto);
+
+    }
+
+```
 
 292. Mapeando Actions para Métodos
 
