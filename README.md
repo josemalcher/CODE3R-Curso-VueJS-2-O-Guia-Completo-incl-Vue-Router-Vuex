@@ -4603,6 +4603,23 @@ export default new Vuex.Store({
 
 298. Usando Namespaces para Evitar Conflitos de Nomes
 
+- [Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/store/modules/carrinho.js](Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/store/modules/carrinho.js)
+
+```javascript
+export default{
+    namespaced: true,
+```
+
+- [Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/components/Carrinho.vue](Secao-17-Melhor-Gerenciamento-de-Estado-com-Vuex/vuex-exercicios/src/components/Carrinho.vue)
+
+```javascript
+export default {
+    computed: {
+      ...mapGetters('carrinho',{
+        total: 'valorTotal'
+      }),
+```
+
 299. Conclusão do Módulo
 
 300. Recursos do Módulo & Links Úteis
