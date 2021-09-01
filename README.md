@@ -4632,6 +4632,49 @@ export default {
 
 ## <a name="parte18">18 - Seção 18: Projeto #03 - The Stock Trader </a>
 
+301. Introdução do Projeto
+
+302. Debugando Vuex com Vue Developer Tools
+
+303. Configuração do Projeto
+
+304. Criando os Primeiros Componentes
+
+305. Configurando as Rotas do Projeto
+
+306. Adicionando Cabeçalho e Navegação
+
+307. Criando o Componente de Ações (Stocks)
+
+308. Adicionando o Botão Comprar
+
+309. Configurando o Vuex no Projeto
+
+310. Adicionando o Módulo Portfolio ao Vuex
+
+311. Trabalhando com Ações do Portfolio
+
+312. Conectando o Portfolio ao Vuex
+
+313. Exibindo o Saldo
+
+314. Adicionando Validações
+
+315. Aplicando Filtro de Valor Monetário no Saldo
+
+316. Finalizando Dia - Alterando Preço das Ações
+
+317. Animando a Transição de Rotas
+
+318. Configurando Axios & Firebase
+
+319. Salvando Dados (Requisição PUT)
+
+320. Obtendo Dados (Requisição GET)
+
+321. Conclusão do Módulo
+
+322. Recursos do Módulo & Links Úteis
 
 
 [Voltar ao Índice](#indice)
