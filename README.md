@@ -4638,6 +4638,8 @@ export default {
 
 303. Configuração do Projeto
 
+- [Secao-18-Projeto-03-The-Stock-Trader/stock-trader](Secao-18-Projeto-03-The-Stock-Trader/stock-trader)
+
 304. Criando os Primeiros Componentes
 
 305. Configurando as Rotas do Projeto
