@@ -15,19 +15,16 @@ import {mapGetters} from 'vuex'
 export default {
 
 //  computed: mapGetters(['valorTotal'])
-computed:mapGetters({
-  total: 'valorTotal'
-
-})
+  computed: mapGetters('carrinho', {total: 'valorTotal'})
   // computed: {
   //   total() {
   //     return this.$store.getters.valorTotal;
   //     // return this.produtos.map(p => p.quantidade * p.preco)
   //     //     .reduce((total, atual) => total + atual, 0)
   //   },
-    // produtos() {
-    //   return this.$store.state.produtos
-    // }
+  // produtos() {
+  //   return this.$store.state.produtos
+  // }
   // },
   // data() {
   //     return {

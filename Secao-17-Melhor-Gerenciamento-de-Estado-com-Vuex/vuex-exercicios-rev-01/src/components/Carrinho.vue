@@ -30,7 +30,7 @@ import {mapGetters} from "vuex";
 
 export default {
   computed: {
-    ...mapGetters({
+    ...mapGetters('carrinho', {
       total: 'valorTotal'
     }),
     // total() {
@@ -39,7 +39,7 @@ export default {
     //   //     .reduce((total, atual) => total + atual, 0)
     // },
     produtos() {
-      return this.$store.state.produtos
+      return this.$store.state.carrinho.produtos
     }
   },
   // data() {

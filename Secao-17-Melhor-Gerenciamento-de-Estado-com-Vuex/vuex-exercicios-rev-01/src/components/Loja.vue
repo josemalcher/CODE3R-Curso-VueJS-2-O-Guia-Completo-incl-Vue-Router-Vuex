@@ -17,16 +17,34 @@ import {mapActions} from 'vuex'
 
 export default {
 
-  data() {
-    return {
-      sequencia: 1,
-      quantidade: 1,
-      preco: 9.99,
+  // data() {
+  //   return {
+  //     sequencia: 1,
+  //     quantidade: 1,
+  //     preco: 9.99,
+  //   }
+  // },
+  computed: {
+    quantidade: {
+      get() {
+        return this.$store.state.parametros.quantidade
+      },
+      set(valor) {
+        this.$store.commit('setQuantidade', valor)
+      }
+    },
+    preco: {
+      get() {
+        return this.$store.state.parametros.preco
+      },
+      set(valor) {
+        this.$store.commit('setPreco', valor)
+      }
     }
   },
   methods: {
     // ...mapMutations(['adicionarProduto']),
-    ...mapActions(['adicionarProduto']),
+    ...mapActions('carrinho', ['adicionarProduto']),
     adicionar() {
       const produto = {
         id: this.sequencia,
@@ -43,6 +61,11 @@ export default {
 
       this.adicionarProduto(produto)
       //this.$store.dispatch('adicionarProduto', produto)
+
+      // eslint-disable-next-line
+      console.log(this.$store.getters.getNome)
+      // eslint-disable-next-line
+      console.log(this.$store.getters.getNomeCompleto)
     }
   }
 }
